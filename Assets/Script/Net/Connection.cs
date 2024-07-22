@@ -73,6 +73,11 @@ namespace Game.Net
         {
             BufferEntity bufferEntity = BufferEntityFactory.Allocate(data);
             var message = ProtoHelper.ParseFrom(bufferEntity.messageID, bufferEntity.proto, 0, bufferEntity.protoSize);
+            if (ProtoHelper.SeqCode(message.GetType()) == 0)
+            {
+                LogUtils.Error($"[{NetErrCode.NET_ERROR_UNKNOW_PROTOCOL}] The client does not have this proto type : {Type.FilterName}");
+                return;
+            }
             OnDataReceived?.Invoke(this, bufferEntity, message);
         }
 
@@ -129,12 +134,19 @@ namespace Game.Net
         /// <param name="len">数据长度</param>
         private void SocketSend(byte[] data, int offset, int len)
         {
-            lock (this)
+            try
             {
-                if (_socket.Connected)
+                lock (this)
                 {
-                    _socket.BeginSend(data, offset, len, SocketFlags.None, new AsyncCallback(SendCallback), _socket);
+                    if (_socket.Connected)
+                    {
+                        _socket.BeginSend(data, offset, len, SocketFlags.None, new AsyncCallback(SendCallback), _socket);
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                LogUtils.Error($"{NetErrCode.NET_ERROR_SEND_EXCEPTION} : ProcessSend exception: {e.ToString()}");
             }
         }
 

@@ -84,9 +84,9 @@ namespace Game.Helper
             {
                 var fname = list[i];
                 var t = _registry[fname];
-                Debug.Log($"Proto Type registry：{i + 1000} - {fname}");
-                _DictIntType[i + 1000] = t;
-                _DictTypeInt[t] = i + 1000;
+                Debug.Log($"Proto Type registry：{i + 10000} - {fname}");
+                _DictIntType[i + 10000] = t;
+                _DictTypeInt[t] = i + 10000;
             }
         }
 
@@ -97,7 +97,9 @@ namespace Game.Helper
         /// <returns>int值来对应的protobuf类型</returns>
         public static int SeqCode(Type type)
         {
-            return _DictTypeInt[type];
+            int result = 0;
+            _DictTypeInt.TryGetValue(type, out result);
+            return result;
         }
 
         /// <summary>
@@ -107,7 +109,9 @@ namespace Game.Helper
         /// <returns>protobuf类型</returns>
         public static Type SeqType(int code)
         {
-            return _DictIntType[code];
+            Type type = null;
+             _DictIntType.TryGetValue(code, out type);
+            return type;
         }
 
         /// <summary>

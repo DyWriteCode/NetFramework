@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Sockets;
 using UnityEngine;
+using Game.Log;
 
 namespace Game.Net
 {
@@ -31,7 +32,7 @@ namespace Game.Net
         /// <summary>
         /// 每次读取到数据的缓冲区
         /// </summary>
-        private byte[] buffer;
+        private byte[] buffer = new byte[64 * 1024];
 
         /// <summary>
         /// 每次读取的开始位置
@@ -113,7 +114,12 @@ namespace Game.Net
         /// <param name="len">数据的长度</param>
         private void parseReceive(int len)
         {
-            //解析数据
+            if (len == 0)
+            {
+                LogUtils.Error($"{NetErrCode.NET_ERROR_ZERO_BYTE} : Error of sending and receiving 0 bytes");
+                return;
+            }
+            // 解析数据
             int remain = startIndex + len;
             int offset = 0;
             while (remain > 4)
@@ -123,29 +129,26 @@ namespace Game.Net
                 {
                     break;
                 }
-                //解析消息
+                // 解析消息
                 byte[] data = new byte[msgLen];
                 Array.Copy(buffer, offset + 4, data, 0, msgLen);
-                //解析消息
+                // 解析消息
                 try
                 {
                     DataReceived?.Invoke(data);
                 }
-                catch
+                catch (Exception e)
                 {
-                    Debug.LogError("消息解析异常");
+                    LogUtils.Error($"{NetErrCode.NET_ERROR_ILLEGAL_PACKAGE} : ProcessReceive exception: {e.ToString()}");
                 }
                 offset += msgLen + 4;
                 remain -= msgLen + 4;
             }
-
             if (remain > 0)
             {
                 Array.Copy(buffer, offset, buffer, 0, remain);
             }
-
             startIndex = remain;
-
         }
 
         /// <summary>

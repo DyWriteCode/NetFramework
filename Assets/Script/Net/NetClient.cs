@@ -2,7 +2,6 @@
 using System.Net.Sockets;
 using System.Net;
 using Google.Protobuf;
-using UnityEngine;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 using Game.Helper;
@@ -19,6 +18,14 @@ namespace Game.Net
         /// 与服务器的连接
         /// </summary>
         private Connection conn = null;
+        /// <summary>
+        /// 是否正在运行
+        /// </summary>
+        private bool running = false;
+        /// <summary>
+        /// 是否正在运行
+        /// </summary>
+        public bool Running { get => running; set => running = value; }
         /// <summary>
         /// 超时重传的间隔时间
         /// </summary>
@@ -50,19 +57,28 @@ namespace Game.Net
         /// <param name="host">服务器IP</param>
         /// <param name="port">服务器端口</param>
         /// <param name="threadCount">启动消息分发器的线程数</param>
-        public void ConnectToServer(string host, int port, int threadCount = 1)
+        public bool ConnectToServer(string host, int port, int threadCount = 1)
         {
             // 服务器终端
             IPEndPoint ipe = new IPEndPoint(IPAddress.Parse(host), port);
             Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            Connect(socket, ipe);
+            if (Connect(socket, ipe) == false)
+            {
+                running = false;
+                return false;
+            }
             conn = new Connection(socket);
             conn.OnDisconnected += OnDisconnected;
             conn.OnDataReceived += OnDataReceived;
+            sessionID = 0;
+            sendSN = 0;
+            handleSN = 0;
             // 启动消息分发器
             MessageRouter.Instance.Init(threadCount);
             // 超时重传逻辑接口启动
-            CheckOutTime();
+            CheckOutTime(host, port, threadCount);
+            running = true;
+            return true;
         }
 
         /// <summary>
@@ -70,16 +86,26 @@ namespace Game.Net
         /// </summary>
         /// <param name="socket">socket对象</param>
         /// <param name="ipe">服务器终端</param>
-        public void Connect(Socket socket, IPEndPoint ipe)
+        public bool Connect(Socket socket, IPEndPoint ipe)
         {
             try
             {
                 socket.Connect(ipe);
-                Debug.Log("Connect To Server");
+                LogUtils.Log("Connect To Server");
+                return true;
+            }
+            catch (SocketException ex)
+            {
+                if (ex.SocketErrorCode == SocketError.ConnectionRefused)
+                {
+                    LogUtils.Error("DoConnect SocketException:[{0},{1},{2}]{3} ", ex.ErrorCode, ex.SocketErrorCode, ex.NativeErrorCode, ex.ToString());
+                }
+                return false;
             }
             catch (Exception e)
             {
-                LogUtils.Error($"DisConnect To Server : {e}");
+                LogUtils.Error($"{NetErrCode.NET_ERROR_FAIL_TO_CONNECT} : DisConnect To Server : {e}");
+                return false;
             }
         }
 
@@ -89,7 +115,8 @@ namespace Game.Net
         /// <param name="sender">与服务器的连接</param>
         private void OnDisconnected(Connection sender)
         {
-            Debug.Log("Disconnect To Server");
+            running = false;
+            LogUtils.Log("Disconnect To Server");
             EventManager.FireOut("OnDisconnected");
         }
 
@@ -139,7 +166,7 @@ namespace Game.Net
             {
                 if (waitHandle.TryAdd(buffer.sn, buffer))
                 {
-                    Debug.Log($"Packets are received in the wrong order :{buffer.sn}");
+                    LogUtils.Log($"Packets are received in the wrong order :{buffer.sn}");
                 }
                 return;
             }
@@ -172,7 +199,7 @@ namespace Game.Net
             }
             catch
             {
-                Debug.Log("Dis Close NetClient");
+                LogUtils.Log("Dis Close NetClient");
             }
         }
 
@@ -194,6 +221,10 @@ namespace Game.Net
                     //缓存起来 因为可能需要重发
                     sendPackage.TryAdd(sendSN, bufferEntity);
                 }
+                if (bufferEntity == null)
+                {
+                    LogUtils.Log($"{NetErrCode.NET_ERROR_ZERO_BYTE} : Error of sending and receiving 0 bytes");
+                }
                 conn.Send(bufferEntity);
             }
         }
@@ -206,6 +237,10 @@ namespace Game.Net
         {
             if (conn != null)
             {
+                if (message == null)
+                {
+                    LogUtils.Log($"{NetErrCode.NET_ERROR_ZERO_BYTE} : Error of sending and receiving 0 bytes");
+                }
                 conn.SocketSend(message);
             }
         }
@@ -213,7 +248,10 @@ namespace Game.Net
         /// <summary>
         /// 超时重传接口
         /// </summary>
-        public async void CheckOutTime()
+        /// <param name="host">服务器IP</param>
+        /// <param name="port">服务器端口</param>
+        /// <param name="threadCount">启动消息分发器的线程数</param>
+        public async void CheckOutTime(string host, int port, int threadCount = 1)
         {
             await Task.Delay(OverTime);
             foreach (var package in sendPackage.Values)
@@ -221,19 +259,23 @@ namespace Game.Net
                 // 确定是不是超过最大发送次数  关闭socket
                 if (package.recurCount >= 10)
                 {
-                    Debug.Log($"recurCount >= 10 close socket");
+                    LogUtils.Log($"recurCount >= 10 close socket");
                     Close();
-                    return;
+                    if (ConnectToServer(host, port, threadCount) == false)
+                    {
+                        LogUtils.Error($"{NetErrCode.NET_ERROR_PACKAGE_TIMEOUT} : Packet collection timed out");
+                        return;
+                    }
                 }
                 // 150
                 if (TimeHelper.ClientNow() - package.time >= (package.recurCount + 1) * OverTime)
                 {
                     package.recurCount += 1;
-                    Debug.Log($"Time out resend count : {package.recurCount}");
+                    LogUtils.Log($"Time out resend count : {package.recurCount}");
                     Send(package.Encoder());
                 }
             }
-            CheckOutTime();
+            CheckOutTime(host, port, threadCount);
         }
     }
 }

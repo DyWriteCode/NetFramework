@@ -156,18 +156,12 @@ namespace Game.Net
                 isFull = false;
                 return;
             }
-
             session = BitConverter.ToInt32(buffer, 4); // 从4的位置 取4个字节转化成int
             sn = BitConverter.ToInt32(buffer, 8); // 从8的位置 取4个字节转化成int
             moduleID = BitConverter.ToInt32(buffer, 12);
-
             time = BitConverter.ToInt64(buffer, 16); // 从16的位置 取8个字节转化成int
-
-            messageType = BitConverter.ToInt32(buffer, 24);//
+            messageType = BitConverter.ToInt32(buffer, 24);
             messageID = BitConverter.ToInt32(buffer, 28);
-
-            // BitConverter.ToInt64();
-            // long
             if (messageType == 1)
             {
                 proto = new byte[protoSize];

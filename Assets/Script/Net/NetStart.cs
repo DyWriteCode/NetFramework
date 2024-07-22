@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Proto;
 using UnityEngine.UI;
-using Game.LogUtils;
+using Game.Log;
 
 namespace Game.Net
 {
@@ -12,7 +12,7 @@ namespace Game.Net
     /// 启动网络初始化一些基本的客户端信息
     /// 需要挂载到一个专门的物体上
     /// </summary>
-    public class Net : MonoBehaviour
+    public class NetStart : MonoBehaviour
     {
         /// <summary>
         /// 保证在切换场景时不被删除的物体以节省资源
@@ -61,7 +61,7 @@ namespace Game.Net
                 DontDestroyOnLoad(alive);
             }
             // 初始化日志工具
-            LogUtils.LogUtils.InitSettings(new LogUtilsConfig()
+            LogUtils.InitSettings(new LogUtilsConfig()
             {
                 savePath = Application.streamingAssetsPath,
             });
@@ -76,10 +76,10 @@ namespace Game.Net
         /// <summary>
         /// 心跳包函数
         /// </summary>
-        /// <returns></returns>
+        /// <returns>WaitForSeconds</returns>
         IEnumerator SendHeartMessage()
         {
-            while (true)
+            while (NetClient.Instance.Running == true)
             {
                 yield return new WaitForSeconds(beatTime);
                 NetClient.Instance.Send(beatRequest);
