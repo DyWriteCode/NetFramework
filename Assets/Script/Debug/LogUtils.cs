@@ -3,10 +3,8 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System.Diagnostics;
-using UnityEngine;
-using System.Drawing;
 
-namespace Game.LogUtils {
+namespace Game.Log {
     /// <summary>
     /// 日志工具类
     /// </summary>
@@ -561,7 +559,7 @@ namespace Game.LogUtils {
     }
 }
 
-namespace Game.LogUtils
+namespace Game.Log
 {
     /// <summary>
     /// 给每个对象绑定拓展方法

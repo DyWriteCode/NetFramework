@@ -14,7 +14,7 @@ namespace Game.Net
         /// <summary>
         /// 业务逻辑的报文
         /// </summary>
-        Login = 1,
+        Logic = 1,
     }
 
     /// <summary>

@@ -2,6 +2,7 @@
 using System.Net.Sockets;
 using Game.Helper;
 using Google.Protobuf;
+using Game.Log;
 
 namespace Game.Net
 {
@@ -16,7 +17,8 @@ namespace Game.Net
         /// </summary>
         /// <param name="sender">发送者</param>
         /// <param name="data">数据</param>
-        public delegate void DataReceivedCallback(Connection sender, IMessage data);
+        public delegate void DataReceivedCallback(Connection sender, BufferEntity bufferEntity, IMessage data);
+
         /// <summary>
         /// 断开连接时的回调
         /// </summary>
@@ -69,19 +71,9 @@ namespace Game.Net
         /// <param name="data">数据</param>
         private void _received(byte[] data)
         {
-            // 获取消息序列号
-            // ushort code = GetUnitShort(data, 0);
-            // var msg = ProtoHelper.ParseFrom(code, data, 2, data.Length - 2);
             BufferEntity bufferEntity = BufferEntityFactory.Allocate(data);
             var message = ProtoHelper.ParseFrom(bufferEntity.messageID, bufferEntity.proto, 0, bufferEntity.protoSize);
-            if (MessageRouter.Instance.Running)
-            {
-                if (bufferEntity.isFull == true)
-                {
-                    MessageRouter.Instance.AddMessage(this, message);
-                }
-            }
-            OnDataReceived?.Invoke(this, message);
+            OnDataReceived?.Invoke(this, bufferEntity, message);
         }
 
         /// <summary>
@@ -109,6 +101,15 @@ namespace Game.Net
         public void Send(BufferEntity message)
         {
             this.SocketSend(message.Encoder(false));
+        }
+
+        /// <summary>
+        /// 发送ACK报文
+        /// </summary>
+        /// <param name="message">protobuf类型</param>
+        public void SendACK(BufferEntity message)
+        {
+            Send(message);
         }
 
         /// <summary>

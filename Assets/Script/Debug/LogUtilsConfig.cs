@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Game.LogUtils {
+namespace Game.Log {
     /// <summary>
     /// 打印的类型
     /// </summary>
