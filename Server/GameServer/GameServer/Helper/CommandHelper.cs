@@ -42,7 +42,7 @@ namespace GameServer.Helper
         public static void Help()
         {
             Console.WriteLine(@"Command Help:
-    exit  >>  Exit Game Server
+    exit  >>  Exit GameServer Server
     help  >>  Show Help
 ");
         }

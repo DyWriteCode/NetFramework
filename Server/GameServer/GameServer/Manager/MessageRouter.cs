@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Threading;
+﻿using System.Reflection;
 using Google.Protobuf;
-using UnityEngine;
-using Game.Common;
+using GameServer.Log;
+using GameServer.Net;
 
-namespace Game.Net
+namespace GameServer.Manager.MessageRouters
 {
     /// <summary>
     /// 发送的消息
@@ -26,7 +23,7 @@ namespace Game.Net
     /// <summary>
     /// 网络消息分发器
     /// </summary>
-    public class MessageRouter : Singleton<MessageRouter>
+    public class MessageRouter
     {
         /// <summary>
         /// 工作线程数
@@ -73,6 +70,11 @@ namespace Game.Net
         /// </summary>
         private Dictionary<string, Delegate> delegateMap = new Dictionary<string, Delegate>();
 
+        public MessageRouter()
+        {
+            LogUtils.Log("MessageRouter Initialization Completed");
+        }
+
         /// <summary>
         /// 订阅消息
         /// </summary>
@@ -86,7 +88,7 @@ namespace Game.Net
                 delegateMap[type] = null;
             }
             delegateMap[type] = (MessageHandler<T>)delegateMap[type] + handler;
-            Debug.Log($"{type}:{delegateMap[type].GetInvocationList().Length}");
+            LogUtils.Log($"{type}:{delegateMap[type].GetInvocationList().Length}");
         }
 
         /// <summary>
@@ -122,7 +124,7 @@ namespace Game.Net
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"MessageRouter.Fire error : {e.StackTrace}");
+                    LogUtils.Error($"MessageRouter.Fire error : {e.StackTrace}");
                 }
 
             }
@@ -205,7 +207,7 @@ namespace Game.Net
         /// <param name="state">状态</param>
         private void MessageWork(object state = null)
         {
-            Debug.Log("worker thread start");
+            LogUtils.Log("worker thread start");
             try
             {
                 WorkerCount = Interlocked.Increment(ref WorkerCount);
@@ -235,13 +237,13 @@ namespace Game.Net
             }
             catch (Exception ex)
             {
-                Debug.LogError(ex.ToString());
+                LogUtils.Error(ex.ToString());
             }
             finally
             {
                 WorkerCount = Interlocked.Decrement(ref WorkerCount);
             }
-            Debug.Log("worker thread end");
+            LogUtils.Log("worker thread end");
         }
 
         /// <summary>

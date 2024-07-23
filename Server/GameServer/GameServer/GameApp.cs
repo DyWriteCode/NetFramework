@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GameServer.Common;
-using GameServer.Archive;
-using GameServer.Config;
+using GameServer.Manager.Archive;
+using GameServer.Manager.Config;
+using GameServer.Manager.MessageRouters;
 using GameServer.Log;
 
-namespace GameServer
+namespace GameServer.Manager
 {
     /// <summary>
     /// 统一定义游戏中的管理器,在这个类里面进行初始化
@@ -17,6 +18,7 @@ namespace GameServer
     {
         public static ArchiveManager? ArchiveManager;
         public static ConfigManager? ConfigManager; 
+        public static MessageRouter? MessageRouter;
 
         /// <summary>
         /// 初始化
@@ -25,9 +27,17 @@ namespace GameServer
         {
             base.Init();
             ArchiveManager = new ArchiveManager();
-            LogUtils.Log("ArchiveManager Initialization Completed");
             ConfigManager = new ConfigManager();
-            LogUtils.Log("ConfigManager Initialization Completed");
+            MessageRouter = new MessageRouter();
+        }
+
+        /// <summary>
+        /// 每一帧运行
+        /// </summary>
+        /// <param name="dt">每一针间隔时间</param>
+        public override void Update(float dt)
+        {
+            base.Update(dt);
         }
     }
 }

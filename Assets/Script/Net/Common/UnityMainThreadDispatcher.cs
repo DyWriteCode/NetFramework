@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System;
 using System.Threading.Tasks;
 
-namespace Game
+namespace Game.Common
 {
     /// <summary>
     /// 一个线程安全类，它保存一个队列，其中包含要在下一个 Update（） 方法上执行的操作。它可用于调用主线程，例如 Unity 中的 UI 操作。它是为与 Firebase Unity 插件结合使用而开发的，该插件使用单独的线程进行事件处理

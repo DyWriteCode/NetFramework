@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace GameServer.Archive
+namespace GameServer.Manager.Archive
 {
     /// <summary>
     /// 存放密钥的类

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game.Net
+namespace GameServer.Net
 {
     /// <summary>
     /// Net错误码

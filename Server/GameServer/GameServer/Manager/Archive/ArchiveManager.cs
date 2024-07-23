@@ -2,8 +2,9 @@ using System.Collections;
 using System.Text;
 using GameServer.Common;
 using GameServer.Common.Algorithm;
+using GameServer.Log;
 
-namespace GameServer.Archive
+namespace GameServer.Manager.Archive
 {
     /// <summary>
     /// 保存数据加密解密管理类
@@ -14,11 +15,16 @@ namespace GameServer.Archive
     /// </summary>
     public class ArchiveManager
     {
+        public ArchiveManager() 
+        {
+            LogUtils.Log("ArchiveManager Initialization Completed");
+        }
+
         /// <summary>
         /// 存储着每个基本的数据类型对应的ID前缀用于加解密
         /// {"type", "type id"}
         /// </summary>
-        public static Dictionary<string, string> TypeIdentifier = new Dictionary<string, string>
+        public Dictionary<string, string> TypeIdentifier = new Dictionary<string, string>
         {
             { "string", "10001" },
             { "int", "10002" },

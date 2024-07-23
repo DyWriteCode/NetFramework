@@ -12,3 +12,9 @@ D:\unity\SocketLearn\Server\GameServer\GameServer\obj\Debug\net8.0\refint\GameSe
 D:\unity\SocketLearn\Server\GameServer\GameServer\obj\Debug\net8.0\GameServer.pdb
 D:\unity\SocketLearn\Server\GameServer\GameServer\obj\Debug\net8.0\GameServer.genruntimeconfig.cache
 D:\unity\SocketLearn\Server\GameServer\GameServer\obj\Debug\net8.0\ref\GameServer.dll
+D:\unity\SocketLearn\Server\GameServer\GameServer\obj\Debug\net8.0\GameServer.sourcelink.json
+D:\unity\SocketLearn\Server\GameServer\GameServer\obj\Debug\net8.0\GameServer.csproj.AssemblyReference.cache
+D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\Google.Protobuf.dll
+D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\Google.Protobuf.pdb
+D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\Google.Protobuf.xml
+D:\unity\SocketLearn\Server\GameServer\GameServer\obj\Debug\net8.0\GameServer.csproj.Up2Date

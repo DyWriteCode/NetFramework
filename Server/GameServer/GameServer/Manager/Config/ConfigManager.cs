@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace GameServer.Config
+namespace GameServer.Manager.Config
 {
     /// <summary>
     /// 游戏中所有配置表管理器

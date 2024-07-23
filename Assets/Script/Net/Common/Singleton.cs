@@ -1,4 +1,4 @@
-﻿namespace Game
+﻿namespace Game.Common
 {
     /// <summary>
     /// 单例模式基础类

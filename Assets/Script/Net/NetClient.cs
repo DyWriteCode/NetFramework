@@ -6,6 +6,7 @@ using System.Collections.Concurrent;
 using System.Threading.Tasks;
 using Game.Helper;
 using Game.Log;
+using Game.Common;
 
 namespace Game.Net
 {
@@ -21,11 +22,13 @@ namespace Game.Net
         /// <summary>
         /// 是否正在运行
         /// </summary>
-        private bool running = false;
-        /// <summary>
-        /// 是否正在运行
-        /// </summary>
-        public bool Running { get => running; set => running = value; }
+        public bool Running 
+        {
+            get
+            {
+                return conn != null;
+            }
+        }
         /// <summary>
         /// 超时重传的间隔时间
         /// </summary>
@@ -64,7 +67,6 @@ namespace Game.Net
             Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             if (Connect(socket, ipe) == false)
             {
-                running = false;
                 return false;
             }
             conn = new Connection(socket);
@@ -77,7 +79,6 @@ namespace Game.Net
             MessageRouter.Instance.Init(threadCount);
             // 超时重传逻辑接口启动
             CheckOutTime(host, port, threadCount);
-            running = true;
             return true;
         }
 
@@ -98,7 +99,7 @@ namespace Game.Net
             {
                 if (ex.SocketErrorCode == SocketError.ConnectionRefused)
                 {
-                    LogUtils.Error("DoConnect SocketException:[{0},{1},{2}]{3} ", ex.ErrorCode, ex.SocketErrorCode, ex.NativeErrorCode, ex.ToString());
+                    LogUtils.Error($"{NetErrCode.NET_ERROR_FAIL_TO_CONNECT} : DoConnect SocketException:{ex.ErrorCode},{ex.SocketErrorCode},{ex.NativeErrorCode}]{ex.ToString()}");
                 }
                 return false;
             }
@@ -115,7 +116,6 @@ namespace Game.Net
         /// <param name="sender">与服务器的连接</param>
         private void OnDisconnected(Connection sender)
         {
-            running = false;
             LogUtils.Log("Disconnect To Server");
             EventManager.FireOut("OnDisconnected");
         }

@@ -4,8 +4,9 @@ using System.IO;
 using System.Resources;
 using System.Text;
 using GameServer;
+using GameServer.Manager.Archive;
 
-namespace GameServer.Config
+namespace GameServer.Manager.Config
 {
     /// <summary>
     /// 读取.bytes格式的数据表(以","隔开的数据格式 )

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Net.Sockets;
-using Game.Helper;
+using GameServer.Helper;
 using Google.Protobuf;
-using Game.Log;
-using Game.Common;
+using GameServer.Log;
+using GameServer.Common;
 
-namespace Game.Net
+namespace GameServer.Net
 {
     /// <summary>
     /// 通用网络连接，可以继承此类实现功能拓展
