@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Proto;
 using GameServer.Log;
 using GameServer.Manager;
-using GameServer.Manager.MessageRouters;
 
 namespace GameServer.Net.Service
 {
@@ -78,6 +77,28 @@ namespace GameServer.Net.Service
             heartBeatPairs[conn] = DateTime.Now;
             HeartBeatResponse resp = new HeartBeatResponse();
             conn.Send(resp);
+        }
+
+        /// <summary>
+        /// 当客户端接入
+        /// </summary>
+        /// <param name="conn">客户端连接</param>
+        private void OnClientConnected(Connection conn)
+        {
+            LogUtils.Log("Client access");
+            heartBeatPairs[conn] = DateTime.Now;
+            conn.Set<Session>(new Session());
+        }
+
+        /// <summary>
+        /// 断开的时候
+        /// </summary>
+        /// <param name="conn">客户端连接</param>
+        private void OnDisconnected(Connection conn)
+        {
+            heartBeatPairs.Remove(conn);
+            LogUtils.Log($"The connection is lost : {conn}");
+            // TODO : 清除掉地图内属于本客户端的角色
         }
     }
 }

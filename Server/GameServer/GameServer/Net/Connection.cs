@@ -4,6 +4,7 @@ using GameServer.Helper;
 using Google.Protobuf;
 using GameServer.Log;
 using GameServer.Common;
+using System.Collections.Concurrent;
 
 namespace GameServer.Net
 {
@@ -51,6 +52,27 @@ namespace GameServer.Net
         /// 连接断开回调函数
         /// </summary>
         public DisconnectedCallback OnDisconnected;
+
+        /// <summary>
+        /// 会话ID
+        /// </summary>
+        public int sessionID = 0;
+        /// <summary>
+        /// 发送序号
+        /// </summary>
+        public int sendSN = 0;
+        /// <summary>
+        /// 处理的序号 为了保证报文的顺序性
+        /// </summary>
+        public int handleSN = 0;
+        /// <summary>
+        /// 缓存已经发送的报文
+        /// </summary>
+        public ConcurrentDictionary<int, BufferEntity> waitHandle = new ConcurrentDictionary<int, BufferEntity>();
+        /// <summary>
+        /// 缓存已经发送的报文
+        /// </summary>
+        public ConcurrentDictionary<int, BufferEntity> sendPackage = new ConcurrentDictionary<int, BufferEntity>();
 
         /// <summary>
         /// 构造函数
@@ -101,19 +123,42 @@ namespace GameServer.Net
         }
 
         /// <summary>
-        /// 发送数据
+        /// 发送报文
         /// </summary>
-        /// <param name="message">protobuf类型</param>
-        public void Send(BufferEntity message)
+        /// <param name="message">BufferEntity报文</param>
+        private void SendBuffer(BufferEntity message)
         {
             this.SocketSend(message.Encoder(false));
         }
 
         /// <summary>
-        /// 发送ACK报文
+        /// 发送业务数据
         /// </summary>
-        /// <param name="message">protobuf类型</param>
-        public void SendACK(BufferEntity message)
+        /// <param name="message">Protobuf类型</param>
+        public void Send(IMessage message)
+        {
+            BufferEntity bufferEntity = BufferEntityFactory.Allocate(true);
+            bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+            bufferEntity.time = TimeHelper.ClientNow(); // 暂时先等于0
+            sendSN += 1; // 已经发送的SN加一
+            bufferEntity.sn = sendSN;
+            if (sessionID != 0)
+            {
+                //缓存起来 因为可能需要重发
+                sendPackage.TryAdd(sendSN, bufferEntity);
+            }
+            if (bufferEntity == null)
+            {
+                LogUtils.Log($"{NetErrCode.NET_ERROR_ZERO_BYTE} : Error of sending and receiving 0 bytes");
+            }
+            SendBuffer(bufferEntity);
+        }
+
+        /// <summary>
+        /// 发送ACK数据
+        /// </summary>
+        /// <param name="message">BufferEntity报文</param>
+        public void SendACK(IMessage message)
         {
             Send(message);
         }

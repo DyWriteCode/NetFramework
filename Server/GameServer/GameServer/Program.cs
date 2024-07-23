@@ -27,8 +27,7 @@ namespace GameServer
             LogUtils.Log("Server Start");
             // 加载服务端各模块并运行
             GameApp.Instance.Init();
-            // 加载游戏个服务并且运行
-
+            // TODO : 加载游戏个服务并且运行
             CommandHelper.Run();
             // TODO : 处理游戏退出逻辑
             LogUtils.Log("Server Closed");
