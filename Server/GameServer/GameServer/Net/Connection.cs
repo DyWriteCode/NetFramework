@@ -4,7 +4,7 @@ using GameServer.Helper;
 using Google.Protobuf;
 using GameServer.Log;
 using GameServer.Common;
-using System.Collections.Concurrent;
+using GameServer.Manager;
 
 namespace GameServer.Net
 {
@@ -54,27 +54,6 @@ namespace GameServer.Net
         public DisconnectedCallback OnDisconnected;
 
         /// <summary>
-        /// 会话ID
-        /// </summary>
-        public int sessionID = 0;
-        /// <summary>
-        /// 发送序号
-        /// </summary>
-        public int sendSN = 0;
-        /// <summary>
-        /// 处理的序号 为了保证报文的顺序性
-        /// </summary>
-        public int handleSN = 0;
-        /// <summary>
-        /// 缓存已经发送的报文
-        /// </summary>
-        public ConcurrentDictionary<int, BufferEntity> waitHandle = new ConcurrentDictionary<int, BufferEntity>();
-        /// <summary>
-        /// 缓存已经发送的报文
-        /// </summary>
-        public ConcurrentDictionary<int, BufferEntity> sendPackage = new ConcurrentDictionary<int, BufferEntity>();
-
-        /// <summary>
         /// 构造函数
         /// </summary>
         /// <param name="socket">socket 对象</param>
@@ -86,6 +65,7 @@ namespace GameServer.Net
             secoder.DataReceived += _received;
             secoder.Disconnected += () => OnDisconnected?.Invoke(this);
             secoder.Init(); // 启动解码器
+            BufferEntityFactory.Init();
         }
 
         /// <summary>
@@ -100,6 +80,10 @@ namespace GameServer.Net
             {
                 LogUtils.Error($"[{NetErrCode.NET_ERROR_UNKNOW_PROTOCOL}] The client does not have this proto type : {Type.FilterName}");
                 return;
+            }
+            if (GameApp.MessageRouter.Running == true)
+            {
+                GameApp.MessageRouter.AddMessage(this, message);
             }
             OnDataReceived?.Invoke(this, bufferEntity, message);
         }
@@ -123,42 +107,19 @@ namespace GameServer.Net
         }
 
         /// <summary>
-        /// 发送报文
+        /// 发送数据
         /// </summary>
-        /// <param name="message">BufferEntity报文</param>
-        private void SendBuffer(BufferEntity message)
+        /// <param name="message">protobuf类型</param>
+        public void Send(BufferEntity message)
         {
             this.SocketSend(message.Encoder(false));
         }
 
         /// <summary>
-        /// 发送业务数据
+        /// 发送ACK报文
         /// </summary>
-        /// <param name="message">Protobuf类型</param>
-        public void Send(IMessage message)
-        {
-            BufferEntity bufferEntity = BufferEntityFactory.Allocate(true);
-            bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
-            bufferEntity.time = TimeHelper.ClientNow(); // 暂时先等于0
-            sendSN += 1; // 已经发送的SN加一
-            bufferEntity.sn = sendSN;
-            if (sessionID != 0)
-            {
-                //缓存起来 因为可能需要重发
-                sendPackage.TryAdd(sendSN, bufferEntity);
-            }
-            if (bufferEntity == null)
-            {
-                LogUtils.Log($"{NetErrCode.NET_ERROR_ZERO_BYTE} : Error of sending and receiving 0 bytes");
-            }
-            SendBuffer(bufferEntity);
-        }
-
-        /// <summary>
-        /// 发送ACK数据
-        /// </summary>
-        /// <param name="message">BufferEntity报文</param>
-        public void SendACK(IMessage message)
+        /// <param name="message">protobuf类型</param>
+        public void SendACK(BufferEntity message)
         {
             Send(message);
         }
@@ -184,7 +145,7 @@ namespace GameServer.Net
             {
                 lock (this)
                 {
-                    if (_socket.Connected)
+                    if (_socket.Connected == true)
                     {
                         _socket.BeginSend(data, offset, len, SocketFlags.None, new AsyncCallback(SendCallback), _socket);
                     }
@@ -193,25 +154,6 @@ namespace GameServer.Net
             catch (Exception e)
             {
                 LogUtils.Error($"{NetErrCode.NET_ERROR_SEND_EXCEPTION} : ProcessSend exception: {e.ToString()}");
-            }
-        }
-
-        /// <summary>
-        /// 获取消息序列号
-        /// 前提是data必须是大端字节序
-        /// </summary>
-        /// <param name="data">数据</param>
-        /// <param name="offset">数据的偏移量</param>
-        /// <returns></returns>
-        private ushort GetUnitShort(byte[] data, int offset)
-        {
-            if (BitConverter.IsLittleEndian)
-            {
-                return (ushort)((data[offset] << 8) | data[offset + 1]);
-            }
-            else
-            {
-                return (ushort)((data[offset + 1] << 8) | data[offset]);
             }
         }
 

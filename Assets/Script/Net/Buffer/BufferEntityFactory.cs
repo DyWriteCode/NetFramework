@@ -25,12 +25,23 @@ namespace Game.Net
         /// <summary>
         /// 自定义数据流对象池
         /// </summary>
-        private static Queue<BufferEntity> BufferEntityPool = new Queue<BufferEntity>();
+        private static Queue<BufferEntity> BufferEntityPool = new Queue<BufferEntity>(200);
         /// <summary>
         /// 最大容量
         /// </summary>
         public static int PoolMaxCount = 200;
         private bool disposedValue;
+
+        /// <summary>
+        /// 对buffer factory进行初始化
+        /// </summary>
+        public static void Init()
+        {
+            for (int i = 0; i < PoolMaxCount + 1; i++)
+            {
+                BufferEntityPool.Enqueue(new BufferEntity());
+            }
+        }
 
         /// <summary>
         /// 从对象池中获取BufferEntity

@@ -1,0 +1,66 @@
+﻿[LOG]# 06:00:59-889  ThreadID:1 >>> LogUtils Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 06:00:59-954  ThreadID:1 >>> Server Start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 06:01:00-030  ThreadID:1 >>> ArchiveManager Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 06:01:00-031  ThreadID:1 >>> MessageRouter Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 06:01:00-205  ThreadID:1 >>> Start listening on the port : 32510
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 06:01:00-232  ThreadID:11 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 06:01:00-232  ThreadID:7 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 06:01:00-233  ThreadID:5 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 06:01:00-232  ThreadID:10 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 06:01:00-344  ThreadID:1 >>> Proto.HeartBeatRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 06:01:00-344  ThreadID:1 >>> The network service is started
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 07:08:27-981  ThreadID:12 >>> Client access
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 07:08:30-325  ThreadID:12 >>> 1002 : ProcessReceive exception: System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at GameServer.Net.Connection.GetUnitShort(Byte[] data, Int32 offset) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 172
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 77
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 137
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:137
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:100
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 07:08:30-337  ThreadID:12 >>> 1002 : ProcessReceive exception: System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at GameServer.Net.Connection.GetUnitShort(Byte[] data, Int32 offset) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 172
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 77
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 137
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:137
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:100
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 07:08:42-267  ThreadID:14 >>> The connection is lost : GameServer.Net.Connection
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 07:08:42-280  ThreadID:3 >>> The connection is lost : GameServer.Net.Connection
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->

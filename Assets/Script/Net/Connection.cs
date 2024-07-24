@@ -64,6 +64,7 @@ namespace Game.Net
             secoder.DataReceived += _received;
             secoder.Disconnected += () => OnDisconnected?.Invoke(this);
             secoder.Init(); // 启动解码器
+            BufferEntityFactory.Init();
         }
 
         /// <summary>
@@ -78,6 +79,10 @@ namespace Game.Net
             {
                 LogUtils.Error($"[{NetErrCode.NET_ERROR_UNKNOW_PROTOCOL}] The client does not have this proto type : {Type.FilterName}");
                 return;
+            }
+            if (MessageRouter.Instance.Running == true)
+            {
+                MessageRouter.Instance.AddMessage(this, message);
             }
             OnDataReceived?.Invoke(this, bufferEntity, message);
         }
@@ -139,7 +144,7 @@ namespace Game.Net
             {
                 lock (this)
                 {
-                    if (_socket.Connected)
+                    if (_socket.Connected == true)
                     {
                         _socket.BeginSend(data, offset, len, SocketFlags.None, new AsyncCallback(SendCallback), _socket);
                     }
@@ -148,25 +153,6 @@ namespace Game.Net
             catch (Exception e)
             {
                 LogUtils.Error($"{NetErrCode.NET_ERROR_SEND_EXCEPTION} : ProcessSend exception: {e.ToString()}");
-            }
-        }
-
-        /// <summary>
-        /// 获取消息序列号
-        /// 前提是data必须是大端字节序
-        /// </summary>
-        /// <param name="data">数据</param>
-        /// <param name="offset">数据的偏移量</param>
-        /// <returns></returns>
-        private ushort GetUnitShort(byte[] data, int offset)
-        {
-            if (BitConverter.IsLittleEndian)
-            {
-                return (ushort)((data[offset] << 8) | data[offset + 1]);
-            }
-            else
-            {
-                return (ushort)((data[offset + 1] << 8) | data[offset]);
             }
         }
 

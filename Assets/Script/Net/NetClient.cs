@@ -154,6 +154,12 @@ namespace Game.Net
             }
         }
 
+        /// <summary>
+        /// 处理业务报文
+        /// </summary>
+        /// <param name="sender">服务端连接</param>
+        /// <param name="buffer">传过来的报文</param>
+        /// <param name="data">protobuf类型</param>
         private void HandleLogincPackage(Connection sender, BufferEntity buffer, IMessage data)
         {
             // 接收到的报文是以前处理过的

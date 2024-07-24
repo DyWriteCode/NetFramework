@@ -1,8 +1,14 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace GameServer.Helper
+namespace GameServer.Helper.Command
 {
+    public class CommandEnitly
+    {
+        public string Desc = string.Empty;
+        public Action Callback = null;
+    }
+
     /// <summary>
     /// 命令行帮助类
     /// </summary>
@@ -11,7 +17,8 @@ namespace GameServer.Helper
         /// <summary>
         /// 启动命令行帮助类
         /// </summary>
-        public static void Run()
+        /// <param name="callback">不同命令的回调字典</param>
+        public static void Run(Dictionary<string, CommandEnitly> callbacks)
         {
             bool run = true;
             while (run)
@@ -20,18 +27,21 @@ namespace GameServer.Helper
                 Console.Write("GameServer > ");
                 Console.ForegroundColor = ConsoleColor.Gray;
                 string line = Console.ReadLine();
-                if (line == null)
+                if (string.IsNullOrEmpty(line) == true)
                 {
                     continue;
                 }
-                switch (line.ToLower().Trim())
+                if (callbacks.TryGetValue(line.ToLower().Trim(), out CommandEnitly command) == true)
                 {
-                    case "exit":
+                    command.Callback?.Invoke();
+                    if (line.ToLower().Trim() == "exit")
+                    {
                         run = false;
-                        break;
-                    default:
-                        Help();
-                        break;
+                    }
+                }
+                else
+                {
+                    Help(callbacks);
                 }
             }
         }
@@ -39,12 +49,14 @@ namespace GameServer.Helper
         /// <summary>
         /// 帮助类的help文本
         /// </summary>
-        public static void Help()
+        public static void Help(Dictionary<string, CommandEnitly> info)
         {
-            Console.WriteLine(@"Command Help:
-    exit  >>  Exit GameServer Server
-    help  >>  Show Help
-");
+            Console.WriteLine("Command Help:");
+            Console.WriteLine("-- help  >>  Show Help");
+            foreach (var item in info)
+            {
+                Console.WriteLine($"-- {item.Key}  >>  {item.Value.Desc}");
+            }
         }
     }
 }

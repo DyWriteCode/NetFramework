@@ -1,0 +1,47 @@
+﻿[LOG]# 05:18:12-093  ThreadID:1 >>> LogUtils Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:12-103  ThreadID:1 >>> Server Start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:12-108  ThreadID:1 >>> ArchiveManager Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:12-109  ThreadID:1 >>> MessageRouter Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:12-135  ThreadID:1 >>> Start listening on the port : 32510
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:12-142  ThreadID:10 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:12-142  ThreadID:7 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:12-142  ThreadID:5 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:12-142  ThreadID:11 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:12-246  ThreadID:1 >>> Proto.HeartBeatRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:12-246  ThreadID:1 >>> The network service is started
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:17-234  ThreadID:12 >>> Client access
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:33-660  ThreadID:14 >>> The connection is lost : GameServer.Net.Connection
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 05:18:33-660  ThreadID:15 >>> The connection is lost : GameServer.Net.Connection
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 05:18:42-423  ThreadID:12 >>> 0
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Buffer\BufferEntityFactory.cs::GameServer.Net.BufferEntity Allocate(Boolean) Line:43
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Buffer\BufferEntityFactory.cs::GameServer.Net.BufferEntity Allocate(Byte[]) Line:67
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs::Void _received(Byte[]) Line:76
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:137
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:100
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
