@@ -178,6 +178,8 @@ namespace Game.Log {
                         Console.ForegroundColor = ConsoleColor.Gray;
                         break;
                     case LogColor.None:
+                        Console.WriteLine(msg);
+                        break;
                     default:
                         Console.WriteLine(msg);
                         break;

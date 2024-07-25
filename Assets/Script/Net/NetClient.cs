@@ -72,9 +72,6 @@ namespace Game.Net
             conn = new Connection(socket);
             conn.OnDisconnected += OnDisconnected;
             conn.OnDataReceived += OnDataReceived;
-            sessionID = 0;
-            sendSN = 0;
-            handleSN = 0;
             // 启动消息分发器
             MessageRouter.Instance.Init(threadCount);
             // 超时重传逻辑接口启动
@@ -168,16 +165,15 @@ namespace Game.Net
                 return;
             }
             // 已经收到的报文是错序的
-            //LogUtils.Log(handleSN);
-            //if (buffer.sn - handleSN > 1)
-            //{
-            //    if (waitHandle.TryAdd(buffer.sn, buffer))
-            //    {
-            //        LogUtils.Log($"Packets are received in the wrong order :{buffer.sn}");
-            //    }
-            //    return;
-            //}
-            // 更新已处理的报文 
+            if (buffer.sn - handleSN > 1)
+            {
+                if (waitHandle.TryAdd(buffer.sn, buffer))
+                {
+                    LogUtils.Log($"Packets are received in the wrong order :{buffer.sn}");
+                }
+                return;
+            }
+            // 更新已处理的报文
             handleSN = buffer.sn;
             if (MessageRouter.Instance.Running)
             {

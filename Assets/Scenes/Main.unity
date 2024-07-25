@@ -306,6 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 269992166}
   - component: {fileID: 269992165}
+  - component: {fileID: 269992167}
   m_Layer: 0
   m_Name: NetStart
   m_TagString: Untagged
@@ -345,6 +346,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &269992167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269992164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea72f7ece2d79841b21891f2e24a82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &722992930
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,7 +58,7 @@ namespace Game.Net
             // 6号Layer无视碰撞，可以把角色，NPC，怪物，全都放到6号图层
             Physics.IgnoreLayerCollision(6, 6, true);
             // 先把自己DontDestroyOnLoad
-            DontDestroyOnLoad(gameObject);
+            KeepAlive.Add(gameObject);
             // 遍历保持活跃的列表DontDestroyOnLoad
             foreach (GameObject alive in KeepAlive)
             {
@@ -90,7 +90,7 @@ namespace Game.Net
             UnityMainThreadDispatcher.Instance().Enqueue(() =>
             {
                 int ms = Math.Max(1, (int)Math.Round(t.TotalMilliseconds));
-                NetworkLatencyText.text += $"Network Latency :{ms} ms";
+                NetworkLatencyText.text = $"Network Latency :{ms} ms";
             });
         }
 

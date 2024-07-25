@@ -13,6 +13,7 @@ using System.Threading;
 using System.Collections.Concurrent;
 using GameServer.Helper;
 using System.Collections;
+using System.Net.Sockets;
 
 namespace GameServer.Net.Service
 {
@@ -36,23 +37,7 @@ namespace GameServer.Net.Service
         /// <summary>
         /// 会话ID
         /// </summary>
-        public int sessionID = 0;
-        /// <summary>
-        /// 发送序号
-        /// </summary>
-        public int sendSN = 0;
-        /// <summary>
-        /// 处理的序号 为了保证报文的顺序性
-        /// </summary>
-        public int handleSN = 0;
-        /// <summary>
-        /// 缓存已经发送的报文
-        /// </summary>
-        public ConcurrentDictionary<int, BufferEntity> waitHandle = new ConcurrentDictionary<int, BufferEntity>();
-        /// <summary>
-        /// 缓存已经发送的报文
-        /// </summary>
-        public ConcurrentDictionary<int, BufferEntity> sendPackage = new ConcurrentDictionary<int, BufferEntity>();
+        public int sessionID = 1000;
 
         /// <summary>
         /// 初始化
@@ -68,75 +53,17 @@ namespace GameServer.Net.Service
         /// <summary>
         /// 接收到数据
         /// </summary>
-        /// <param name="sender">与服务器的连接</param>
-        /// <param name="bufferEntity">发送回来的报文</param>
-        /// <param name="data"></param>
+        /// <param name="sender">与客户端的连接</param>
+        /// <param name="buffer">发送回来的报文</param>
+        /// <param name="data">protobuf类型</param>
         private void OnDataReceived(Connection sender, BufferEntity buffer, IMessage data)
         {
-            if (sessionID == 0 && buffer.session != 0)
+            if (sender.Get<Session>().sessionID == 0 && buffer.session == 0)
             {
-                LogUtils.Log($"The session ID sent to us by the service is :{buffer.session}");
-                sessionID = buffer.session;
+                sessionID += 1;
+                sender.Get<Session>().sessionID = sessionID;
             }
-            switch (buffer.messageType)
-            {
-                case (int)MessageType.ACK: //ACK确认报文
-                    BufferEntity bufferEntity;
-                    if (sendPackage.TryRemove(buffer.sn, out bufferEntity))
-                    {
-                        LogUtils.Log($"An ACK acknowledgement packet is received with the serial number : {buffer.sn}");
-                    }
-                    break;
-                case (int)MessageType.Logic: //业务报文
-                    BufferEntity ackBuffer = BufferEntityFactory.Allocate();
-                    ackBuffer.Init(buffer);
-                    sender.SendACK(ackBuffer); // 先告诉客户端 我已经收到这个报文
-                    // 再来处理业务报文
-                    HandleLogincPackage(sender, buffer, data);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// 处理业务报文
-        /// </summary>
-        /// <param name="sender">服务端连接</param>
-        /// <param name="buffer">传过来的报文</param>
-        /// <param name="data">protobuf类型</param>
-        private void HandleLogincPackage(Connection sender, BufferEntity buffer, IMessage data)
-        {
-            // 接收到的报文是以前处理过的
-            if (buffer.sn <= handleSN)
-            {
-                return;
-            }
-            // 已经收到的报文是错序的
-            //if (buffer.sn - handleSN > 1)
-            //{
-            //    if (waitHandle.TryAdd(buffer.sn, buffer))
-            //    {
-            //        LogUtils.Log($"Packets are received in the wrong order :{buffer.sn}");
-            //    }
-            //    return;
-            //}
-            // 更新已处理的报文 
-            handleSN = buffer.sn;
-            if (GameApp.MessageRouter.Running == true)
-            {
-                if (buffer.isFull == true)
-                {
-                    GameApp.MessageRouter.AddMessage(sender, data);
-                }
-            }
-            // 检测缓存的数据 有没有包含下一条可以处理的数据
-            BufferEntity nextBuffer;
-            if (waitHandle.TryRemove(handleSN + 1, out nextBuffer))
-            {
-                // 这里是判断缓冲区有没有存在下一条数据
-                HandleLogincPackage(sender, nextBuffer, data);
-            }
+            sender.Get<Session>().Handle(sender, buffer, data);
         }
 
         /// <summary>
@@ -216,14 +143,14 @@ namespace GameServer.Net.Service
             if (conn != null)
             {
                 var bufferEntity = BufferEntityFactory.Allocate();
-                bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                bufferEntity.Init(conn.Get<Session>().sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
                 bufferEntity.time = TimeHelper.ClientNow(); // 暂时先等于0
-                sendSN += 1; // 已经发送的SN加一
-                bufferEntity.sn = sendSN;
-                if (sessionID != 0)
+                conn.Get<Session>().sendSN += 1; // 已经发送的SN加一
+                bufferEntity.sn = conn.Get<Session>().sendSN;
+                if (conn.Get<Session>().sessionID != 0)
                 {
                     //缓存起来 因为可能需要重发
-                    sendPackage.TryAdd(sendSN, bufferEntity);
+                    conn.Get<Session>().sendPackage.TryAdd(conn.Get<Session>().sendSN, bufferEntity);
                 }
                 if (bufferEntity == null)
                 {
