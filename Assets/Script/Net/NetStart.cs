@@ -5,6 +5,7 @@ using UnityEngine;
 using Proto;
 using UnityEngine.UI;
 using Game.Log;
+using Game.Common;
 
 namespace Game.Net
 {
@@ -32,7 +33,7 @@ namespace Game.Net
         /// <summary>
         /// 显示网络延迟的text
         /// </summary>
-        public Text NetworklatencyText;
+        public Text NetworkLatencyText;
 
         /// <summary>
         /// 每次心跳包发送的间隔时间
@@ -49,6 +50,9 @@ namespace Game.Net
         /// </summary>
         DateTime lastBeatTime = DateTime.MinValue;
 
+        /// <summary>
+        /// 初始化
+        /// </summary>
         public void Start()
         {
             // 6号Layer无视碰撞，可以把角色，NPC，怪物，全都放到6号图层
@@ -66,11 +70,28 @@ namespace Game.Net
                 savePath = Application.streamingAssetsPath,
             });
             // 连接服务器
-            NetClient.Instance.ConnectToServer(HOST, PORT, 10);
+            NetClient.Instance.ConnectToServer(HOST, PORT, 1);
             //心跳包任务，每秒1次
             StartCoroutine(SendHeartMessage());
+            MessageRouter.Instance.Subscribe<HeartBeatResponse>(_HeartBeatResponse);
             // 注册out事件
             EventManager.RegisterOut("OnDisconnected", this, "OnDisconnected");
+        }
+
+        /// <summary>
+        /// 接收到服务器心跳包
+        /// </summary>
+        /// <param name="sender">服务器</param>
+        /// <param name="message">发送过来的信息</param>
+        private void _HeartBeatResponse(Connection sender, HeartBeatResponse message)
+        {
+            var t = DateTime.Now - lastBeatTime;
+            LogUtils.Log($"Heartbeat response from the server : ms = {t.TotalMilliseconds}");
+            UnityMainThreadDispatcher.Instance().Enqueue(() =>
+            {
+                int ms = Math.Max(1, (int)Math.Round(t.TotalMilliseconds));
+                NetworkLatencyText.text += $"Network Latency :{ms} ms";
+            });
         }
 
         /// <summary>
@@ -82,7 +103,7 @@ namespace Game.Net
             while (NetClient.Instance.Running == true)
             {
                 yield return new WaitForSeconds(beatTime);
-                NetClient.Instance.Send(beatRequest);
+                NetClient.Instance.Send(beatRequest, true);
                 lastBeatTime = DateTime.Now;
             }
         }

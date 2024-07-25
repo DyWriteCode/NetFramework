@@ -124,7 +124,7 @@ namespace Game.Net
         /// 接收到数据
         /// </summary>
         /// <param name="sender">与服务器的连接</param>
-        /// <param name="bufferEntity">发送回来的报文</param>
+        /// <param name="buffer">发送回来的报文</param>
         /// <param name="data"></param>
         private void OnDataReceived(Connection sender, BufferEntity buffer, IMessage data)
         {
@@ -168,14 +168,15 @@ namespace Game.Net
                 return;
             }
             // 已经收到的报文是错序的
-            if (buffer.sn - handleSN > 1)
-            {
-                if (waitHandle.TryAdd(buffer.sn, buffer))
-                {
-                    LogUtils.Log($"Packets are received in the wrong order :{buffer.sn}");
-                }
-                return;
-            }
+            //LogUtils.Log(handleSN);
+            //if (buffer.sn - handleSN > 1)
+            //{
+            //    if (waitHandle.TryAdd(buffer.sn, buffer))
+            //    {
+            //        LogUtils.Log($"Packets are received in the wrong order :{buffer.sn}");
+            //    }
+            //    return;
+            //}
             // 更新已处理的报文 
             handleSN = buffer.sn;
             if (MessageRouter.Instance.Running)
@@ -213,7 +214,7 @@ namespace Game.Net
         /// 发送消息
         /// </summary>
         /// <param name="message">需要发送的数据</param>
-        public void Send(IMessage message)
+        public void Send(IMessage message, bool isAck = false)
         {
             if (conn != null)
             {
@@ -231,7 +232,7 @@ namespace Game.Net
                 {
                     LogUtils.Log($"{NetErrCode.NET_ERROR_ZERO_BYTE} : Error of sending and receiving 0 bytes");
                 }
-                conn.Send(bufferEntity);
+                conn.Send(bufferEntity, isAck);
             }
         }
 

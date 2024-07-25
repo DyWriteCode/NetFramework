@@ -12,6 +12,7 @@ using System.Reflection.Metadata;
 using System.Threading;
 using System.Collections.Concurrent;
 using GameServer.Helper;
+using System.Collections;
 
 namespace GameServer.Net.Service
 {
@@ -112,14 +113,14 @@ namespace GameServer.Net.Service
                 return;
             }
             // 已经收到的报文是错序的
-            if (buffer.sn - handleSN > 1)
-            {
-                if (waitHandle.TryAdd(buffer.sn, buffer))
-                {
-                    LogUtils.Log($"Packets are received in the wrong order :{buffer.sn}");
-                }
-                return;
-            }
+            //if (buffer.sn - handleSN > 1)
+            //{
+            //    if (waitHandle.TryAdd(buffer.sn, buffer))
+            //    {
+            //        LogUtils.Log($"Packets are received in the wrong order :{buffer.sn}");
+            //    }
+            //    return;
+            //}
             // 更新已处理的报文 
             handleSN = buffer.sn;
             if (GameApp.MessageRouter.Running == true)
@@ -181,7 +182,7 @@ namespace GameServer.Net.Service
         {
             heartBeatPairs[conn] = DateTime.Now;
             HeartBeatResponse resp = new HeartBeatResponse();
-            Send(conn, resp);
+            Send(conn, resp, true);
         }
 
         /// <summary>
@@ -210,7 +211,7 @@ namespace GameServer.Net.Service
         /// 发送消息
         /// </summary>
         /// <param name="message">需要发送的数据</param>
-        public void Send(Connection conn, IMessage message)
+        public void Send(Connection conn, IMessage message, bool isAck = false)
         {
             if (conn != null)
             {
@@ -228,7 +229,7 @@ namespace GameServer.Net.Service
                 {
                     LogUtils.Log($"{NetErrCode.NET_ERROR_ZERO_BYTE} : Error of sending and receiving 0 bytes");
                 }
-                conn.Send(bufferEntity);
+                conn.Send(bufferEntity, isAck);
             }
         }
 
@@ -236,7 +237,7 @@ namespace GameServer.Net.Service
         /// 发送消息
         /// </summary>
         /// <param name="message">需要发送的数据</param>
-        public void Send(Connection conn, byte[] message)
+        public void Send(Connection conn, byte[] message, bool isAck = false)
         {
             if (conn != null)
             {

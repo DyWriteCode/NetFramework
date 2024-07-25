@@ -1,0 +1,898 @@
+﻿[LOG]# 01:38:29-249  ThreadID:1 >>> LogUtils Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:29-309  ThreadID:1 >>> Server Start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:29-395  ThreadID:1 >>> ArchiveManager Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:29-396  ThreadID:1 >>> MessageRouter Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:29-659  ThreadID:1 >>> Start listening on the port : 32510
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:29-693  ThreadID:11 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:29-693  ThreadID:10 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:29-693  ThreadID:5 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:29-693  ThreadID:7 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:29-794  ThreadID:1 >>> Proto.HeartBeatRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:29-795  ThreadID:1 >>> The network service is started
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:37-715  ThreadID:12 >>> Client access
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-288  ThreadID:12 >>> Proto Type registry：10000 - proto.Vec3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-288  ThreadID:12 >>> Proto Type registry：10001 - proto.Damage
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-288  ThreadID:12 >>> Proto Type registry：10002 - proto.CastInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10003 - proto.ItemInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10004 - proto.NetActor
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10005 - proto.NetEntity
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10006 - proto.SkillInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10007 - proto.ItemUpdate
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10008 - summer.proto.Rpc
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10009 - proto.ChatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10010 - proto.ChatResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10011 - proto.SpellRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10012 - proto.InventoryInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10013 - proto.NetEntitySync
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10014 - proto.ReviveRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10015 - proto.SpellResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10016 - proto.DamageResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10017 - proto.ItemUseRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-289  ThreadID:12 >>> Proto Type registry：10018 - proto.PropertyUpdate
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10019 - summer.proto.Vector3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10020 - proto.GameEnterRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10021 - proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10022 - proto.InventoryRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10023 - proto.UserLoginRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10024 - proto.GameEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10025 - proto.HeartBeatResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10026 - proto.InventoryResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10027 - proto.PickupItemRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10028 - proto.SpellFailResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10029 - proto.UserLoginResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10030 - proto.EntitySyncResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10031 - proto.ItemDiscardRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10032 - proto.SpaceEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10033 - proto.EntityEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10034 - proto.UserRegisterRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10035 - proto.CharacterListRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10036 - proto.ItemPlacementRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10037 - proto.UserRegisterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-290  ThreadID:12 >>> Proto Type registry：10038 - proto.CharacterListResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10039 - proto.CharacterCreateRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10040 - proto.CharacterDeleteRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10041 - proto.ChracterCreateResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10042 - proto.PropertyUpdateResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10043 - proto.SpaceEntitySyncRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10044 - proto.CharacterDeleteResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10045 - proto.SpaceEntitySyncResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10046 - summer.proto.InstantiateRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10047 - proto.SpaceCharacterLeaveResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10048 - proto.PropertyUpdate.PropertyValue
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:39-291  ThreadID:12 >>> Proto Type registry：10049 - proto.SpaceCharactersEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:39-474  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:39-474  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeMethod(System.Object, Void**, System.Signature, Boolean) Line:0
+    ::System.Object InvokeDirectByRefWithFewArgs(System.Object, System.Span`1[System.Object], System.Reflection.BindingFlags) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:39-974  ThreadID:10 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:40-473  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:40-974  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:41-480  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:41-979  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:42-483  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:42-985  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:43-488  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:43-991  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:44-491  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:44-993  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:45-494  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:45-999  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:46-502  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:47-005  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:47-506  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:38:48-009  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:38:48-366  ThreadID:14 >>> The connection is lost : GameServer.Net.Connection
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:40:15-492  ThreadID:12 >>> Client access
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:16-884  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:17-310  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:17-813  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:18-315  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:18-815  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:19-317  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:19-819  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:20-322  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:20-830  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:21-330  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:21-831  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:22-332  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:22-833  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:23-335  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:23-836  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:24-341  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:24-842  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:25-345  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:25-846  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:26-347  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:26-849  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:27-352  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:27-855  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:28-357  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:28-858  ThreadID:5 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# 01:40:29-359  ThreadID:7 >>> MessageRouter.Fire error :    at System.Text.ValueStringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ReadOnlySpan`1 args)
+   at System.String.Format(String format, Object[] args)
+   at GameServer.Log.LogUtils.Log(String msg, Object[] args) in D:\unity\SocketLearn\Server\GameServer\GameServer\Debug\LogUtils.cs:line 263
+   at GameServer.Net.Service.NetService._HeartBeatRequest(Connection conn, HeartBeatRequest msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Service\NetService.cs:line 183
+   at GameServer.Manager.MessageRouters.MessageRouter.Fire[T](Connection sender, T msg) in D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs:line 123
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeStub_MessageRouter.Fire(System.Object, System.Span`1[System.Object]) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:259
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageRouter.cs::Void MessageWork(System.Object) Line:234
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:40:29-800  ThreadID:12 >>> The connection is lost : GameServer.Net.Connection
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# 01:40:29-802  ThreadID:12 >>> The connection is lost : GameServer.Net.Connection
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->

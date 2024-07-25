@@ -119,36 +119,37 @@ namespace Game.Net
                 LogUtils.Error($"{NetErrCode.NET_ERROR_ZERO_BYTE} : Error of sending and receiving 0 bytes");
                 return;
             }
+            DataReceived?.Invoke(buffer);
             // 解析数据
-            int remain = startIndex + len;
-            int offset = 0;
-            while (remain > 4)
-            {
-                int msgLen = GetInt32Biggest(buffer, offset);
-                if (remain < msgLen + 4)
-                {
-                    break;
-                }
-                // 解析消息
-                byte[] data = new byte[msgLen];
-                Array.Copy(buffer, offset + 4, data, 0, msgLen);
-                // 解析消息
-                try
-                {
-                    DataReceived?.Invoke(data);
-                }
-                catch (Exception e)
-                {
-                    LogUtils.Error($"{NetErrCode.NET_ERROR_ILLEGAL_PACKAGE} : ProcessReceive exception: {e.ToString()}");
-                }
-                offset += msgLen + 4;
-                remain -= msgLen + 4;
-            }
-            if (remain > 0)
-            {
-                Array.Copy(buffer, offset, buffer, 0, remain);
-            }
-            startIndex = remain;
+            //int remain = startIndex + len;
+            //int offset = 0;
+            //while (remain > 4)
+            //{
+            //    int msgLen = GetInt32Biggest(buffer, offset);
+            //    if (remain < msgLen + 4)
+            //    {
+            //        break;
+            //    }
+            //    // 解析消息
+            //    byte[] data = new byte[msgLen];
+            //    Array.Copy(buffer, offset + 4, data, 0, msgLen);
+            //    // 解析消息
+            //    try
+            //    {
+                    
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        LogUtils.Error($"{NetErrCode.NET_ERROR_ILLEGAL_PACKAGE} : ProcessReceive exception: {e.ToString()}");
+            //    }
+            //    offset += msgLen + 4;
+            //    remain -= msgLen + 4;
+            //}
+            //if (remain > 0)
+            //{
+            //    Array.Copy(buffer, offset, buffer, 0, remain);
+            //}
+            //startIndex = remain;
         }
 
         /// <summary>

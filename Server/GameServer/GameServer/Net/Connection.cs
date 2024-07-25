@@ -101,8 +101,6 @@ namespace GameServer.Net
             {
                 // throws if client process has already closed
             }
-            _socket.Close();
-            _socket = null;
             OnDisconnected?.Invoke(this);
         }
 
@@ -110,9 +108,9 @@ namespace GameServer.Net
         /// 发送数据
         /// </summary>
         /// <param name="message">protobuf类型</param>
-        public void Send(BufferEntity message)
+        public void Send(BufferEntity message, bool isAck = false)
         {
-            this.SocketSend(message.Encoder(false));
+            this.SocketSend(message.Encoder(isAck));
         }
 
         /// <summary>
@@ -121,7 +119,7 @@ namespace GameServer.Net
         /// <param name="message">protobuf类型</param>
         public void SendACK(BufferEntity message)
         {
-            Send(message);
+            Send(message, true);
         }
 
         /// <summary>

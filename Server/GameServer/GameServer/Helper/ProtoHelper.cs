@@ -2,6 +2,7 @@
 using Google.Protobuf;
 using Google.Protobuf.Reflection;
 using GameServer.Log;
+using Proto;
 
 namespace GameServer.Helper
 {
@@ -87,10 +88,10 @@ namespace GameServer.Helper
         }
 
         /// <summary>
-        /// 通过int值来获取对应的protobuf类型
+        /// 通过protobuf类型来获取对应的int值
         /// </summary>
-        /// <param name="type">protobuf类型</param>
-        /// <returns>int值来对应的protobuf类型</returns>
+        /// <param name="code">protobuf类型对应的int值</param>
+        /// <returns>protobuf类型</returns>
         public static int SeqCode(Type type)
         {
             int result = 0;
@@ -99,10 +100,10 @@ namespace GameServer.Helper
         }
 
         /// <summary>
-        /// 通过protobuf类型来获取对应的int值
+        /// 通过int值来获取对应的protobuf类型
         /// </summary>
-        /// <param name="code">protobuf类型对应的int值</param>
-        /// <returns>protobuf类型</returns>
+        /// <param name="type">protobuf类型</param>
+        /// <returns>int值来对应的protobuf类型</returns>
         public static Type SeqType(int code)
         {
             Type type = null;
@@ -121,11 +122,18 @@ namespace GameServer.Helper
         public static IMessage ParseFrom(int typeCode, byte[] data, int offset, int len)
         {
             Type t = ProtoHelper.SeqType(typeCode);
+            if (t == typeof(HeartBeatRequest))
+            {
+                return new HeartBeatRequest();
+            }
+            if (t == typeof(HeartBeatResponse))
+            {
+                return new HeartBeatResponse();
+            }
             var desc = t.GetProperty("Descriptor").GetValue(t) as MessageDescriptor;
             var msg = desc.Parser.ParseFrom(data, offset, len);
-            LogUtils.Log($"Descriptor Message：code={typeCode} - {msg}");
+            LogUtils.Log($"Descriptor Message：code={typeCode} - {ProtoHelper.SeqType(typeCode)}");
             return msg;
         }
     }
 }
-
