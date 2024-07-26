@@ -481,7 +481,7 @@ namespace GameServer.Log {
             StringBuilder sb = new StringBuilder(config.logPrefix, 100);
             if(config.enableTime) 
             {
-                sb.AppendFormat(" {0}", DateTime.Now.ToString("hh:mm:ss-fff"));
+                sb.AppendFormat(" [{0}]", DateTime.Now.ToString("yy:hh:mm:ss-fff"));
             }
             if(config.enableThreadID)
             {
