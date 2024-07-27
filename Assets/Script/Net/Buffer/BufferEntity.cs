@@ -108,11 +108,11 @@ namespace Game.Net
         /// <returns>打包好后的数据</returns>
         public byte[] Encoder(bool isAck = false)
         {
-            byte[] data = new byte[32 + protoSize];
             if (isAck == true)
             {
                 protoSize = 0; // 发送的业务数据的大小
             }
+            byte[] data = new byte[32 + protoSize];
             byte[] _length = BitConverter.GetBytes(protoSize);
             byte[] _session = BitConverter.GetBytes(session);
             byte[] _sn = BitConverter.GetBytes(sn);

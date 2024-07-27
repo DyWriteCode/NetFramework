@@ -143,7 +143,14 @@ namespace GameServer.Net.Service
             if (conn != null)
             {
                 var bufferEntity = BufferEntityFactory.Allocate();
-                bufferEntity.Init(conn.Get<Session>().sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                if (isAck == true)
+                {
+                    bufferEntity.Init(sessionID, 0, 0, MessageType.ACK.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                }
+                else
+                {
+                    bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                }
                 bufferEntity.time = TimeHelper.ClientNow(); // 暂时先等于0
                 conn.Get<Session>().sendSN += 1; // 已经发送的SN加一
                 bufferEntity.sn = conn.Get<Session>().sendSN;

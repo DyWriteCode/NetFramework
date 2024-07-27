@@ -46,8 +46,9 @@ namespace GameServer.Net
             switch (buffer.messageType)
             {
                 case (int)MessageType.ACK: //ACK确认报文
+                    LogUtils.Log($"An ACK acknowledgement packet is received with the serial number : {buffer.sn}");
                     BufferEntity bufferEntity;
-                    if (sendPackage.TryRemove(buffer.sn, out bufferEntity))
+                    if (sendPackage.TryRemove(buffer.sn, out bufferEntity) == true)
                     {
                         LogUtils.Log($"An ACK acknowledgement packet is received with the serial number : {buffer.sn}");
                     }

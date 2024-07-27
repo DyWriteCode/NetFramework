@@ -215,7 +215,14 @@ namespace Game.Net
             if (conn != null)
             {
                 var bufferEntity = BufferEntityFactory.Allocate();
-                bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                if (isAck == true)
+                {
+                    bufferEntity.Init(sessionID, 0, 0, MessageType.ACK.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                }
+                else
+                {
+                    bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                }
                 bufferEntity.time = TimeHelper.ClientNow(); // 暂时先等于0
                 sendSN += 1; // 已经发送的SN加一
                 bufferEntity.sn = sendSN;
@@ -275,7 +282,14 @@ namespace Game.Net
                 {
                     package.recurCount += 1;
                     LogUtils.Log($"Time out resend count : {package.recurCount}");
-                    Send(package.Encoder());
+                    if (package.protoSize == 0)
+                    {
+                        Send(package.Encoder(true));
+                    }
+                    else
+                    {
+                        Send(package.Encoder(false));
+                    }
                 }
             }
             CheckOutTime(host, port, threadCount);
