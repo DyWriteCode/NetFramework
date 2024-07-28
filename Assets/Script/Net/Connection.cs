@@ -4,6 +4,7 @@ using Game.Helper;
 using Google.Protobuf;
 using Game.Log;
 using Game.Common;
+using Proto;
 
 namespace Game.Net
 {
@@ -82,6 +83,10 @@ namespace Game.Net
             }
             if (MessageRouter.Instance.Running == true)
             {
+                if (message.GetType() == typeof(UserLoginResponse))
+                {
+                    LogUtils.Log(1);
+                }
                 MessageRouter.Instance.AddMessage(this, message);
             }
             OnDataReceived?.Invoke(this, bufferEntity, message);

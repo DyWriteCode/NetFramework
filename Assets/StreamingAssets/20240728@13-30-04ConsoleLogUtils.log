@@ -1,0 +1,224 @@
+﻿[LOG]# [2024:01:30:04-231]  ThreadID:1 >>> Connect To Server
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:05-532]  ThreadID:87 >>> The session ID sent to us by the service is :1002
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:05-534]  ThreadID:79 >>> Heartbeat response from the server : ms = 2.513
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:05-953]  ThreadID:66 >>> An ACK acknowledgement packet is received with the serial number : 2
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:05-953]  ThreadID:79 >>> Heartbeat response from the server : ms = 1.297
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:06-455]  ThreadID:87 >>> An ACK acknowledgement packet is received with the serial number : 3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:06-455]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:06-956]  ThreadID:67 >>> An ACK acknowledgement packet is received with the serial number : 4
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:06-956]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:07-458]  ThreadID:67 >>> An ACK acknowledgement packet is received with the serial number : 5
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:07-458]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:07-962]  ThreadID:53 >>> An ACK acknowledgement packet is received with the serial number : 6
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:07-962]  ThreadID:79 >>> Heartbeat response from the server : ms = 1.0089
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:08-464]  ThreadID:83 >>> An ACK acknowledgement packet is received with the serial number : 7
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:08-464]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:08-967]  ThreadID:86 >>> An ACK acknowledgement packet is received with the serial number : 8
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:08-968]  ThreadID:79 >>> Heartbeat response from the server : ms = 1.0048
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:09-077]  ThreadID:83 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:09-078]  ThreadID:79 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:09-079]  ThreadID:79 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:01:30:09-079]  ThreadID:1 >>> null
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetStart.cs::Void <_UserLoginResponse>b__0() Line:89
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Boolean MoveNext() Line:71
+    ::Void InvokeMoveNext(System.Collections.IEnumerator, IntPtr) Line:0
+    ::UnityEngine.Coroutine StartCoroutineManaged2(UnityEngine.MonoBehaviour, System.Collections.IEnumerator) Line:0
+    ::UnityEngine.Coroutine StartCoroutine(System.Collections.IEnumerator) Line:0
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void <Enqueue>b__0() Line:28
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void Update() Line:108
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:01:30:09-085]  ThreadID:1 >>> null
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetStart.cs::Void <_UserLoginResponse>b__0() Line:89
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Boolean MoveNext() Line:71
+    ::Void InvokeMoveNext(System.Collections.IEnumerator, IntPtr) Line:0
+    ::UnityEngine.Coroutine StartCoroutineManaged2(UnityEngine.MonoBehaviour, System.Collections.IEnumerator) Line:0
+    ::UnityEngine.Coroutine StartCoroutine(System.Collections.IEnumerator) Line:0
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void <Enqueue>b__0() Line:28
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void Update() Line:108
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:09-469]  ThreadID:80 >>> An ACK acknowledgement packet is received with the serial number : 10
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:09-469]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:09-971]  ThreadID:68 >>> An ACK acknowledgement packet is received with the serial number : 11
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:09-971]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:10-144]  ThreadID:80 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:10-144]  ThreadID:79 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:10-144]  ThreadID:79 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:01:30:10-147]  ThreadID:1 >>> null
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetStart.cs::Void <_UserLoginResponse>b__0() Line:89
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Boolean MoveNext() Line:71
+    ::Void InvokeMoveNext(System.Collections.IEnumerator, IntPtr) Line:0
+    ::UnityEngine.Coroutine StartCoroutineManaged2(UnityEngine.MonoBehaviour, System.Collections.IEnumerator) Line:0
+    ::UnityEngine.Coroutine StartCoroutine(System.Collections.IEnumerator) Line:0
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void <Enqueue>b__0() Line:28
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void Update() Line:108
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:01:30:10-147]  ThreadID:1 >>> null
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetStart.cs::Void <_UserLoginResponse>b__0() Line:89
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Boolean MoveNext() Line:71
+    ::Void InvokeMoveNext(System.Collections.IEnumerator, IntPtr) Line:0
+    ::UnityEngine.Coroutine StartCoroutineManaged2(UnityEngine.MonoBehaviour, System.Collections.IEnumerator) Line:0
+    ::UnityEngine.Coroutine StartCoroutine(System.Collections.IEnumerator) Line:0
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void <Enqueue>b__0() Line:28
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void Update() Line:108
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:10-472]  ThreadID:87 >>> An ACK acknowledgement packet is received with the serial number : 13
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:10-473]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:10-935]  ThreadID:69 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:10-936]  ThreadID:79 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:10-936]  ThreadID:79 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:01:30:10-941]  ThreadID:1 >>> null
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetStart.cs::Void <_UserLoginResponse>b__0() Line:89
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Boolean MoveNext() Line:71
+    ::Void InvokeMoveNext(System.Collections.IEnumerator, IntPtr) Line:0
+    ::UnityEngine.Coroutine StartCoroutineManaged2(UnityEngine.MonoBehaviour, System.Collections.IEnumerator) Line:0
+    ::UnityEngine.Coroutine StartCoroutine(System.Collections.IEnumerator) Line:0
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void <Enqueue>b__0() Line:28
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void Update() Line:108
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:01:30:10-941]  ThreadID:1 >>> null
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetStart.cs::Void <_UserLoginResponse>b__0() Line:89
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Boolean MoveNext() Line:71
+    ::Void InvokeMoveNext(System.Collections.IEnumerator, IntPtr) Line:0
+    ::UnityEngine.Coroutine StartCoroutineManaged2(UnityEngine.MonoBehaviour, System.Collections.IEnumerator) Line:0
+    ::UnityEngine.Coroutine StartCoroutine(System.Collections.IEnumerator) Line:0
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void <Enqueue>b__0() Line:28
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void Update() Line:108
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:10-974]  ThreadID:87 >>> An ACK acknowledgement packet is received with the serial number : 15
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:10-974]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:11-479]  ThreadID:83 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:11-479]  ThreadID:79 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:11-479]  ThreadID:79 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:11-479]  ThreadID:82 >>> An ACK acknowledgement packet is received with the serial number : 17
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:11-479]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:01:30:11-486]  ThreadID:1 >>> null
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetStart.cs::Void <_UserLoginResponse>b__0() Line:89
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Boolean MoveNext() Line:71
+    ::Void InvokeMoveNext(System.Collections.IEnumerator, IntPtr) Line:0
+    ::UnityEngine.Coroutine StartCoroutineManaged2(UnityEngine.MonoBehaviour, System.Collections.IEnumerator) Line:0
+    ::UnityEngine.Coroutine StartCoroutine(System.Collections.IEnumerator) Line:0
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void <Enqueue>b__0() Line:28
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void Update() Line:108
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:01:30:11-486]  ThreadID:1 >>> null
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetStart.cs::Void <_UserLoginResponse>b__0() Line:89
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Boolean MoveNext() Line:71
+    ::Void InvokeMoveNext(System.Collections.IEnumerator, IntPtr) Line:0
+    ::UnityEngine.Coroutine StartCoroutineManaged2(UnityEngine.MonoBehaviour, System.Collections.IEnumerator) Line:0
+    ::UnityEngine.Coroutine StartCoroutine(System.Collections.IEnumerator) Line:0
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void <Enqueue>b__0() Line:28
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void Update() Line:108
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:11-979]  ThreadID:69 >>> An ACK acknowledgement packet is received with the serial number : 18
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:11-979]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:12-482]  ThreadID:83 >>> An ACK acknowledgement packet is received with the serial number : 19
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:12-482]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:12-656]  ThreadID:66 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:12-657]  ThreadID:79 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:12-657]  ThreadID:79 >>> 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:01:30:12-660]  ThreadID:1 >>> null
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetStart.cs::Void <_UserLoginResponse>b__0() Line:89
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Boolean MoveNext() Line:71
+    ::Void InvokeMoveNext(System.Collections.IEnumerator, IntPtr) Line:0
+    ::UnityEngine.Coroutine StartCoroutineManaged2(UnityEngine.MonoBehaviour, System.Collections.IEnumerator) Line:0
+    ::UnityEngine.Coroutine StartCoroutine(System.Collections.IEnumerator) Line:0
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void <Enqueue>b__0() Line:28
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void Update() Line:108
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:01:30:12-661]  ThreadID:1 >>> null
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetStart.cs::Void <_UserLoginResponse>b__0() Line:89
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Boolean MoveNext() Line:71
+    ::Void InvokeMoveNext(System.Collections.IEnumerator, IntPtr) Line:0
+    ::UnityEngine.Coroutine StartCoroutineManaged2(UnityEngine.MonoBehaviour, System.Collections.IEnumerator) Line:0
+    ::UnityEngine.Coroutine StartCoroutine(System.Collections.IEnumerator) Line:0
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void <Enqueue>b__0() Line:28
+    D:\unity\SocketLearn\Assets\Script\Net\Common\UnityMainThreadDispatcher.cs::Void Update() Line:108
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:12-985]  ThreadID:68 >>> An ACK acknowledgement packet is received with the serial number : 21
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:12-985]  ThreadID:79 >>> Heartbeat response from the server : ms = 1.0023
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:13-486]  ThreadID:83 >>> An ACK acknowledgement packet is received with the serial number : 22
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:13-486]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:13-988]  ThreadID:69 >>> An ACK acknowledgement packet is received with the serial number : 23
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:13-988]  ThreadID:79 >>> Heartbeat response from the server : ms = 1.0001
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:14-489]  ThreadID:66 >>> An ACK acknowledgement packet is received with the serial number : 24
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:14-489]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:14-992]  ThreadID:82 >>> An ACK acknowledgement packet is received with the serial number : 25
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:14-992]  ThreadID:79 >>> Heartbeat response from the server : ms = 0.5082
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:15-492]  ThreadID:86 >>> An ACK acknowledgement packet is received with the serial number : 26
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:15-492]  ThreadID:79 >>> Heartbeat response from the server : ms = 1.0061
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:15-993]  ThreadID:69 >>> An ACK acknowledgement packet is received with the serial number : 27
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:15-993]  ThreadID:79 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:16-122]  ThreadID:1 >>> Disconnect To Server
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:01:30:16-130]  ThreadID:68 >>> Disconnect To Server
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->

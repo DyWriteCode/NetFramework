@@ -76,7 +76,16 @@ namespace GameServer.Net.Service
             // 启动消息分发器
             GameApp.MessageRouter.Init(4);
             GameApp.MessageRouter.Subscribe<HeartBeatRequest>(_HeartBeatRequest);
+            GameApp.MessageRouter.Subscribe<UserLoginRequest>(_UserLoginRequest);
             Timer timer = new Timer(TimerCallback, null, TimeSpan.Zero, TimeSpan.FromSeconds(5));
+        }
+
+        private void _UserLoginRequest(Connection sender, UserLoginRequest msg)
+        {
+            UserLoginResponse response = new UserLoginResponse();
+            response.Message = "null";
+            response.Success = true;
+            Send(sender, response, false);
         }
 
         /// <summary>
@@ -140,7 +149,7 @@ namespace GameServer.Net.Service
         /// <param name="message">需要发送的数据</param>
         public void Send(Connection conn, IMessage message, bool isAck = false)
         {
-            if (conn != null)
+            if (conn != null && conn.Get<Session>() != null)
             {
                 var bufferEntity = BufferEntityFactory.Allocate();
                 if (isAck == true)

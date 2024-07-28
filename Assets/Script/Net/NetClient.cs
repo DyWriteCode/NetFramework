@@ -75,7 +75,7 @@ namespace Game.Net
             // 启动消息分发器
             MessageRouter.Instance.Init(threadCount);
             // 超时重传逻辑接口启动
-            CheckOutTime(host, port, threadCount);
+            // CheckOutTime(host, port, threadCount);
             return true;
         }
 
@@ -138,11 +138,12 @@ namespace Game.Net
                     {
                         LogUtils.Log($"An ACK acknowledgement packet is received with the serial number : {buffer.sn}");
                     }
+                    handleSN += 1;
                     break;
                 case (int)MessageType.Logic://业务报文
                     BufferEntity ackBuffer = BufferEntityFactory.Allocate();
                     ackBuffer.Init(buffer);
-                    conn.SendACK(ackBuffer); // 先告诉服务器 我已经收到这个报文
+                    // conn.SendACK(ackBuffer); // 先告诉服务器 我已经收到这个报文
                     // 再来处理业务报文
                     HandleLogincPackage(sender, buffer, data);
                     break;
@@ -175,7 +176,7 @@ namespace Game.Net
             }
             // 更新已处理的报文
             handleSN = buffer.sn;
-            if (MessageRouter.Instance.Running)
+            if (MessageRouter.Instance.Running == true)
             {
                 if (buffer.isFull == true)
                 {

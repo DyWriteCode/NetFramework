@@ -48,15 +48,16 @@ namespace GameServer.Net
                 case (int)MessageType.ACK: //ACK确认报文
                     LogUtils.Log($"An ACK acknowledgement packet is received with the serial number : {buffer.sn}");
                     BufferEntity bufferEntity;
-                    if (sendPackage.TryRemove(buffer.sn, out bufferEntity) == true)
-                    {
-                        LogUtils.Log($"An ACK acknowledgement packet is received with the serial number : {buffer.sn}");
-                    }
+                    //if (sendPackage.TryRemove(buffer.sn, out bufferEntity) == true)
+                    //{
+                    //    LogUtils.Log($"An ACK acknowledgement packet is received with the serial number : {buffer.sn}");
+                    //}
+                    handleSN += 1;
                     break;
                 case (int)MessageType.Logic: //业务报文
                     BufferEntity ackBuffer = BufferEntityFactory.Allocate();
                     ackBuffer.Init(buffer);
-                    sender.SendACK(ackBuffer); // 先告诉客户端 我已经收到这个报文
+                    // sender.SendACK(ackBuffer); // 先告诉客户端 我已经收到这个报文
                     // 再来处理业务报文
                     HandleLogincPackage(sender, buffer, data);
                     break;

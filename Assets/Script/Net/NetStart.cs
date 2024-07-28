@@ -103,7 +103,7 @@ namespace Game.Net
             while (NetClient.Instance.Running == true)
             {
                 yield return new WaitForSeconds(beatTime);
-                NetClient.Instance.Send(beatRequest, true);
+                NetClient.Instance.Send(beatRequest, false);
                 lastBeatTime = DateTime.Now;
             }
         }

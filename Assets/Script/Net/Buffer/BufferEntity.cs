@@ -142,10 +142,11 @@ namespace Game.Net
         /// </summary>
         private void DeCode()
         {
+            isFull = true;
             if (buffer.Length >= 4)
             {
                 //字节数组 转化成 int 或者是long
-                protoSize = BitConverter.ToInt32(buffer, 0); // 从0的位置 取4个字节转化成int
+                protoSize = BitConverter.ToInt32(buffer, 0); // 从0的位置 取4个字节转化成int                
                 if (buffer.Length == protoSize + 32)
                 {
                     isFull = true;
