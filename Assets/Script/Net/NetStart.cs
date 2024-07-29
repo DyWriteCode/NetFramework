@@ -12,6 +12,7 @@ namespace Game.Net
     /// <summary>
     /// 启动网络初始化一些基本的客户端信息
     /// 需要挂载到一个专门的物体上
+    /// 进行网络初始化
     /// </summary>
     public class NetStart : MonoBehaviour
     {
@@ -42,8 +43,15 @@ namespace Game.Net
 
         /// <summary>
         /// 心跳包对象
+        /// 为了不把心跳包和ACK报文混在一起把心跳包做成了一个业务报文
+        /// 心跳包！= ACK报文
+        /// 心跳包：确认连接状态
+        /// ACK报文：确认报文接收状态
         /// </summary>
-        private HeartBeatRequest beatRequest = new HeartBeatRequest();
+        private HeartBeatRequest beatRequest = new HeartBeatRequest() 
+        { 
+            State = 1
+        };
 
         /// <summary>
         /// 心跳最后一次发送的时间
@@ -73,7 +81,8 @@ namespace Game.Net
             NetClient.Instance.ConnectToServer(HOST, PORT, 1);
             //心跳包任务，每秒1次
             StartCoroutine(SendHeartMessage());
-            MessageRouter.Instance.Subscribe<HeartBeatResponse>(_HeartBeatResponse);
+            // MessageRouter这个是事件处理器
+            MessageManager.Instance.Subscribe<HeartBeatResponse>(_HeartBeatResponse);
             // 注册out事件
             EventManager.RegisterOut("OnDisconnected", this, "OnDisconnected");
         }

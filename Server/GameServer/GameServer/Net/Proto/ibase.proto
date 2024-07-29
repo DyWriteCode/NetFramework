@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package proto;
+
+message Vector3 {
+	float x = 1;
+	float y = 2;
+	float z = 3;
+}
+
+message Rpc {
+	int32 id = 1;
+	string name = 2;
+	int32 target = 3;
+	bytes args = 4;
+}
+
+message InstantiateRequest{
+	string prefabName = 1;
+	Vector3 position = 2;
+	Vector3 direction = 3;
+	int32 group = 4;
+	bytes args = 5;
+}

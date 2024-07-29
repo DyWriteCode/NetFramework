@@ -7,6 +7,7 @@ namespace Game.Net
 {
     /// <summary>
     /// Socket接收者
+    /// 类似于一个中转站
     /// </summary>
     public class SocketReceiver
     {
@@ -31,6 +32,7 @@ namespace Game.Net
 
         /// <summary>
         /// 每次读取到数据的缓冲区
+        /// 类似于放快递的仓库
         /// </summary>
         private byte[] buffer = new byte[64 * 1024];
 
@@ -157,7 +159,6 @@ namespace Game.Net
         /// </summary>
         private void _disconnected()
         {
-
             try
             {
                 Disconnected?.Invoke();
@@ -173,6 +174,7 @@ namespace Game.Net
 
         /// <summary>
         /// 获取大端模式int值
+        /// 这个原本是给旧的报文结构用的等会儿看一看报文结构
         /// </summary>
         /// <param name="data">数据</param>
         /// <param name="index">读取的开始位置</param>

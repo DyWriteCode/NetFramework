@@ -18,7 +18,7 @@ namespace GameServer.Manager
     {
         public static ArchiveManager? ArchiveManager;
         public static ConfigManager? ConfigManager; 
-        public static MessageRouter? MessageRouter;
+        public static MessageManager? MessageManager;
 
         /// <summary>
         /// 初始化
@@ -28,7 +28,7 @@ namespace GameServer.Manager
             base.Init();
             ArchiveManager = new ArchiveManager();
             ConfigManager = new ConfigManager();
-            MessageRouter = new MessageRouter();
+            MessageManager = new MessageManager();
         }
 
         /// <summary>

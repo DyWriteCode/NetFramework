@@ -90,12 +90,13 @@ namespace GameServer.Net
             }
             // 更新已处理的报文 
             handleSN = buffer.sn;
-            if (GameApp.MessageRouter.Running == true)
+            if (GameApp.MessageManager.Running == true)
             {
                 if (buffer.isFull == true)
                 {
-                    GameApp.MessageRouter.AddMessage(sender, data);
+                    
                 }
+                GameApp.MessageManager.AddMessage(sender, data);
             }
             // 检测缓存的数据 有没有包含下一条可以处理的数据
             BufferEntity nextBuffer;

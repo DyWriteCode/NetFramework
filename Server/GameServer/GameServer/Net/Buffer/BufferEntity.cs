@@ -1,4 +1,6 @@
 ﻿using System;
+using GameServer.Common;
+using GameServer.Log;
 
 namespace GameServer.Net
 {
@@ -53,7 +55,6 @@ namespace GameServer.Net
         /// 用来判断报文是否完整
         /// </summary>
         public bool isFull = false;
-        private bool disposedValue;
 
         /// <summary>
         /// 构建请求报文
@@ -108,11 +109,11 @@ namespace GameServer.Net
         /// <returns>打包好后的数据</returns>
         public byte[] Encoder(bool isAck = false)
         {
-            byte[] data = new byte[32 + protoSize];
             if (isAck == true)
             {
                 protoSize = 0; // 发送的业务数据的大小
             }
+            byte[] data = new byte[32 + protoSize];
             byte[] _length = BitConverter.GetBytes(protoSize);
             byte[] _session = BitConverter.GetBytes(session);
             byte[] _sn = BitConverter.GetBytes(sn);
@@ -133,6 +134,22 @@ namespace GameServer.Net
                 // 业务数据 追加进来
                 Array.Copy(proto, 0, data, 32, proto.Length);
             }
+            //DataStream dataStream = DataStream.Allocate();
+            //dataStream.WriteInt(protoSize);
+            //dataStream.WriteInt(session);
+            //dataStream.WriteInt(sn);
+            //dataStream.WriteInt(moduleID);
+            //dataStream.WriteLong(time);
+            //dataStream.WriteInt(messageType);
+            //dataStream.WriteInt(messageID);
+            if (isAck == false)
+            {
+                // 业务数据 追加进来
+                //dataStream.WriteBuffer(proto);
+                Array.Copy(proto, 0, data, 32, proto.Length);
+            }
+            //buffer = dataStream.ToArray();
+            //DataStream.Recycle(dataStream);
             buffer = data;
             return data;
         }
@@ -142,10 +159,13 @@ namespace GameServer.Net
         /// </summary>
         private void DeCode()
         {
+            //DataStream dataStream = null;
             if (buffer.Length >= 4)
             {
-                //字节数组 转化成 int 或者是long
+                ////字节数组 转化成 int 或者是long
                 protoSize = BitConverter.ToInt32(buffer, 0); // 从0的位置 取4个字节转化成int
+                //dataStream = DataStream.Allocate(buffer);
+                //protoSize = dataStream.ReadInt();
                 if (buffer.Length == protoSize + 32)
                 {
                     isFull = true;
@@ -162,12 +182,36 @@ namespace GameServer.Net
             time = BitConverter.ToInt64(buffer, 16); // 从16的位置 取8个字节转化成int
             messageType = BitConverter.ToInt32(buffer, 24);
             messageID = BitConverter.ToInt32(buffer, 28);
+            //session = dataStream.ReadInt();
+            //sn = dataStream.ReadInt();
+            //moduleID = dataStream.ReadInt();
+            //time = dataStream.ReadLong();
+            //messageType = dataStream.ReadInt();
+            //messageID = dataStream.ReadInt();
             if (messageType == 1)
             {
                 proto = new byte[protoSize];
                 // 将buffer里剩下的数据 复制到proto 得到最终的业务数据
                 Array.Copy(buffer, 32, proto, 0, protoSize);
+                //proto = dataStream.ReadBuffer(protoSize);
             }
+        }
+
+        /// <summary>
+        /// 把所有还原为初始值
+        /// </summary>
+        public void Reset()
+        {
+            this.protoSize = 0;
+            this.session = 0;
+            this.sn = 0;
+            this.moduleID = 0;
+            this.time = 0;
+            this.messageType = 0;
+            this.messageID = 0;
+            this.buffer = null;
+            this.proto = null;
+            this.isFull = false;
         }
     }
 }

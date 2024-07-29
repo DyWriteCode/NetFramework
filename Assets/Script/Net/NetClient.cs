@@ -26,6 +26,8 @@ namespace Game.Net
         {
             get
             {
+                // 如果有连接就正在运行
+                // 如果连接为空那就是已经断开了
                 return conn != null;
             }
         }
@@ -38,7 +40,7 @@ namespace Game.Net
         /// </summary>
         public int sessionID = 0;
         /// <summary>
-        /// 发送序号
+        /// 发送序号 为了保证报文的顺序性
         /// </summary>
         public int sendSN = 0;
         /// <summary>
@@ -51,6 +53,7 @@ namespace Game.Net
         public ConcurrentDictionary<int, BufferEntity> waitHandle = new ConcurrentDictionary<int, BufferEntity>();
         /// <summary>
         /// 缓存已经发送的报文
+        /// 如果发送失败了会缓存到这里进行重发
         /// </summary>
         public ConcurrentDictionary<int, BufferEntity> sendPackage = new ConcurrentDictionary<int, BufferEntity>();
 
@@ -69,11 +72,12 @@ namespace Game.Net
             {
                 return false;
             }
+            // 绑定事件
             conn = new Connection(socket);
             conn.OnDisconnected += OnDisconnected;
             conn.OnDataReceived += OnDataReceived;
             // 启动消息分发器
-            MessageRouter.Instance.Init(threadCount);
+            MessageManager.Instance.Init(threadCount);
             // 超时重传逻辑接口启动
             // CheckOutTime(host, port, threadCount);
             return true;
@@ -92,7 +96,7 @@ namespace Game.Net
                 LogUtils.Log("Connect To Server");
                 return true;
             }
-            catch (SocketException ex)
+            catch (SocketException ex) // 连接出现问题
             {
                 if (ex.SocketErrorCode == SocketError.ConnectionRefused)
                 {
@@ -100,7 +104,7 @@ namespace Game.Net
                 }
                 return false;
             }
-            catch (Exception e)
+            catch (Exception e) // 其他地方出现问题
             {
                 LogUtils.Error($"{NetErrCode.NET_ERROR_FAIL_TO_CONNECT} : DisConnect To Server : {e}");
                 return false;
@@ -114,6 +118,7 @@ namespace Game.Net
         private void OnDisconnected(Connection sender)
         {
             LogUtils.Log("Disconnect To Server");
+            // 触发断开事件
             EventManager.FireOut("OnDisconnected");
         }
 
@@ -122,9 +127,10 @@ namespace Game.Net
         /// </summary>
         /// <param name="sender">与服务器的连接</param>
         /// <param name="buffer">发送回来的报文</param>
-        /// <param name="data"></param>
+        /// <param name="data">报文中读取的 TODO:去掉这个参数</param>
         private void OnDataReceived(Connection sender, BufferEntity buffer, IMessage data)
         {
+            // 服务器如果说是第一次发报文服务器会给一个session ID
             if (sessionID == 0 && buffer.session != 0)
             {
                 LogUtils.Log($"The session ID sent to us by the service is :{buffer.session}");
@@ -132,7 +138,7 @@ namespace Game.Net
             }
             switch (buffer.messageType)
             {
-                case (int)MessageType.ACK: //ACK确认报文
+                case (int)MessageType.ACK: // ACK确认报文 单纯就是为了确认报文是否发出  就像别人叫你做一件事 你回一个嗯啊OK
                     BufferEntity bufferEntity;
                     if (sendPackage.TryRemove(buffer.sn, out bufferEntity))
                     {
@@ -140,7 +146,7 @@ namespace Game.Net
                     }
                     handleSN += 1;
                     break;
-                case (int)MessageType.Logic://业务报文
+                case (int)MessageType.Logic: // 业务报文
                     BufferEntity ackBuffer = BufferEntityFactory.Allocate();
                     ackBuffer.Init(buffer);
                     // conn.SendACK(ackBuffer); // 先告诉服务器 我已经收到这个报文
@@ -157,9 +163,10 @@ namespace Game.Net
         /// </summary>
         /// <param name="sender">服务端连接</param>
         /// <param name="buffer">传过来的报文</param>
-        /// <param name="data">protobuf类型</param>
+        /// <param name="data">protobuf类型 TODO:去掉这个参数</param>
         private void HandleLogincPackage(Connection sender, BufferEntity buffer, IMessage data)
         {
+            // 参考了GCP
             // 接收到的报文是以前处理过的
             if (buffer.sn <= handleSN)
             {
@@ -176,12 +183,13 @@ namespace Game.Net
             }
             // 更新已处理的报文
             handleSN = buffer.sn;
-            if (MessageRouter.Instance.Running == true)
+            if (MessageManager.Instance.Running == true)
             {
                 if (buffer.isFull == true)
                 {
-                    MessageRouter.Instance.AddMessage(sender, data);
+                    
                 }
+                MessageManager.Instance.AddMessage(sender, data);
             }
             // 检测缓存的数据 有没有包含下一条可以处理的数据
             BufferEntity nextBuffer;
@@ -211,6 +219,7 @@ namespace Game.Net
         /// 发送消息
         /// </summary>
         /// <param name="message">需要发送的数据</param>
+        /// <param name="isAck">是否为ACK报文</param>
         public void Send(IMessage message, bool isAck = false)
         {
             if (conn != null)
@@ -227,9 +236,10 @@ namespace Game.Net
                 bufferEntity.time = TimeHelper.ClientNow(); // 暂时先等于0
                 sendSN += 1; // 已经发送的SN加一
                 bufferEntity.sn = sendSN;
+                // 如果说是第一个报文根本就不用重发因为连接不上可以直接断掉
                 if (sessionID != 0)
                 {
-                    //缓存起来 因为可能需要重发
+                    // 缓存起来 因为可能需要重发
                     sendPackage.TryAdd(sendSN, bufferEntity);
                 }
                 if (bufferEntity == null)
@@ -242,6 +252,7 @@ namespace Game.Net
 
         /// <summary>
         /// 发送消息
+        /// 直接发送二进制
         /// </summary>
         /// <param name="message">需要发送的数据</param>
         public void Send(byte[] message)
@@ -258,6 +269,7 @@ namespace Game.Net
 
         /// <summary>
         /// 超时重传接口
+        /// 使用递归去把send package里面的东西重发
         /// </summary>
         /// <param name="host">服务器IP</param>
         /// <param name="port">服务器端口</param>
@@ -293,6 +305,7 @@ namespace Game.Net
                     }
                 }
             }
+            // 通过递归不断把sand package里面的失败的报文重新发出去
             CheckOutTime(host, port, threadCount);
         }
     }

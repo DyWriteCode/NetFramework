@@ -11,9 +11,9 @@ namespace GameServer.Net
     /// -- Connected     >>    有新的连接
     /// -- DataReceived  >>    有新的消息
     /// -- Disconnected  >>    有连接断开
-    /// Start()          >>    启动服务器
-    /// Stop()           >>    关闭服务器
-    /// IsRunning        >>    是否正在运行
+    /// -- Start()       >>    启动服务器
+    /// -- Stop()        >>    关闭服务器
+    /// -- IsRunning     >>    是否正在运行
     /// </summary>
     public class TcpServer
     {

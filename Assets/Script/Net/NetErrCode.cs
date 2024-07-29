@@ -8,6 +8,7 @@ namespace Game.Net
 {
     /// <summary>
     /// Net错误码
+    /// 自己写了一套错误协议不同的错误码对应着不同的错误
     /// </summary>
     public class NetErrCode
     {

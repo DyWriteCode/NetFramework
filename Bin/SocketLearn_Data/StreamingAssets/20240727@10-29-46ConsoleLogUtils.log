@@ -1,0 +1,161 @@
+﻿[LOG]# [2024:10:29:46-528]  ThreadID:1 >>> Connect To Server
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:48-151]  ThreadID:64 >>> The session ID sent to us by the service is :1001
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:48-152]  ThreadID:22 >>> Heartbeat response from the server : ms = 123.2014
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:48-449]  ThreadID:58 >>> An ACK acknowledgement packet is received with the serial number : 2
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:48-449]  ThreadID:22 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:48-953]  ThreadID:58 >>> An ACK acknowledgement packet is received with the serial number : 3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:48-953]  ThreadID:22 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:49-457]  ThreadID:62 >>> An ACK acknowledgement packet is received with the serial number : 4
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:49-457]  ThreadID:22 >>> Heartbeat response from the server : ms = 0.9995
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:49-958]  ThreadID:62 >>> An ACK acknowledgement packet is received with the serial number : 5
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:49-958]  ThreadID:22 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:50-458]  ThreadID:64 >>> An ACK acknowledgement packet is received with the serial number : 6
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:50-458]  ThreadID:22 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:50-961]  ThreadID:64 >>> An ACK acknowledgement packet is received with the serial number : 7
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:50-961]  ThreadID:22 >>> Heartbeat response from the server : ms = 1.0003
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:51-466]  ThreadID:65 >>> An ACK acknowledgement packet is received with the serial number : 8
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:51-466]  ThreadID:22 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:51-970]  ThreadID:65 >>> An ACK acknowledgement packet is received with the serial number : 9
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:51-970]  ThreadID:22 >>> Heartbeat response from the server : ms = 0.5124
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:52-472]  ThreadID:65 >>> An ACK acknowledgement packet is received with the serial number : 10
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:52-472]  ThreadID:22 >>> Heartbeat response from the server : ms = 1.0071
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:52-974]  ThreadID:58 >>> An ACK acknowledgement packet is received with the serial number : 11
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:52-974]  ThreadID:22 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:53-475]  ThreadID:58 >>> An ACK acknowledgement packet is received with the serial number : 12
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:53-475]  ThreadID:22 >>> Heartbeat response from the server : ms = 0.5112
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:53-978]  ThreadID:65 >>> An ACK acknowledgement packet is received with the serial number : 13
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:53-978]  ThreadID:22 >>> Heartbeat response from the server : ms = 1.0069
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:54-481]  ThreadID:57 >>> An ACK acknowledgement packet is received with the serial number : 14
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:54-481]  ThreadID:22 >>> Heartbeat response from the server : ms = 1.2909
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:54-981]  ThreadID:63 >>> An ACK acknowledgement packet is received with the serial number : 15
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:54-981]  ThreadID:22 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:55-484]  ThreadID:63 >>> An ACK acknowledgement packet is received with the serial number : 16
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:55-484]  ThreadID:22 >>> Heartbeat response from the server : ms = 0.52
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:55-989]  ThreadID:62 >>> An ACK acknowledgement packet is received with the serial number : 17
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:55-989]  ThreadID:22 >>> Heartbeat response from the server : ms = 1.0001
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:56-490]  ThreadID:58 >>> An ACK acknowledgement packet is received with the serial number : 18
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:56-490]  ThreadID:22 >>> Heartbeat response from the server : ms = 0.5103
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:56-991]  ThreadID:57 >>> An ACK acknowledgement packet is received with the serial number : 19
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:56-991]  ThreadID:22 >>> Heartbeat response from the server : ms = 0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:57-492]  ThreadID:57 >>> An ACK acknowledgement packet is received with the serial number : 20
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:57-492]  ThreadID:22 >>> Heartbeat response from the server : ms = 1.002
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:57-710]  ThreadID:65 >>> Disconnect To Server
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:58-201]  ThreadID:1 >>> Time out resend count : 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:58-355]  ThreadID:1 >>> Time out resend count : 2
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:58-509]  ThreadID:1 >>> Time out resend count : 3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:58-660]  ThreadID:1 >>> Time out resend count : 4
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:58-661]  ThreadID:1 >>> Time out resend count : 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:58-884]  ThreadID:1 >>> Time out resend count : 5
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:58-884]  ThreadID:1 >>> Time out resend count : 2
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-038]  ThreadID:1 >>> Time out resend count : 6
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-039]  ThreadID:1 >>> Time out resend count : 3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-192]  ThreadID:1 >>> Time out resend count : 7
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-192]  ThreadID:1 >>> Time out resend count : 4
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-192]  ThreadID:1 >>> Time out resend count : 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-345]  ThreadID:1 >>> Time out resend count : 8
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-346]  ThreadID:1 >>> Time out resend count : 5
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-346]  ThreadID:1 >>> Time out resend count : 2
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-617]  ThreadID:1 >>> Time out resend count : 9
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-618]  ThreadID:1 >>> Time out resend count : 6
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-618]  ThreadID:1 >>> Time out resend count : 3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-771]  ThreadID:1 >>> Time out resend count : 10
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-772]  ThreadID:1 >>> Time out resend count : 7
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-772]  ThreadID:1 >>> Time out resend count : 4
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-772]  ThreadID:1 >>> Time out resend count : 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-924]  ThreadID:1 >>> recurCount >= 10 close socket
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:10:29:59-924]  ThreadID:1 >>> Disconnect To Server
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:10:30:01-946]  ThreadID:1 >>> 1005 : DoConnect SocketException:10061,ConnectionRefused,10061]System.Net.Sockets.SocketException (0x80004005): 由于目标计算机积极拒绝，无法连接。
+                                                                                                                                                                                                                                             
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x000b6] in <ae467d6c56404add82dd0ad831025110>:0 
+  at Game.Net.NetClient.Connect (System.Net.Sockets.Socket socket, System.Net.IPEndPoint ipe) [0x00002] in D:\unity\SocketLearn\Assets\Script\Net\NetClient.cs:91 
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetClient.cs::Boolean Connect(System.Net.Sockets.Socket, System.Net.IPEndPoint) Line:99
+    D:\unity\SocketLearn\Assets\Script\Net\NetClient.cs::Boolean ConnectToServer(System.String, Int32, Int32) Line:68
+    D:\unity\SocketLearn\Assets\Script\Net\NetClient.cs::Void MoveNext() Line:274
+    ::Void InvokeMoveNext(System.Object) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean) Line:0
+    ::Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean) Line:0
+    ::Void Run() Line:0
+    ::Void <.cctor>b__7_0(System.Object) Line:0
+    ::Void Invoke() Line:0
+    ::Void Exec() Line:0
+    ::Void ExecuteTasks() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:10:30:01-947]  ThreadID:1 >>> 1004 : Packet collection timed out
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\NetClient.cs::Void MoveNext() Line:276
+    ::Void InvokeMoveNext(System.Object) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean) Line:0
+    ::Void Run(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object, Boolean) Line:0
+    ::Void Run() Line:0
+    ::Void <.cctor>b__7_0(System.Object) Line:0
+    ::Void Invoke() Line:0
+    ::Void Exec() Line:0
+    ::Void ExecuteTasks() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->

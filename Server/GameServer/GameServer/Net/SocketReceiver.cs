@@ -32,7 +32,7 @@ namespace GameServer.Net
         /// <summary>
         /// 每次读取到数据的缓冲区
         /// </summary>
-        private byte[] buffer = new byte[64 * 1024];
+        private byte[] buffer = new byte[1024 * 64];
 
         /// <summary>
         /// 每次读取的开始位置
@@ -169,17 +169,6 @@ namespace GameServer.Net
             }
             _Socket.Close();
             _Socket = null;
-        }
-
-        /// <summary>
-        /// 获取大端模式int值
-        /// </summary>
-        /// <param name="data">数据</param>
-        /// <param name="index">读取的开始位置</param>
-        /// <returns>大端模式int值</returns>
-        private int GetInt32Biggest(byte[] data, int index)
-        {
-            return (data[index] << 0x18) | (data[index + 1] << 0x10) | (data[index + 2] << 8) | (data[index + 3]);
         }
     }
 }

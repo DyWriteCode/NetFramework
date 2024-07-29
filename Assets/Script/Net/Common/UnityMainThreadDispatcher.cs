@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Game.Common
 {
     /// <summary>
+    /// 这是unity官方的一个工具脚本我自己稍微做了点中文注释
     /// 一个线程安全类，它保存一个队列，其中包含要在下一个 Update（） 方法上执行的操作。它可用于调用主线程，例如 Unity 中的 UI 操作。它是为与 Firebase Unity 插件结合使用而开发的，该插件使用单独的线程进行事件处理
     /// </summary>
     public class UnityMainThreadDispatcher : MonoBehaviour

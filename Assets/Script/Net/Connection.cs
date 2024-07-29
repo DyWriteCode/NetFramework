@@ -12,7 +12,7 @@ namespace Game.Net
     /// 通用网络连接，可以继承此类实现功能拓展
     /// 职责：发送消息，关闭连接，断开回调，接收消息回调，
     /// </summary>
-    public class Connection : TypeAttributeStore
+    public class Connection : TypePropertyStore
     {
         /// <summary>
         /// 接收到数据时的回调
@@ -81,13 +81,12 @@ namespace Game.Net
                 LogUtils.Error($"[{NetErrCode.NET_ERROR_UNKNOW_PROTOCOL}] The client does not have this proto type : {Type.FilterName}");
                 return;
             }
-            if (MessageRouter.Instance.Running == true)
+            if (MessageManager.Instance.Running == true)
             {
-                if (message.GetType() == typeof(UserLoginResponse))
+                if (MessageManager.Instance.Running == true)
                 {
-                    LogUtils.Log(1);
+                    // 先处理一下ACK报文
                 }
-                MessageRouter.Instance.AddMessage(this, message);
             }
             OnDataReceived?.Invoke(this, bufferEntity, message);
         }

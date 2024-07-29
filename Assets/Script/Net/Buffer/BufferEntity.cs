@@ -1,11 +1,14 @@
 ﻿using System;
+using Game.Common;
+using Game.Log;
 
 namespace Game.Net
 {
     /// <summary>
-    /// 自定义数据流
-    /// 其实就是报文
-    /// 采用大端模式进行存储
+    /// 自定义报文
+    /// 这里原本是想用流去存储的
+    /// （uint）typecode + (byte[]) value + （int32）sn 旧的结构
+    /// 下面是现在的结构
     /// </summary>
     public class BufferEntity
     {
@@ -27,6 +30,7 @@ namespace Game.Net
         public int sn = 0;
         /// <summary>
         /// 模块ID
+        /// TODO ; 服务器接收到之后会根据模块ID去分发给不同的服务
         /// </summary>
         public int moduleID = 0;
         /// <summary>
@@ -35,25 +39,33 @@ namespace Game.Net
         public long time = 0;
         /// <summary>
         /// 协议类型
+        /// messageType = MessageType.ACK/Logic.GetHashCode()
         /// </summary>
         public int messageType = 0;
         /// <summary>
         /// 协议ID
+        /// 每一个proto类型，在刚开始都绑定了一个对应的协议ID
+        /// 比如
+        /// heartbeatresqust >> 10021
+        /// 英语不是很好 忘了
+        /// ...... >> 10021
+        /// ......
         /// </summary>
         public int messageID = 0;
         /// <summary>
         /// 业务报文
+        /// protobuff >> protohelper >>byte[]
         /// </summary>
         public byte[] proto = null;
         /// <summary>
         /// 最终要发送的数据 或者是 收到的数据
+        /// 前面都是每个包裹的零部件比如标签之类的这个是打包好的包裹
         /// </summary>
         public byte[] buffer = null;
         /// <summary>
         /// 用来判断报文是否完整
         /// </summary>
         public bool isFull = false;
-        private bool disposedValue;
 
         /// <summary>
         /// 构建请求报文
@@ -133,6 +145,22 @@ namespace Game.Net
                 // 业务数据 追加进来
                 Array.Copy(proto, 0, data, 32, proto.Length);
             }
+            //DataStream dataStream = DataStream.Allocate();
+            //dataStream.WriteInt(protoSize);
+            //dataStream.WriteInt(session);
+            //dataStream.WriteInt(sn);
+            //dataStream.WriteInt(moduleID);
+            //dataStream.WriteLong(time);
+            //dataStream.WriteInt(messageType);
+            //dataStream.WriteInt(messageID);
+            if (isAck == false)
+            {
+                // 业务数据 追加进来
+                //dataStream.WriteBuffer(proto);
+                Array.Copy(proto, 0, data, 32, proto.Length);
+            }
+            //buffer = dataStream.ToArray();
+            //DataStream.Recycle(dataStream);
             buffer = data;
             return data;
         }
@@ -142,15 +170,17 @@ namespace Game.Net
         /// </summary>
         private void DeCode()
         {
-            isFull = true;
+            //DataStream dataStream = null;
             if (buffer.Length >= 4)
             {
-                //字节数组 转化成 int 或者是long
-                protoSize = BitConverter.ToInt32(buffer, 0); // 从0的位置 取4个字节转化成int                
-                if (buffer.Length == protoSize + 32)
-                {
-                    isFull = true;
-                }
+                ////字节数组 转化成 int 或者是long
+                protoSize = BitConverter.ToInt32(buffer, 0); // 从0的位置 取4个字节转化成int
+                //dataStream = DataStream.Allocate(buffer);
+                //protoSize = dataStream.ReadInt();
+                //if (buffer.Length == protoSize + 32)
+                //{
+                //    isFull = true;
+                //}
             }
             else
             {
@@ -163,12 +193,37 @@ namespace Game.Net
             time = BitConverter.ToInt64(buffer, 16); // 从16的位置 取8个字节转化成int
             messageType = BitConverter.ToInt32(buffer, 24);
             messageID = BitConverter.ToInt32(buffer, 28);
+            //session = dataStream.ReadInt();
+            //sn = dataStream.ReadInt();
+            //moduleID = dataStream.ReadInt();
+            //time = dataStream.ReadLong();
+            //messageType = dataStream.ReadInt();
+            //messageID = dataStream.ReadInt();
             if (messageType == 1)
             {
                 proto = new byte[protoSize];
                 // 将buffer里剩下的数据 复制到proto 得到最终的业务数据
                 Array.Copy(buffer, 32, proto, 0, protoSize);
+                //proto = dataStream.ReadBuffer(protoSize);
             }
+        }
+
+        /// <summary>
+        /// 把所有还原为初始值
+        /// 用了对象池需要有一个reset函数
+        /// </summary>
+        public void Reset()
+        {
+            this.protoSize = 0;
+            this.session = 0;
+            this.sn = 0;
+            this.moduleID = 0;
+            this.time = 0;
+            this.messageType = 0;
+            this.messageID = 0;
+            this.buffer = null;
+            this.proto = null;
+            this.isFull = false;
         }
     }
 }

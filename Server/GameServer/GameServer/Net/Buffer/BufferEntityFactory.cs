@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using GameServer.Log;
+using GameServer.Common;
 
 namespace GameServer.Net
 {
@@ -26,22 +27,18 @@ namespace GameServer.Net
         /// <summary>
         /// 自定义数据流对象池
         /// </summary>
-        private static Queue<BufferEntity> BufferEntityPool = new Queue<BufferEntity>(200);
+        private static ClassObjectPool<BufferEntity> BufferEntityPool;
         /// <summary>
         /// 最大容量
         /// </summary>
         public static int PoolMaxCount = 200;
-        private bool disposedValue;
 
         /// <summary>
         /// 对buffer factory进行初始化
         /// </summary>
         public static void Init()
         {
-            for (int i = 0;i < PoolMaxCount + 1; i ++)
-            {
-                BufferEntityPool.Enqueue(new BufferEntity());
-            }
+            BufferEntityPool = new ClassObjectPool<BufferEntity>(PoolMaxCount);
         }
 
         /// <summary>
@@ -49,22 +46,13 @@ namespace GameServer.Net
         /// </summary>
         /// <param name="NotCreate">如果池中没有对象是否创建</param>
         /// <returns>自定义数据流</returns>
-        public static BufferEntity Allocate(bool NotCreate = false)
+        public static BufferEntity Allocate(bool NotCreate = true)
         {
             // 从对象池中获取 BufferEntity
             lock (BufferEntityPool)
             {
-                if (BufferEntityPool.Count > 0)
-                {
-                    return BufferEntityPool.Dequeue();
-                }
+                  return BufferEntityPool.Spawn(NotCreate);
             }
-            if (NotCreate == false)
-            {
-                // 如果对象池中没有BufferEntity，则创建一个新的BufferEntity
-                return new BufferEntity();
-            }
-            return null;
         }
 
         /// <summary>
@@ -72,11 +60,21 @@ namespace GameServer.Net
         /// </summary>
         /// <param name="bytes">二进制数据</param>
         /// <returns>自定义数据流</returns>
-        public static BufferEntity Allocate(byte[] bytes)
+        public static BufferEntity Allocate(byte[] bytes, bool NotCreate = true)
         {
-            BufferEntity buffer = Allocate();
+            BufferEntity buffer = Allocate(NotCreate);
             buffer.Init(bytes);
             return buffer;
+        }
+
+        /// <summary>
+        /// 回收对象
+        /// </summary>
+        /// <param name="buffer">需要回收的对象</param>
+        public static void Recycle(BufferEntity buffer)
+        {
+            buffer.Reset();
+            BufferEntityPool.Recycle(buffer);
         }
     }
 }

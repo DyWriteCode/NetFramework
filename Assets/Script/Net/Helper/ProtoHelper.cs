@@ -12,6 +12,7 @@ namespace Game.Helper
 {
     /// <summary>
     /// Protobuf序列化与反序列化
+    /// 以及一些其他关于printable的协议的工具函数
     /// </summary>
     public class ProtoHelper
     {
@@ -126,14 +127,6 @@ namespace Game.Helper
         public static IMessage ParseFrom(int typeCode, byte[] data, int offset, int len)
         {
             Type t = ProtoHelper.SeqType(typeCode);
-            if (t == typeof(HeartBeatRequest))
-            {
-                return new HeartBeatRequest();
-            }
-            if (t == typeof(HeartBeatResponse))
-            {
-                return new HeartBeatResponse();
-            }
             var desc = t.GetProperty("Descriptor").GetValue(t) as MessageDescriptor;
             var msg = desc.Parser.ParseFrom(data, offset, len);
             Debug.Log($"Descriptor Message：code={typeCode} - {ProtoHelper.SeqType(typeCode)}");

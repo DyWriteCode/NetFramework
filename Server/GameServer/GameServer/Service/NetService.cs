@@ -74,18 +74,9 @@ namespace GameServer.Net.Service
             // 启动网络监听，指定消息包装类型
             tcpServer.Start();
             // 启动消息分发器
-            GameApp.MessageRouter.Init(4);
-            GameApp.MessageRouter.Subscribe<HeartBeatRequest>(_HeartBeatRequest);
-            GameApp.MessageRouter.Subscribe<UserLoginRequest>(_UserLoginRequest);
+            GameApp.MessageManager.Init(4);
+            GameApp.MessageManager.Subscribe<HeartBeatRequest>(_HeartBeatRequest);
             Timer timer = new Timer(TimerCallback, null, TimeSpan.Zero, TimeSpan.FromSeconds(5));
-        }
-
-        private void _UserLoginRequest(Connection sender, UserLoginRequest msg)
-        {
-            UserLoginResponse response = new UserLoginResponse();
-            response.Message = "null";
-            response.Success = true;
-            Send(sender, response, false);
         }
 
         /// <summary>
@@ -117,8 +108,11 @@ namespace GameServer.Net.Service
         private void _HeartBeatRequest(Connection conn, HeartBeatRequest msg)
         {
             heartBeatPairs[conn] = DateTime.Now;
-            HeartBeatResponse resp = new HeartBeatResponse();
-            Send(conn, resp, true);
+            HeartBeatResponse resp = new HeartBeatResponse() 
+            {
+                State = msg.State,
+            };
+            Send(conn, resp, false);
         }
 
         /// <summary>
