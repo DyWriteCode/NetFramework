@@ -7,6 +7,7 @@ using GameServer.Common;
 using GameServer.Manager;
 using Proto;
 using GameServer.Manager.MessageRouters;
+using System.Net;
 
 namespace GameServer.Net
 {
@@ -121,6 +122,10 @@ namespace GameServer.Net
         /// <param name="message">protobuf类型</param>
         public void SendACK(BufferEntity message)
         {
+            message.messageType = MessageType.ACK.GetHashCode();
+            Get<Session>().sendSN += 1;
+            message.sn = Get<Session>().sendSN;
+            message.messageID = 0;
             Send(message, true);
         }
 

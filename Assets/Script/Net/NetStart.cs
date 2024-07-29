@@ -14,7 +14,7 @@ namespace Game.Net
     /// 需要挂载到一个专门的物体上
     /// 进行网络初始化
     /// </summary>
-    public class NetStart : MonoBehaviour
+    public class NetStart : SingletonMono<NetStart>
     {
         /// <summary>
         /// 保证在切换场景时不被删除的物体以节省资源

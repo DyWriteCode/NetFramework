@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Game.Helper;
 using Game.Log;
 using Game.Common;
+using System.Collections;
+using UnityEditor.Experimental.GraphView;
 
 namespace Game.Net
 {
@@ -79,7 +81,7 @@ namespace Game.Net
             // 启动消息分发器
             MessageManager.Instance.Init(threadCount);
             // 超时重传逻辑接口启动
-            // CheckOutTime(host, port, threadCount);
+            CheckOutTime(host, port, threadCount);
             return true;
         }
 
@@ -147,9 +149,7 @@ namespace Game.Net
                     handleSN += 1;
                     break;
                 case (int)MessageType.Logic: // 业务报文
-                    BufferEntity ackBuffer = BufferEntityFactory.Allocate();
-                    ackBuffer.Init(buffer);
-                    // conn.SendACK(ackBuffer); // 先告诉服务器 我已经收到这个报文
+                    // conn.SendACK(buffer); // 先告诉服务器 我已经收到这个报文
                     // 再来处理业务报文
                     HandleLogincPackage(sender, buffer, data);
                     break;
@@ -277,6 +277,22 @@ namespace Game.Net
         public async void CheckOutTime(string host, int port, int threadCount = 1)
         {
             await Task.Delay(OverTime);
+            if (NetStart.Instance != null)
+            {
+                NetStart.Instance.StartCoroutine(ReSend(host, port, threadCount));
+            }
+            // 通过递归不断把sand package里面的失败的报文重新发出去
+            CheckOutTime(host, port, threadCount);
+        }
+
+        /// <summary>
+        /// 重传接口
+        /// </summary>
+        /// <param name="host">服务器IP</param>
+        /// <param name="port">服务器端口</param>
+        /// <param name="threadCount">启动消息分发器的线程数</param>
+        private IEnumerator ReSend(string host, int port, int threadCount = 1)
+        {
             foreach (var package in sendPackage.Values)
             {
                 // 确定是不是超过最大发送次数  关闭socket
@@ -287,7 +303,7 @@ namespace Game.Net
                     if (ConnectToServer(host, port, threadCount) == false)
                     {
                         LogUtils.Error($"{NetErrCode.NET_ERROR_PACKAGE_TIMEOUT} : Packet collection timed out");
-                        return;
+                        yield return null;
                     }
                 }
                 // 150
@@ -304,9 +320,8 @@ namespace Game.Net
                         Send(package.Encoder(false));
                     }
                 }
+                yield return null;
             }
-            // 通过递归不断把sand package里面的失败的报文重新发出去
-            CheckOutTime(host, port, threadCount);
         }
     }
 }

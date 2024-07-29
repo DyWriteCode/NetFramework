@@ -10,11 +10,19 @@ namespace GameServer.Common
     public class Singleton<T> where T : class, new()
     {
         private static readonly T instance = Activator.CreateInstance<T>();
+        private static readonly object locker = new object();
+
+        /// <summary>
+        /// 单例
+        /// </summary>
         public static T Instance
         {
             get
             {
-                return instance;
+                lock (locker)
+                {
+                    return instance;
+                }
             }
             set
             {

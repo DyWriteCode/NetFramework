@@ -66,21 +66,36 @@ namespace Game.Common
             return tcs.Task;
         }
 
-
+        /// <summary>
+        /// 操作包装器
+        /// </summary>
+        /// <param name="action">需要执行的内容</param>
+        /// <returns>null</returns>
         IEnumerator ActionWrapper(Action action)
         {
             action?.Invoke();
             yield return null;
         }
 
-
+        /// <summary>
+        /// 单例
+        /// </summary>
         private static UnityMainThreadDispatcher _instance = null;
 
+        /// <summary>
+        /// 是否正在运行
+        /// </summary>
+        /// <returns>是否正在运行</returns>
         public static bool Exists()
         {
             return _instance != null;
         }
 
+        /// <summary>
+        /// 获取单例
+        /// </summary>
+        /// <returns>单例对象</returns>
+        /// <exception cref="Exception">此脚本并没有挂载到mono behavior上</exception>
         public static UnityMainThreadDispatcher Instance()
         {
             if (!Exists())
@@ -90,7 +105,9 @@ namespace Game.Common
             return _instance;
         }
 
-
+        /// <summary>
+        /// 刚开始就执行
+        /// </summary>
         void Awake()
         {
             if (_instance == null)
@@ -100,6 +117,9 @@ namespace Game.Common
             }
         }
 
+        /// <summary>
+        /// 每帧运行
+        /// </summary>
         public void Update()
         {
             lock (_executionQueue)
@@ -111,6 +131,9 @@ namespace Game.Common
             }
         }
 
+        /// <summary>
+        /// 在删除的时候把单例归为空
+        /// </summary>
         void OnDestroy()
         {
             _instance = null;

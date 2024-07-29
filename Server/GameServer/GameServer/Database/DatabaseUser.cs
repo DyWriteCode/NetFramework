@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using GameServer.Common;
 
 namespace GameServer.Database
 {
@@ -63,5 +64,21 @@ namespace GameServer.Database
         /// 连接数据库字符串
         /// </summary>
         public static string ConnectionString { get => connectionString; }
+        /// <summary>
+        /// 数据库实体对象池
+        /// </summary>
+        private static ClassObjectPool<DatabaseEntity> DatabaseEntity;
+        /// <summary>
+        /// 对象时可以容纳的最大数量
+        /// </summary>
+        public static int MaxCount = 200;
+
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        public static void Init()
+        {
+            DatabaseEntity = new ClassObjectPool<DatabaseEntity>(MaxCount);
+        }
     }
 }

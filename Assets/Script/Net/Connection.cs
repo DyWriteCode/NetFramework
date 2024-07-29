@@ -122,6 +122,10 @@ namespace Game.Net
         /// <param name="message">protobuf类型</param>
         public void SendACK(BufferEntity message)
         {
+            message.messageType = MessageType.ACK.GetHashCode();
+            NetClient.Instance.sendSN += 1;
+            message.sn = NetClient.Instance.sendSN;
+            message.messageID = 0;
             Send(message, true);
         }
 

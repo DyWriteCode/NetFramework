@@ -55,9 +55,7 @@ namespace GameServer.Net
                     handleSN += 1;
                     break;
                 case (int)MessageType.Logic: //业务报文
-                    BufferEntity ackBuffer = BufferEntityFactory.Allocate();
-                    ackBuffer.Init(buffer);
-                    // sender.SendACK(ackBuffer); // 先告诉客户端 我已经收到这个报文
+                    // sender.SendACK(buffer); // 先告诉客户端 我已经收到这个报文
                     // 再来处理业务报文
                     HandleLogincPackage(sender, buffer, data);
                     break;
