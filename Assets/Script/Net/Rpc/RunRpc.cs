@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Game.Net.Rpc
 {
+    /// <summary>
+    /// RunRPC标签
+    /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class RunRpcAttribute : Attribute
     {

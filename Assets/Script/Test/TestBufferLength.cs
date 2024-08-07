@@ -7,10 +7,9 @@ using System;
 
 namespace Game.Test
 {
-    using UnityEngine;
-
     public class MathService
     {
+        // 可以这样自动的去注册方法
         // 这个方法可以被同步调用
         [RunRpc]
         public int Add(int a, int b) { return a + b; }
@@ -33,6 +32,7 @@ namespace Game.Test
         {
             _rpcMethodManager = new RpcMethodManager();
 
+            // 也可以这样手动的去注册方法
             // 手动注册方法
             // _rpcMethodManager.RegisterMethod("Add", new Func<int, int, int>(_mathService.Add));
             // 注意：对于异步方法，您需要传递方法的委托

@@ -19,6 +19,7 @@ namespace GameServer.Manager
         public static ArchiveManager? ArchiveManager;
         public static ConfigManager? ConfigManager; 
         public static MessageManager? MessageManager;
+        public static FactoryManager? FactoryManager;
 
         /// <summary>
         /// 初始化
@@ -29,6 +30,7 @@ namespace GameServer.Manager
             ArchiveManager = new ArchiveManager();
             ConfigManager = new ConfigManager();
             MessageManager = new MessageManager();
+            FactoryManager = new FactoryManager();
         }
 
         /// <summary>

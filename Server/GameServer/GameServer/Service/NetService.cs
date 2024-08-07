@@ -145,7 +145,7 @@ namespace GameServer.Net.Service
         {
             if (conn != null && conn.Get<Session>() != null)
             {
-                var bufferEntity = BufferEntityFactory.Allocate();
+                var bufferEntity = GameApp.FactoryManager.BufferEntityFactory.Allocate();
                 if (isAck == true)
                 {
                     bufferEntity.Init(sessionID, 0, 0, MessageType.ACK.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));

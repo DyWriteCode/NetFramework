@@ -1,0 +1,36 @@
+﻿[LOG]# [2024:08:56:01-125]  ThreadID:1 >>> LogUtils Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-134]  ThreadID:1 >>> Server Start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-138]  ThreadID:1 >>> ArchiveManager Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-139]  ThreadID:1 >>> MessageManager Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-152]  ThreadID:1 >>> DatabaseUser Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-153]  ThreadID:1 >>> BufferEntityFactory Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:08:56:01-479]  ThreadID:1 >>> An error occurred in executing the database operation command:Column 'Id' cannot be null
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Database\DatabaseEntity.cs::Void ExecuteNonQuery() Line:88
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Database\DatabaseUser.cs::Boolean AddCommand(System.String) Line:154
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Database\DatabaseReader.cs::Boolean Insert[T](T) Line:195
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Test\TestDb.cs::Void Test() Line:25
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Program.cs::Void Main() Line:63
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-486]  ThreadID:1 >>> False
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-488]  ThreadID:1 >>> Start listening on the port : 32510
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-493]  ThreadID:11 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-493]  ThreadID:10 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-493]  ThreadID:7 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-494]  ThreadID:5 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-600]  ThreadID:1 >>> Proto.HeartBeatRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:56:01-600]  ThreadID:1 >>> The network service is started
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->

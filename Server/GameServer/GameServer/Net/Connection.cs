@@ -68,7 +68,7 @@ namespace GameServer.Net
             secoder.DataReceived += _received;
             secoder.Disconnected += () => OnDisconnected?.Invoke(this);
             secoder.Init(); // 启动解码器
-            BufferEntityFactory.Init();
+            GameApp.FactoryManager.BufferEntityFactory.Init();
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace GameServer.Net
         /// <param name="data">数据</param>
         private void _received(byte[] data)
         {
-            BufferEntity bufferEntity = BufferEntityFactory.Allocate(data);
+            BufferEntity bufferEntity = GameApp.FactoryManager.BufferEntityFactory.Allocate(data);
             var message = ProtoHelper.ParseFrom(bufferEntity.messageID, bufferEntity.proto, 0, bufferEntity.protoSize);
             if (ProtoHelper.SeqCode(message.GetType()) == 0)
             {
