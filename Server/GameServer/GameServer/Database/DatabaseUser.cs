@@ -83,6 +83,12 @@ namespace GameServer.Database
             DatabaseEntityPool = new ClassObjectPool<DatabaseEntity>(MaxCount);
         }
 
+        // 从对象池获取到数据库实例对象
+        // 它会对数据库实例对象进行对数据库的连接等初始化操作
+        // 然后呢把传入的SQL命令给这个实体去处理
+        // 把结果缓存并返回
+        // 回收实体
+
         /// <summary>
         /// 执行命令 :返回执行结果
         /// </summary>

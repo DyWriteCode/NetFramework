@@ -14,17 +14,19 @@ namespace GameServer.Test
     [Table("test")]
     public class testdata
     {
-        public int Id { get; set; }
-        public string Te { get; set; }
+        public int id { get; set; }
+        public string Text { get; set; }
     }
 
     public class TestDb
     {
         public static void Test()
         {
-            LogUtils.Log(DatabaseReader.Insert<testdata>(new testdata()
+            // select * from test where "Id" = 2
+            LogUtils.ColorLog(LogColor.Green, DatabaseReader.Insert<testdata>(new testdata
             {
-                Te = "hi",
+                id = 1,
+                Text = "test",
             }));
         }
     }

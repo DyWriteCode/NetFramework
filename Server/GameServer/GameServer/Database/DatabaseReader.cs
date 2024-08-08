@@ -59,9 +59,9 @@ namespace GameServer.Database
 
         /// <summary>
         /// 查询 根据条件返回实体类
+        /// where Id = 1
         /// </summary>
         /// <typeparam name="T">实体类型</typeparam>
-        /// <param name="name">Table的名字</param>
         /// <param name="sql">查询的sql内容</param>
         /// <returns>单个实体</returns>
         public static T Select<T>(string sql) where T : class, new()
@@ -92,6 +92,7 @@ namespace GameServer.Database
 
         /// <summary>
         /// 查询 根据条件返回实体类列表
+        /// limit 1, 100
         /// </summary>
         /// <typeparam name="T">实体类型</typeparam>
         /// <param name="name">Table的名字</param>

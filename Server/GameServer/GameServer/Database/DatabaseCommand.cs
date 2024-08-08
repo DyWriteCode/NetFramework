@@ -15,9 +15,10 @@ namespace GameServer.Database
         // Set 设置
         public static string Set(string column, long value, bool isFirst = false)
         {
-
             if (isFirst == false)
+            {
                 return ",`" + column + "` = " + value.ToString() + " ";
+            }
             else
             {
                 return "`" + column + "` = " + value.ToString() + " ";
@@ -27,7 +28,9 @@ namespace GameServer.Database
         public static string Set(string column, ulong value, bool isFirst = false)
         {
             if (isFirst == false)
+            {
                 return ",`" + column + "` = " + value.ToString() + " ";
+            }
             else
             {
                 return "`" + column + "` = " + value.ToString() + " ";
@@ -73,6 +76,7 @@ namespace GameServer.Database
         {
             return " WHERE `" + column + "` = " + value;
         }
+
         public static string Where(string column, long value, int greater)
         {
             string _command = "";
@@ -93,14 +97,17 @@ namespace GameServer.Database
             }
             return _command;
         }
+
         public static string Where(string column, ulong value)
         {
             return " WHERE `" + column + "` = " + value;
         }
+
         public static string Where(string column, string value)
         {
             return " WHERE `" + column + "` = '" + MySqlEscape(value) + "'";
         }
+
         public static string Where(string column, bool value)
         {
             return " WHERE `" + column + "` = " + (value ? "1" : "0");
@@ -209,7 +216,7 @@ namespace GameServer.Database
         /// <param name="start">开始的ID</param>
         /// <param name="end">结束的ID</param>
         /// <returns>拼接好的命令</returns>
-        public static string LIMIT(int start, int end)
+        public static string Limit(int start, int end)
         {
             if (start > 0)
             {
@@ -230,7 +237,10 @@ namespace GameServer.Database
         /// <returns>虑好的string</returns>
         public static string MySqlEscape(string usString)
         {
-            if (usString == null) return null;
+            if (usString == null)
+            {
+                return null;
+            }
             // SQL Encoding for MySQL Recommended here:
             // http://au.php.net/manual/en/function.mysql-real-escape-string.php
             // it escapes \r, \n, \x00, \x1a, baskslash, single quotes, and double quotes

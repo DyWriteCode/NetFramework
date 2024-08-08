@@ -186,9 +186,8 @@ namespace Game.Net
             {
                 if (buffer.isFull == true)
                 {
-                    
+                    MessageManager.Instance.AddMessage(sender, data);
                 }
-                MessageManager.Instance.AddMessage(sender, data);
             }
             // 检测缓存的数据 有没有包含下一条可以处理的数据
             BufferEntity nextBuffer;

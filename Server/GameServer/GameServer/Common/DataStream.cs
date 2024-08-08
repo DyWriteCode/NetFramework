@@ -164,7 +164,7 @@ namespace GameServer.Common
         {
             byte[] bytes = new byte[protoSize];
             this.Read(bytes, 0, protoSize);
-            if (BitConverter.IsLittleEndian == true == true)
+            if (BitConverter.IsLittleEndian == true)
             {
                 Array.Reverse(bytes);
             }

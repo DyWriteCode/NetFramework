@@ -92,9 +92,8 @@ namespace GameServer.Net
             {
                 if (buffer.isFull == true)
                 {
-                    
+                    GameApp.MessageManager.AddMessage(sender, data);
                 }
-                GameApp.MessageManager.AddMessage(sender, data);
             }
             // 检测缓存的数据 有没有包含下一条可以处理的数据
             BufferEntity nextBuffer;

@@ -83,10 +83,7 @@ namespace Game.Net
             }
             if (MessageManager.Instance.Running == true)
             {
-                if (MessageManager.Instance.Running == true)
-                {
-                    // 先处理一下ACK报文
-                }
+                // 先处理一下ACK报文
             }
             OnDataReceived?.Invoke(this, bufferEntity, message);
         }
@@ -113,7 +110,11 @@ namespace Game.Net
         /// <param name="message">protobuf类型</param>
         public void Send(BufferEntity message, bool isAck = false)
         {
-            this.SocketSend(message.Encoder(isAck));
+            // this.SocketSend(message.Encoder(isAck));
+            DataStream dataStream = DataStream.Allocate();
+            dataStream.WriteInt(message.Encoder(isAck).Length);
+            dataStream.WriteBuffer(message.Encoder(isAck));
+            this.SocketSend(dataStream.ToArray());
         }
 
         /// <summary>

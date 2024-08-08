@@ -60,7 +60,7 @@ namespace GameServer
             // 加载服务端各模块并运行
             GameApp.Instance.Init();
             // TODO : 加载游戏个服务并且运行
-            TestDb.Test();
+            // TestDb.Test();
             //网路服务模块
             NetService netService = new NetService();
             netService.Start();

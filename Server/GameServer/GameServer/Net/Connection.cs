@@ -113,7 +113,11 @@ namespace GameServer.Net
         /// <param name="message">protobuf类型</param>
         public void Send(BufferEntity message, bool isAck = false)
         {
-            this.SocketSend(message.Encoder(isAck));
+            // this.SocketSend(message.Encoder(isAck));
+            DataStream dataStream = DataStream.Allocate();
+            dataStream.WriteInt(message.Encoder(isAck).Length);
+            dataStream.WriteBuffer(message.Encoder(isAck));
+            this.SocketSend(dataStream.ToArray());
         }
 
         /// <summary>

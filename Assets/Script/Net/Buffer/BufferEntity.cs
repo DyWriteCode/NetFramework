@@ -140,11 +140,6 @@ namespace Game.Net
             Array.Copy(_time, 0, data, 16, 8);
             Array.Copy(_messageType, 0, data, 24, 4);
             Array.Copy(_messageID, 0, data, 28, 4);
-            if (isAck == false)
-            {
-                // 业务数据 追加进来
-                Array.Copy(proto, 0, data, 32, proto.Length);
-            }
             //DataStream dataStream = DataStream.Allocate();
             //dataStream.WriteInt(protoSize);
             //dataStream.WriteInt(session);
@@ -161,6 +156,7 @@ namespace Game.Net
             }
             //buffer = dataStream.ToArray();
             //DataStream.Recycle(dataStream);
+            //return buffer;
             buffer = data;
             return data;
         }
@@ -170,17 +166,17 @@ namespace Game.Net
         /// </summary>
         private void DeCode()
         {
-            //DataStream dataStream = null;
+            DataStream dataStream = null;
             if (buffer.Length >= 4)
             {
-                ////字节数组 转化成 int 或者是long
+                //字节数组 转化成 int 或者是long
                 protoSize = BitConverter.ToInt32(buffer, 0); // 从0的位置 取4个字节转化成int
-                //dataStream = DataStream.Allocate(buffer);
+                dataStream = DataStream.Allocate(buffer);
                 //protoSize = dataStream.ReadInt();
-                //if (buffer.Length == protoSize + 32)
-                //{
-                //    isFull = true;
-                //}
+                if (buffer.Length == protoSize + 32)
+                {
+                    isFull = true;
+                }
             }
             else
             {
