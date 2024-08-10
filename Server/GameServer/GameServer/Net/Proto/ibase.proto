@@ -9,10 +9,8 @@ message Vector3 {
 }
 
 message Rpc {
-	int32 id = 1;
-	string name = 2;
-	int32 target = 3;
-	bytes args = 4;
+	string mrthodName = 2;
+	bytes parameters = 4;
 }
 
 message InstantiateRequest{

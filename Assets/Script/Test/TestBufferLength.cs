@@ -11,11 +11,11 @@ namespace Game.Test
     {
         // 可以这样自动的去注册方法
         // 这个方法可以被同步调用
-        [RunRpc]
+        [RunRpc("a")]
         public int Add(int a, int b) { return a + b; }
 
         // 这个方法可以被异步调用
-        [RunRpc]
+        [RunRpc("b")]
         public async Task<int> MultiplyAsync(int a, int b)
         {
             await Task.Delay(1000); // 模拟异步操作
@@ -45,11 +45,11 @@ namespace Game.Test
         async void PerformOperations()
         {
             // 同步调用
-            int resultAdd = (int)_rpcMethodManager.CallSync("Game.Test.MathService.Add", 3, 4);
+            int resultAdd = (int)_rpcMethodManager.CallSync("a", 3, 4);
             Debug.Log($"Add Result: {resultAdd}");
 
             // 异步调用
-            var resultMultiply = await _rpcMethodManager.CallAsync("Game.Test.MathService.MultiplyAsync", 3, 4);
+            var resultMultiply = await _rpcMethodManager.CallAsync("b", 3, 4);
             Debug.Log($"MultiplyAsync Result: {resultMultiply}");
         }
     }

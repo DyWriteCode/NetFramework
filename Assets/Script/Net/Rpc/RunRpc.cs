@@ -12,11 +12,19 @@ namespace Game.Net.Rpc
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class RunRpcAttribute : Attribute
     {
-        public string Name { get; }
+        /// <summary>
+        /// 自己设置的别名
+        /// </summary>
+        public string MethodName { get; }
+        /// <summary>
+        /// 该方法的注解
+        /// </summary>
+        public string MethodDesc { get; }
 
-        public RunRpcAttribute(string name = null)
+        public RunRpcAttribute(string name = null, string desc = null)
         {
-            Name = name;
+            MethodName = name;
+            MethodDesc = desc;
         }
     }
 }

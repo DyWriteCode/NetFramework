@@ -62,8 +62,15 @@ namespace Game.Net.Rpc
                         // 创建委托实例
                         var delegateInstance = Delegate.CreateDelegate(delegateType, target, method);
 
+                        string methodName = string.Empty;
                         // 为委托创建一个唯一名称
-                        string methodName = $"{type.FullName}.{method.Name}";
+                        if (string.IsNullOrEmpty(attribute.MethodName) == true)
+                        {
+                            methodName = $"{type.FullName}.{method.Name}";
+                        }
+                        else {
+                            methodName = attribute.MethodName;
+                        }
 
                         // 注册委托
                         RegisterMethod(methodName, delegateInstance);

@@ -129,7 +129,7 @@ namespace Proto {
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.ACKResponse), global::Proto.ACKResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Vec3), global::Proto.Vec3.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.NetEntity), global::Proto.NetEntity.Parser, new[]{ "Id", "Position", "Direction", "Speed" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.NetActor), global::Proto.NetActor.Parser, new[]{ "Id", "Tid", "Name", "Level", "Exp", "SpaceId", "Gold", "Entity", "Hp", "Mp", "Type", "Skills", "EquipsInfo", "ItemInfo", "Hpmax", "Mpmax" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.NetActor), global::Proto.NetActor.Parser, new[]{ "Id", "Tid", "MethodName", "Level", "Exp", "SpaceId", "Gold", "Entity", "Hp", "Mp", "Type", "Skills", "EquipsInfo", "ItemInfo", "Hpmax", "Mpmax" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.PropertyUpdate), global::Proto.PropertyUpdate.Parser, new[]{ "EntityId", "Property", "OldValue", "NewValue" }, null, new[]{ typeof(global::Proto.PropertyUpdate.Types.Property) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Proto.PropertyUpdate.Types.PropertyValue), global::Proto.PropertyUpdate.Types.PropertyValue.Parser, new[]{ "IntValue", "FloatValue", "StringValue", "StateValue", "LongValue" }, new[]{ "Value" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.PropertyUpdateResponse), global::Proto.PropertyUpdateResponse.Parser, new[]{ "List" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Damage), global::Proto.Damage.Parser, new[]{ "AttackerId", "TargetId", "SkillId", "Amount", "DamageType", "IsCrit", "IsMiss" }, null, null, null, null),
@@ -156,7 +156,7 @@ namespace Proto {
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.UserLoginResponse), global::Proto.UserLoginResponse.Parser, new[]{ "Success", "Code", "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.EntitySyncResponse), global::Proto.EntitySyncResponse.Parser, new[]{ "EntityList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.EntityEnterResponse), global::Proto.EntityEnterResponse.Parser, new[]{ "Entity" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.CharacterCreateRequest), global::Proto.CharacterCreateRequest.Parser, new[]{ "Name", "JobType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.CharacterCreateRequest), global::Proto.CharacterCreateRequest.Parser, new[]{ "MethodName", "JobType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.ChracterCreateResponse), global::Proto.ChracterCreateResponse.Parser, new[]{ "Success", "Message", "Character" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.CharacterListRequest), global::Proto.CharacterListRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.CharacterListResponse), global::Proto.CharacterListResponse.Parser, new[]{ "CharacterList" }, null, null, null, null),
@@ -2666,7 +2666,7 @@ namespace Proto {
         /// <summary>
         ///名字
         /// </summary>
-        [pbr::OriginalName("Name")] Name = 6,
+        [pbr::OriginalName("MethodName")] Name = 6,
         /// <summary>
         ///金币
         /// </summary>
