@@ -6,9 +6,15 @@ using Proto;
 using UnityEngine.UI;
 using Game.Log;
 using Game.Common;
+using Game.Common.Task;
 
 namespace Game.Net
 {
+    public class TaskInfo
+    {
+        public string TaskName = string.Empty;
+    }
+
     /// <summary>
     /// 启动网络初始化一些基本的客户端信息
     /// 需要挂载到一个专门的物体上
@@ -56,7 +62,17 @@ namespace Game.Net
         /// <summary>
         /// 心跳最后一次发送的时间
         /// </summary>
-        DateTime lastBeatTime = DateTime.MinValue;
+        private DateTime lastBeatTime = DateTime.MinValue;
+
+        /// <summary>
+        /// Queue任务执行者
+        /// </summary>
+        public QueueTaskRunner<TaskInfo> QueueRunner = new QueueTaskRunner<TaskInfo>();
+
+        /// <summary>
+        /// 超时任务执行者
+        /// </summary>
+        public TimeoutTaskRunner<TaskInfo> TimeoutRunner = new TimeoutTaskRunner<TaskInfo>();
 
         /// <summary>
         /// 初始化
@@ -83,6 +99,7 @@ namespace Game.Net
             StartCoroutine(SendHeartMessage());
             // MessageRouter这个是事件处理器
             MessageManager.Instance.Subscribe<HeartBeatResponse>(_HeartBeatResponse);
+            MessageManager.Instance.Subscribe<RpcResponse>(_RpcResponse);
             // 注册out事件
             EventManager.RegisterOut("OnDisconnected", this, "OnDisconnected");
         }
@@ -101,6 +118,16 @@ namespace Game.Net
                 int ms = Math.Max(1, (int)Math.Round(t.TotalMilliseconds));
                 NetworkLatencyText.text = $"Network Latency :{ms} ms";
             });
+        }
+
+        /// <summary>
+        /// 接收传回来的RPC结果
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="message"></param>
+        private void _RpcResponse(Connection sender, RpcResponse message)
+        {
+
         }
 
         /// <summary>

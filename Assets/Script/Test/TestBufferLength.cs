@@ -12,7 +12,18 @@ namespace Game.Test
         // 可以这样自动的去注册方法
         // 这个方法可以被同步调用
         [RunRpc("a")]
-        public int Add(int a, int b) { return a + b; }
+        public void Add(int a, int b) 
+        {
+            Debug.Log(a + b);
+            return; 
+        }
+
+        [RunRpc("c")]
+        public int A(int i)
+        {
+            Debug.Log(i);
+            return i;
+        }
 
         // 这个方法可以被异步调用
         [RunRpc("b")]
@@ -45,12 +56,14 @@ namespace Game.Test
         async void PerformOperations()
         {
             // 同步调用
-            int resultAdd = (int)_rpcMethodManager.CallSync("a", 3, 4);
-            Debug.Log($"Add Result: {resultAdd}");
+            // int resultAdd = (int)_rpcMethodManager.CallSync("a", 3, 4);
+            // Debug.Log($"Add Result: {resultAdd}");
+            //_rpcMethodManager.CallSync("a", 3, 4);
+            //_rpcMethodManager.CallSync("c", 1);
 
-            // 异步调用
-            var resultMultiply = await _rpcMethodManager.CallAsync("b", 3, 4);
-            Debug.Log($"MultiplyAsync Result: {resultMultiply}");
+            //// 异步调用
+            //var resultMultiply = await _rpcMethodManager.CallAsync("b", 3, 4);
+            //Debug.Log($"MultiplyAsync Result: {resultMultiply}");
         }
     }
 }

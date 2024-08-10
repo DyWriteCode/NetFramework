@@ -8,9 +8,15 @@ message Vector3 {
 	float z = 3;
 }
 
-message Rpc {
-	string mrthodName = 2;
-	bytes parameters = 4;
+message RpcRequest {
+	string mrthodName = 1;
+	string id = 2;
+	bytes parameters = 3;
+}
+
+message RpcResponse {
+	bool state = 1;
+	bytes result = 2;
 }
 
 message InstantiateRequest{
