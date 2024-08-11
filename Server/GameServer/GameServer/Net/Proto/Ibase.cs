@@ -29,19 +29,19 @@ namespace Proto
             byte[] descriptorData = global::System.Convert.FromBase64String(
                 string.Concat(
                   "CgtJYmFzZS5wcm90bxIFcHJvdG8iKgoHVmVjdG9yMxIJCgF4GAEgASgCEgkK",
-                  "AXkYAiABKAISCQoBehgDIAEoAiJACgpScGNSZXF1ZXN0EhIKCm1ydGhvZE5h",
-                  "bWUYASABKAkSCgoCaWQYAiABKAkSEgoKcGFyYW1ldGVycxgDIAEoDCIsCgtS",
-                  "cGNSZXNwb25zZRINCgVzdGF0ZRgBIAEoCBIOCgZyZXN1bHQYAiABKAwiigEK",
-                  "Ekluc3RhbnRpYXRlUmVxdWVzdBISCgpwcmVmYWJOYW1lGAEgASgJEiAKCHBv",
-                  "c2l0aW9uGAIgASgLMg4ucHJvdG8uVmVjdG9yMxIhCglkaXJlY3Rpb24YAyAB",
-                  "KAsyDi5wcm90by5WZWN0b3IzEg0KBWdyb3VwGAQgASgFEgwKBGFyZ3MYBSAB",
-                  "KAxiBnByb3RvMw=="));
+                  "AXkYAiABKAISCQoBehgDIAEoAiJACgpScGNSZXF1ZXN0EhIKCm1ldGhvZE5h",
+                  "bWUYASABKAkSCgoCaWQYAiABKAkSEgoKcGFyYW1ldGVycxgDIAEoDCI4CgtS",
+                  "cGNSZXNwb25zZRINCgVzdGF0ZRgBIAEoCBIKCgJpZBgCIAEoCRIOCgZyZXN1",
+                  "bHQYAyABKAwiigEKEkluc3RhbnRpYXRlUmVxdWVzdBISCgpwcmVmYWJOYW1l",
+                  "GAEgASgJEiAKCHBvc2l0aW9uGAIgASgLMg4ucHJvdG8uVmVjdG9yMxIhCglk",
+                  "aXJlY3Rpb24YAyABKAsyDi5wcm90by5WZWN0b3IzEg0KBWdyb3VwGAQgASgF",
+                  "EgwKBGFyZ3MYBSABKAxiBnByb3RvMw=="));
             descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
                 new pbr::FileDescriptor[] { },
                 new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.Vector3), global::Proto.Vector3.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.RpcRequest), global::Proto.RpcRequest.Parser, new[]{ "MrthodName", "Id", "Parameters" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.RpcResponse), global::Proto.RpcResponse.Parser, new[]{ "State", "Result" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.RpcRequest), global::Proto.RpcRequest.Parser, new[]{ "MethodName", "Id", "Parameters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Proto.RpcResponse), global::Proto.RpcResponse.Parser, new[]{ "State", "Id", "Result" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Proto.InstantiateRequest), global::Proto.InstantiateRequest.Parser, new[]{ "PrefabName", "Position", "Direction", "Group", "Args" }, null, null, null, null)
                 }));
         }
@@ -391,7 +391,7 @@ namespace Proto
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RpcRequest(RpcRequest other) : this()
         {
-            mrthodName_ = other.mrthodName_;
+            methodName_ = other.methodName_;
             id_ = other.id_;
             parameters_ = other.parameters_;
             _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -404,17 +404,17 @@ namespace Proto
             return new RpcRequest(this);
         }
 
-        /// <summary>Field number for the "mrthodName" field.</summary>
-        public const int MrthodNameFieldNumber = 1;
-        private string mrthodName_ = "";
+        /// <summary>Field number for the "methodName" field.</summary>
+        public const int MethodNameFieldNumber = 1;
+        private string methodName_ = "";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-        public string MrthodName
+        public string MethodName
         {
-            get { return mrthodName_; }
+            get { return methodName_; }
             set
             {
-                mrthodName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                methodName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
             }
         }
 
@@ -465,7 +465,7 @@ namespace Proto
             {
                 return true;
             }
-            if (MrthodName != other.MrthodName) return false;
+            if (MethodName != other.MethodName) return false;
             if (Id != other.Id) return false;
             if (Parameters != other.Parameters) return false;
             return Equals(_unknownFields, other._unknownFields);
@@ -476,7 +476,7 @@ namespace Proto
         public override int GetHashCode()
         {
             int hash = 1;
-            if (MrthodName.Length != 0) hash ^= MrthodName.GetHashCode();
+            if (MethodName.Length != 0) hash ^= MethodName.GetHashCode();
             if (Id.Length != 0) hash ^= Id.GetHashCode();
             if (Parameters.Length != 0) hash ^= Parameters.GetHashCode();
             if (_unknownFields != null)
@@ -500,9 +500,9 @@ namespace Proto
 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             output.WriteRawMessage(this);
 #else
-      if (MrthodName.Length != 0) {
+      if (MethodName.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(MrthodName);
+        output.WriteString(MethodName);
       }
       if (Id.Length != 0) {
         output.WriteRawTag(18);
@@ -523,10 +523,10 @@ namespace Proto
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output)
         {
-            if (MrthodName.Length != 0)
+            if (MethodName.Length != 0)
             {
                 output.WriteRawTag(10);
-                output.WriteString(MrthodName);
+                output.WriteString(MethodName);
             }
             if (Id.Length != 0)
             {
@@ -550,9 +550,9 @@ namespace Proto
         public int CalculateSize()
         {
             int size = 0;
-            if (MrthodName.Length != 0)
+            if (MethodName.Length != 0)
             {
-                size += 1 + pb::CodedOutputStream.ComputeStringSize(MrthodName);
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(MethodName);
             }
             if (Id.Length != 0)
             {
@@ -577,9 +577,9 @@ namespace Proto
             {
                 return;
             }
-            if (other.MrthodName.Length != 0)
+            if (other.MethodName.Length != 0)
             {
-                MrthodName = other.MrthodName;
+                MethodName = other.MethodName;
             }
             if (other.Id.Length != 0)
             {
@@ -606,7 +606,7 @@ namespace Proto
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            MrthodName = input.ReadString();
+            MethodName = input.ReadString();
             break;
           }
           case 18: {
@@ -637,7 +637,7 @@ namespace Proto
                         break;
                     case 10:
                         {
-                            MrthodName = input.ReadString();
+                            MethodName = input.ReadString();
                             break;
                         }
                     case 18:
@@ -696,6 +696,7 @@ namespace Proto
         public RpcResponse(RpcResponse other) : this()
         {
             state_ = other.state_;
+            id_ = other.id_;
             result_ = other.result_;
             _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -721,8 +722,22 @@ namespace Proto
             }
         }
 
+        /// <summary>Field number for the "id" field.</summary>
+        public const int IdFieldNumber = 2;
+        private string id_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Id
+        {
+            get { return id_; }
+            set
+            {
+                id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            }
+        }
+
         /// <summary>Field number for the "result" field.</summary>
-        public const int ResultFieldNumber = 2;
+        public const int ResultFieldNumber = 3;
         private pb::ByteString result_ = pb::ByteString.Empty;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -755,6 +770,7 @@ namespace Proto
                 return true;
             }
             if (State != other.State) return false;
+            if (Id != other.Id) return false;
             if (Result != other.Result) return false;
             return Equals(_unknownFields, other._unknownFields);
         }
@@ -765,6 +781,7 @@ namespace Proto
         {
             int hash = 1;
             if (State != false) hash ^= State.GetHashCode();
+            if (Id.Length != 0) hash ^= Id.GetHashCode();
             if (Result.Length != 0) hash ^= Result.GetHashCode();
             if (_unknownFields != null)
             {
@@ -791,8 +808,12 @@ namespace Proto
         output.WriteRawTag(8);
         output.WriteBool(State);
       }
-      if (Result.Length != 0) {
+      if (Id.Length != 0) {
         output.WriteRawTag(18);
+        output.WriteString(Id);
+      }
+      if (Result.Length != 0) {
+        output.WriteRawTag(26);
         output.WriteBytes(Result);
       }
       if (_unknownFields != null) {
@@ -811,9 +832,14 @@ namespace Proto
                 output.WriteRawTag(8);
                 output.WriteBool(State);
             }
-            if (Result.Length != 0)
+            if (Id.Length != 0)
             {
                 output.WriteRawTag(18);
+                output.WriteString(Id);
+            }
+            if (Result.Length != 0)
+            {
+                output.WriteRawTag(26);
                 output.WriteBytes(Result);
             }
             if (_unknownFields != null)
@@ -831,6 +857,10 @@ namespace Proto
             if (State != false)
             {
                 size += 1 + 1;
+            }
+            if (Id.Length != 0)
+            {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
             }
             if (Result.Length != 0)
             {
@@ -854,6 +884,10 @@ namespace Proto
             if (other.State != false)
             {
                 State = other.State;
+            }
+            if (other.Id.Length != 0)
+            {
+                Id = other.Id;
             }
             if (other.Result.Length != 0)
             {
@@ -880,6 +914,10 @@ namespace Proto
             break;
           }
           case 18: {
+            Id = input.ReadString();
+            break;
+          }
+          case 26: {
             Result = input.ReadBytes();
             break;
           }
@@ -907,6 +945,11 @@ namespace Proto
                             break;
                         }
                     case 18:
+                        {
+                            Id = input.ReadString();
+                            break;
+                        }
+                    case 26:
                         {
                             Result = input.ReadBytes();
                             break;

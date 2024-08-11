@@ -9,14 +9,15 @@ message Vector3 {
 }
 
 message RpcRequest {
-	string mrthodName = 1;
+	string methodName = 1;
 	string id = 2;
 	bytes parameters = 3;
 }
 
 message RpcResponse {
 	bool state = 1;
-	bytes result = 2;
+	string id = 2;
+	bytes result = 3;
 }
 
 message InstantiateRequest{

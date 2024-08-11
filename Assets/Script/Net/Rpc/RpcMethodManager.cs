@@ -4,19 +4,22 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Security.Cryptography;
 using System.Threading.Tasks;
+using Game.Helper;
 using Game.Common;
+using Game.Common.Tasks;
+using Game.Helper;
 using Google.Protobuf;
 using Proto;
 using UnityEngine;
+using Game.Log;
 
 namespace Game.Net.Rpc
 {
     /// <summary>
     /// RPC方法管理
     /// </summary>
-    public class RpcMethodManager
+    public class RpcMethodManager : Singleton<RpcMethodManager>
     {
         /// <summary>
         /// 存储RPC方法
@@ -47,7 +50,7 @@ namespace Game.Net.Rpc
                         var parameterTypes = method.GetParameters().Select(p => p.ParameterType).ToArray();
                         // 检查方法是否异步
                         bool isAsync = method.ReturnType.IsGenericType && method.ReturnType.GetGenericTypeDefinition() == typeof(Task<>);
-                        // 异步方法的返回类型应为 Task，同步方法使用实际返回类型
+                        // 异步方法的返回类型应为 Tasks，同步方法使用实际返回类型
                         Type effectiveReturnType = isAsync ? typeof(Task) : method.ReturnType;
                         // 创建泛型参数数组
                         Type[] typeArguments;
@@ -221,7 +224,7 @@ namespace Game.Net.Rpc
         /// <param name="methodName">方法的名字</param>
         /// <param name="parameters">需要传入的参数数组</param>
         /// <returns>本地调用RPC函数的返回值</returns>
-        public object CallSync(string methodName, params object[] parameters)
+        private object InvokeSync(string methodName, params object[] parameters)
         {
             if (_rpcMethods.TryGetValue(methodName, out Delegate method))
             {
@@ -248,7 +251,7 @@ namespace Game.Net.Rpc
         /// <param name="methodName">方法的名字</param>
         /// <param name="parameters">需要传入的参数数组</param>
         /// <returns>本地调用RPC函数的返回值</returns>
-        public async Task<object> CallAsync(string methodName, params object[] parameters)
+        private async Task<object> InvokeAsync(string methodName, params object[] parameters)
         {
             if (_rpcMethods.TryGetValue(methodName, out Delegate method))
             {
@@ -258,7 +261,7 @@ namespace Game.Net.Rpc
                     if (result is Task task)
                     {
                         await task;
-                        // 如果 Task<TResult>，则获取 Result 属性
+                        // 如果 Tasks<TResult>，则获取 Result 属性
                         return task.GetType().GetProperty("Result")?.GetValue(task);
                     }
                     return result;
@@ -282,12 +285,36 @@ namespace Game.Net.Rpc
         /// <param name="methodName">方法的名字</param>
         /// <param name="parameters">需要传入的参数数组</param>
         /// <returns>一个task对象可以从中获取结果</returns>
-        public async Task<object> Call(string methodName, params object[] parameters)
+        public async Task<object> Call(string methodName, int timeoutSeconds = 2, params object[] parameters)
+        //public async Task<object> Call(string id, string methodName, params object[] parameters)
         {
             RpcRequest request = MakeRequest(methodName, parameters);
+            // RpcRequest request = MakeRequest(id, methodName, parameters);
             if (NetClient.Instance.Running == true)
             {
                 NetClient.Instance.Send(request, false);
+            }
+            bool isTimeout = false;
+            NetStart.Instance.TimeoutRunner.AddTimeoutTask(new TaskInfo
+            {
+                Name = request.Id
+            }, timeoutSeconds, (TaskInfo objectKey, string context) =>
+            {
+                isTimeout = true;
+            });
+            while (!_responseCache.ContainsKey(request.Id))
+            {
+                // 检查是否超时
+                if (isTimeout == true)
+                {
+                    return null;
+                }
+                await Task.Delay(100); // 等待一段时间，避免密集轮询
+            }
+            // 从字典中获取结果
+            lock (_responseCache)
+            {
+                return _responseCache[request.Id];
             }
         }
 
@@ -298,19 +325,74 @@ namespace Game.Net.Rpc
         /// <param name="parameters">需要传入的参数数组</param>
         /// <returns>RPC请求</returns>
         private RpcRequest MakeRequest(string methodName, params object[] parameters)
+        // private RpcRequest MakeRequest(string id, string methodName, params object[] parameters)
         {
             // 构建proto buf
             string requestId = Guid.NewGuid().ToString(); // 生成唯一ID
+            //string requestId = id; // 生成唯一ID
             RpcRequest request = new RpcRequest();
-            request.MrthodName = methodName;
+            request.MethodName = methodName;
             request.Id = requestId;
-            using (var dataStream = new DataStream())
-            {
-                var binaryFormatter = new BinaryFormatter();
-                binaryFormatter.Serialize(dataStream, parameters);
-                request.Parameters = ByteString.CopyFrom(dataStream.ToArray());
-            }
+            request.Parameters = ByteString.CopyFrom(TypeHelper.ConvertFromObject(parameters));
             return request;
+        }
+
+        /// <summary>
+        /// 构建RPC返回报文
+        /// </summary>
+        /// <param name="id">唯一ID</param>
+        /// <returns>RPC返回报文</returns>
+        private RpcResponse MakeResponse(string id)
+        {
+            // 构建proto buf
+            string responseId = id;
+            RpcResponse response = new RpcResponse();
+            response.Id = responseId;
+            return response;
+        }
+
+        /// <summary>
+        /// 处理RPC请求内容
+        /// </summary>
+        /// <param name="sender">发送者</param>
+        /// <param name="response">response</param>
+        public void RPCRequestHander(Connection sender, RpcRequest request)
+        //public void RPCRequestHander(RpcRequest request)
+        {
+            RpcResponse response = MakeResponse(request.Id);
+            if (InvokeSync(request.MethodName, TypeHelper.ConvertFromBinaryByteArray(request.Parameters.ToByteArray())) != null)
+            {
+                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(InvokeSync(request.MethodName, TypeHelper.ConvertFromBinaryByteArray(request.Parameters.ToByteArray()))));
+                response.State = true;
+            }
+            else
+            {
+                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(null));
+                response.State = false;
+            }
+            if (NetClient.Instance.Running == true)
+            {
+                NetClient.Instance.Send(response, false);
+            }
+        }
+
+        /// <summary>
+        /// 处理RPC返回内容
+        /// </summary>
+        /// <param name="sender">发送者</param>
+        /// <param name="response">response</param>
+        public void RPCResponseHander(Connection sender, RpcResponse response)
+        // public void RPCResponseHander(RpcResponse response)
+        {
+            if (response.State == false)
+            {
+                return;
+            }
+            using (var ms = DataStream.Allocate(response.Result.ToByteArray()))
+            {
+                var formatter = new BinaryFormatter();
+                _responseCache.Add(response.Id, formatter.Deserialize(ms));
+            }
         }
     }
 }

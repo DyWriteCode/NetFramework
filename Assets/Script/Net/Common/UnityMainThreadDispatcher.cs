@@ -41,7 +41,7 @@ namespace Game.Common
         }
 
         /// <summary>
-        /// 锁定队列并将 Action 添加到队列中，返回一个 Task，该 Task 在操作完成时完成
+        /// 锁定队列并将 Action 添加到队列中，返回一个 Tasks，该 Tasks 在操作完成时完成
         /// </summary>
         /// <param name="action">将从主线程执行的函数。</param>
         /// <returns>可以等待直到操作完成的任务</returns>

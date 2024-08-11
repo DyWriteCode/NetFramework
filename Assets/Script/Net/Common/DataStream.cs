@@ -42,7 +42,7 @@ namespace Game.Common
         /// <returns>一个对象</returns>
         public static DataStream Allocate(byte[] bytes, bool NotCreate = true)
         {
-            DataStream stream = Allocate();
+            DataStream stream = Allocate(NotCreate);
             stream.Write(bytes, 0, bytes.Length);
             stream.Position = 0;
             return stream;

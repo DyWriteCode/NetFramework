@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace Game.Common.Task
+namespace Game.Common.Tasks
 {
     /// <summary>
     /// 任务执行者

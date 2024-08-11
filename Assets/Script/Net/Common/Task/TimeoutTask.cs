@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Game.Common.Task
+namespace Game.Common.Tasks
 {
     /// <summary>
     /// 超时回调的委托

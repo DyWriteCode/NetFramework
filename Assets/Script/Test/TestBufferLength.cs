@@ -47,7 +47,7 @@ namespace Game.Test
             // 手动注册方法
             // _rpcMethodManager.RegisterMethod("Add", new Func<int, int, int>(_mathService.Add));
             // 注意：对于异步方法，您需要传递方法的委托
-            // _rpcMethodManager.RegisterMethod("MultiplyAsync", new Func<int, int, Task<int>>(_mathService.MultiplyAsync));
+            // _rpcMethodManager.RegisterMethod("MultiplyAsync", new Func<int, int, Tasks<int>>(_mathService.MultiplyAsync));
             _rpcMethodManager.RegisterAllMethodsFromAssembly();
 
             PerformOperations();

@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 
-namespace Game.Common.Task
+namespace Game.Common.Tasks
 {
     /// <summary>
     /// 超时任务运行器
