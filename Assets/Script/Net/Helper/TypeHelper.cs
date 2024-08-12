@@ -6,8 +6,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using Google.Protobuf;
 using System.Security.Cryptography;
-using UnityEditor.PackageManager.Requests;
-
 
 namespace Game.Helper
 {
@@ -17,25 +15,34 @@ namespace Game.Helper
     public class TypeHelper
     {
         /// <summary>
-        /// byte[]转换为object[]
+        /// byte[]转换为object
         /// </summary>
         /// <param name="binaryByteArray">byte[]数组</param>
-        /// <returns>object[]数组</returns>
+        /// <returns>object</returns>
         public static object ConvertFromBinaryByteArray(byte[] binaryByteArray)
         {
             using (var memoryStream = DataStream.Allocate(binaryByteArray))
             {
+#pragma warning disable SYSLIB0011
                 var formatter = new BinaryFormatter();
+#pragma warning restore SYSLIB0011
                 return formatter.Deserialize(memoryStream);
             }
         }
 
+        /// <summary>
+        /// Object转byte[]数组
+        /// </summary>
+        /// <param name="obj">object</param>
+        /// <returns>byte[]数组</returns>
         public static byte[] ConvertFromObject(object obj)
         {
             using (var dataStream = new DataStream())
             {
-                var binaryFormatter = new BinaryFormatter();
-                binaryFormatter.Serialize(dataStream, obj);
+#pragma warning disable SYSLIB0011
+                var formatter = new BinaryFormatter();
+#pragma warning restore SYSLIB0011
+                formatter.Serialize(dataStream, obj);
                 return dataStream.ToArray();
             }
         }

@@ -418,7 +418,7 @@ namespace Proto
             }
         }
 
-        /// <summary>Field number for the "id" field.</summary>
+        /// <summary>Field number for the "ids" field.</summary>
         public const int IdFieldNumber = 2;
         private string id_ = "";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -722,7 +722,7 @@ namespace Proto
             }
         }
 
-        /// <summary>Field number for the "id" field.</summary>
+        /// <summary>Field number for the "ids" field.</summary>
         public const int IdFieldNumber = 2;
         private string id_ = "";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

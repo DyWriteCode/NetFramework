@@ -124,9 +124,8 @@ namespace GameServer.Manager.MessageRouters
                 }
                 catch (Exception e)
                 {
-                    LogUtils.Error($"MessageManager.Fire error : {e.StackTrace}");
+                    LogUtils.Error($"MessageManager.Fire error : {e.Message}");
                 }
-
             }
         }
 

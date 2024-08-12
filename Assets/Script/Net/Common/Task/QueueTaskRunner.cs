@@ -71,8 +71,8 @@ namespace Game.Common.Tasks
         /// <summary>
         /// 添加任务
         /// </summary>
-        /// <param name="objectKey"></param>
-        /// <param name="callback"></param>
+        /// <param name="objectKey">标识符</param>
+        /// <param name="callback">回调</param>
         public void AddTask(T objectKey, Action<T, string> callback)
         {
             AddTask(objectKey, callback, null);

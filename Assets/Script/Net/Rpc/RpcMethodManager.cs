@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -8,11 +7,10 @@ using System.Threading.Tasks;
 using Game.Helper;
 using Game.Common;
 using Game.Common.Tasks;
-using Game.Helper;
+using Game.Log;
 using Google.Protobuf;
 using Proto;
 using UnityEngine;
-using Game.Log;
 
 namespace Game.Net.Rpc
 {
@@ -230,17 +228,53 @@ namespace Game.Net.Rpc
             {
                 try
                 {
-                    return method.DynamicInvoke(parameters);
+                    switch (method.GetMethodInfo().GetParameters().Length)
+                    {
+                        case 0:
+                            return method.DynamicInvoke(parameters[0]);
+                        case 1:
+                            System.Collections.IList? param = parameters[0] as System.Collections.IList;
+                            return method.DynamicInvoke(param[0]);
+                        case 2:
+                            param = parameters[0] as System.Collections.IList;
+                            return method.DynamicInvoke(param[0], param[1]);
+                        case 3:
+                            param = parameters[0] as System.Collections.IList;
+                            return method.DynamicInvoke(param[0], param[1], param[2]);
+                        case 4:
+                            param = parameters[0] as System.Collections.IList;
+                            return method.DynamicInvoke(param[0], param[1], param[2], param[3]);
+                        case 5:
+                            param = parameters[0] as System.Collections.IList;
+                            return method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4]);
+                        case 6:
+                            param = parameters[0] as System.Collections.IList;
+                            return method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4], param[5]);
+                        case 7:
+                            param = parameters[0] as System.Collections.IList;
+                            return method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4], param[5], param[6]);
+                        case 8:
+                            param = parameters[0] as System.Collections.IList;
+                            return method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4], param[5], param[6], param[7]);
+                        case 9:
+                            param = parameters[0] as System.Collections.IList;
+                            return method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4], param[5], param[6], param[7], param[8]);
+                        case 10:
+                            param = parameters[0] as System.Collections.IList;
+                            return method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4], param[5], param[6], param[7], param[8], param[9]);
+                        default:
+                            return method.DynamicInvoke(parameters[0]);
+                    }
                 }
                 catch (Exception ex)
                 {
-                    Debug.LogError($"An exception occurred while calling the method '{methodName}': {ex}");
+                    LogUtils.Error($"An exception occurred while calling the method '{methodName}': {ex}");
                     throw;
                 }
             }
             else
             {
-                Debug.LogError($"Method '{methodName}' not found.");
+                LogUtils.Error($"Method '{methodName}' not found.");
                 throw new KeyNotFoundException($"Method '{methodName}' not found.");
             }
         }
@@ -257,7 +291,56 @@ namespace Game.Net.Rpc
             {
                 try
                 {
-                    var result = method.DynamicInvoke(parameters);
+                    var result = new object();
+                    switch (method.GetMethodInfo().GetParameters().Length)
+                    {
+                        case 0:
+                            result = method.DynamicInvoke(parameters[0]);
+                            break;
+                        case 1:
+                            System.Collections.IList? param = parameters[0] as System.Collections.IList;
+                            result = method.DynamicInvoke(param[0]);
+                            break;
+                        case 2:
+                            param = parameters[0] as System.Collections.IList;
+                            result = method.DynamicInvoke(param[0], param[1]);
+                            break;
+                        case 3:
+                            param = parameters[0] as System.Collections.IList;
+                            result = method.DynamicInvoke(param[0], param[1], param[2]);
+                            break;
+                        case 4:
+                            param = parameters[0] as System.Collections.IList;
+                            result = method.DynamicInvoke(param[0], param[1], param[2], param[3]);
+                            break;
+                        case 5:
+                            param = parameters[0] as System.Collections.IList;
+                            result = method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4]);
+                            break;
+                        case 6:
+                            param = parameters[0] as System.Collections.IList;
+                            result = method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4], param[5]);
+                            break;
+                        case 7:
+                            param = parameters[0] as System.Collections.IList;
+                            result = method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4], param[5], param[6]);
+                            break;
+                        case 8:
+                            param = parameters[0] as System.Collections.IList;
+                            result = method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4], param[5], param[6], param[7]);
+                            break;
+                        case 9:
+                            param = parameters[0] as System.Collections.IList;
+                            result = method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4], param[5], param[6], param[7], param[8]);
+                            break;
+                        case 10:
+                            param = parameters[0] as System.Collections.IList;
+                            result = method.DynamicInvoke(param[0], param[1], param[2], param[3], param[4], param[5], param[6], param[7], param[8], param[9]);
+                            break;
+                        default:
+                            result = method.DynamicInvoke(parameters[0]);
+                            break;
+                    }
                     if (result is Task task)
                     {
                         await task;
@@ -286,33 +369,34 @@ namespace Game.Net.Rpc
         /// <param name="parameters">需要传入的参数数组</param>
         /// <returns>一个task对象可以从中获取结果</returns>
         public async Task<object> Call(string methodName, int timeoutSeconds = 2, params object[] parameters)
-        //public async Task<object> Call(string id, string methodName, params object[] parameters)
+        //public async Task<object> Call(string ids, string methodName, params object[] parameters)
         {
             RpcRequest request = MakeRequest(methodName, parameters);
-            // RpcRequest request = MakeRequest(id, methodName, parameters);
+            // RpcRequest request = MakeRequest(ids, methodName, parameters);
             if (NetClient.Instance.Running == true)
             {
                 NetClient.Instance.Send(request, false);
             }
             bool isTimeout = false;
-            NetStart.Instance.TimeoutRunner.AddTimeoutTask(new TaskInfo
+            NetStart.Instance.TimeoutRunner.AddTimeoutTask(new TimeoutTaskInfo
             {
-                Name = request.Id
-            }, timeoutSeconds, (TaskInfo objectKey, string context) =>
+                Name = request.Id,
+                TimeoutSeconds = timeoutSeconds,
+            }, (TimeoutTaskInfo objectKey, string context) =>
             {
                 isTimeout = true;
             });
-            while (!_responseCache.ContainsKey(request.Id))
+            while (_responseCache.ContainsKey(request.Id) == false)
             {
                 // 检查是否超时
                 if (isTimeout == true)
                 {
-                    return null;
+                    break;
                 }
-                await Task.Delay(100); // 等待一段时间，避免密集轮询
+                await Task.Delay(1000); // 等待一段时间，避免密集轮询
             }
             // 从字典中获取结果
-            lock (_responseCache)
+            lock(_responseCache)
             {
                 return _responseCache[request.Id];
             }
@@ -325,11 +409,11 @@ namespace Game.Net.Rpc
         /// <param name="parameters">需要传入的参数数组</param>
         /// <returns>RPC请求</returns>
         private RpcRequest MakeRequest(string methodName, params object[] parameters)
-        // private RpcRequest MakeRequest(string id, string methodName, params object[] parameters)
+        // private RpcRequest MakeRequest(string ids, string methodName, params object[] parameters)
         {
             // 构建proto buf
             string requestId = Guid.NewGuid().ToString(); // 生成唯一ID
-            //string requestId = id; // 生成唯一ID
+            //string requestId = ids; // 生成唯一ID
             RpcRequest request = new RpcRequest();
             request.MethodName = methodName;
             request.Id = requestId;
@@ -360,9 +444,10 @@ namespace Game.Net.Rpc
         //public void RPCRequestHander(RpcRequest request)
         {
             RpcResponse response = MakeResponse(request.Id);
-            if (InvokeSync(request.MethodName, TypeHelper.ConvertFromBinaryByteArray(request.Parameters.ToByteArray())) != null)
+            object result = InvokeSync(request.MethodName, TypeHelper.ConvertFromBinaryByteArray(request.Parameters.ToByteArray()));
+            if (result != null)
             {
-                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(InvokeSync(request.MethodName, TypeHelper.ConvertFromBinaryByteArray(request.Parameters.ToByteArray()))));
+                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(result));
                 response.State = true;
             }
             else
@@ -388,11 +473,8 @@ namespace Game.Net.Rpc
             {
                 return;
             }
-            using (var ms = DataStream.Allocate(response.Result.ToByteArray()))
-            {
-                var formatter = new BinaryFormatter();
-                _responseCache.Add(response.Id, formatter.Deserialize(ms));
-            }
+            object result = TypeHelper.ConvertFromBinaryByteArray(response.Result.ToByteArray());
+            _responseCache[response.Id] = result;
         }
     }
 }

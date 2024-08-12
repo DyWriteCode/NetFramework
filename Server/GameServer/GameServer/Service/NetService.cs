@@ -20,7 +20,7 @@ namespace GameServer.Net.Service
     /// <summary>
     /// 网络服务
     /// </summary>
-    public class NetService
+    public class NetService : BaseService
     {
         /// <summary>
         /// 服务端对象
@@ -38,6 +38,12 @@ namespace GameServer.Net.Service
         /// 会话ID
         /// </summary>
         public int sessionID = 1000;
+
+        /// <summary>
+        /// 客户端列表
+        /// 只要用于RPC
+        /// </summary>
+        public List<Connection> ConnectionList = new List<Connection>();
 
         /// <summary>
         /// 初始化
@@ -124,6 +130,7 @@ namespace GameServer.Net.Service
             LogUtils.Log("Client access");
             heartBeatPairs[conn] = DateTime.Now;
             conn.Set<Session>(new Session());
+            ConnectionList.Add(conn);
         }
 
         /// <summary>
@@ -135,55 +142,6 @@ namespace GameServer.Net.Service
             heartBeatPairs.Remove(conn);
             LogUtils.Log($"The connection is lost : {conn}");
             // TODO : 清除掉地图内属于本客户端的角色
-        }
-
-        /// <summary>
-        /// 发送消息
-        /// </summary>
-        /// <param name="message">需要发送的数据</param>
-        public void Send(Connection conn, IMessage message, bool isAck = false)
-        {
-            if (conn != null && conn.Get<Session>() != null)
-            {
-                var bufferEntity = GameApp.FactoryManager.BufferEntityFactory.Allocate();
-                if (isAck == true)
-                {
-                    bufferEntity.Init(sessionID, 0, 0, MessageType.ACK.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
-                }
-                else
-                {
-                    bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
-                }
-                bufferEntity.time = TimeHelper.ClientNow(); // 暂时先等于0
-                conn.Get<Session>().sendSN += 1; // 已经发送的SN加一
-                bufferEntity.sn = conn.Get<Session>().sendSN;
-                if (conn.Get<Session>().sessionID != 0)
-                {
-                    //缓存起来 因为可能需要重发
-                    conn.Get<Session>().sendPackage.TryAdd(conn.Get<Session>().sendSN, bufferEntity);
-                }
-                if (bufferEntity == null)
-                {
-                    LogUtils.Log($"{NetErrCode.NET_ERROR_ZERO_BYTE} : Error of sending and receiving 0 bytes");
-                }
-                conn.Send(bufferEntity, isAck);
-            }
-        }
-
-        /// <summary>
-        /// 发送消息
-        /// </summary>
-        /// <param name="message">需要发送的数据</param>
-        public void Send(Connection conn, byte[] message, bool isAck = false)
-        {
-            if (conn != null)
-            {
-                if (message == null)
-                {
-                    LogUtils.Log($"{NetErrCode.NET_ERROR_ZERO_BYTE} : Error of sending and receiving 0 bytes");
-                }
-                conn.SocketSend(message);
-            }
         }
     }
 }

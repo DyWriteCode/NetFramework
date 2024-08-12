@@ -8,6 +8,8 @@ using GameServer.Manager.Archive;
 using GameServer.Manager.Config;
 using GameServer.Manager.MessageRouters;
 using GameServer.Log;
+using GameServer.Net.Rpc;
+using GameServer.Common.Tasks;
 
 namespace GameServer.Manager
 {
@@ -16,10 +18,34 @@ namespace GameServer.Manager
     /// </summary>
     public class GameApp : Singleton<GameApp>
     {
+        /// <summary>
+        /// 存档管理器
+        /// </summary>
         public static ArchiveManager? ArchiveManager;
+        /// <summary>
+        /// 配置管理器
+        /// </summary>
         public static ConfigManager? ConfigManager; 
+        /// <summary>
+        /// 消息管理器
+        /// </summary>
         public static MessageManager? MessageManager;
+        /// <summary>
+        /// 工厂管理器
+        /// </summary>
         public static FactoryManager? FactoryManager;
+        /// <summary>
+        /// Queue任务执行者
+        /// </summary>
+        public static QueueTaskRunner<TimeoutTaskInfo>? QueueRunner;
+        /// <summary>
+        /// 超时任务执行者
+        /// </summary>
+        public static TimeoutTaskRunner<TimeoutTaskInfo>? TimeoutRunner;
+        /// <summary>
+        /// rpc网络管理器
+        /// </summary>
+        public static RpcMethodManager? RpcMethodManager;
 
         /// <summary>
         /// 初始化
@@ -31,6 +57,9 @@ namespace GameServer.Manager
             ConfigManager = new ConfigManager();
             MessageManager = new MessageManager();
             FactoryManager = new FactoryManager();
+            QueueRunner = new QueueTaskRunner<TimeoutTaskInfo>();
+            TimeoutRunner = new TimeoutTaskRunner<TimeoutTaskInfo>();
+            RpcMethodManager = new RpcMethodManager();
         }
 
         /// <summary>

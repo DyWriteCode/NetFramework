@@ -13,7 +13,7 @@ namespace Game.Common.Tasks
     /// 专为超时时间到达后执行的任务，在超时时间到达之间，可以随时移除
     /// </summary>
     /// <typeparam name="T">任意类型</typeparam>
-    public class TimeoutTaskRunner<T> where T : class, new()
+    public class TimeoutTaskRunner<T> where T : TimeoutTaskInfo, new()
     {        
         /// <summary>
         /// 为添加的超时任务分配的 TaskId 任务标识序列
@@ -149,9 +149,9 @@ namespace Game.Common.Tasks
         /// <param name="timeoutSeconds">超时时间</param>
         /// <param name="callback">回调函数</param>
         /// <returns>任务标识</returns>
-        public long AddTimeoutTask(T objectKey, int timeoutSeconds, TimeoutCallback<T> callback)
+        public long AddTimeoutTask(T taskInfo, TimeoutCallback<T> callback, string context = "")
         {
-            return AddTimeoutTask(objectKey, timeoutSeconds, callback, null);
+            return AddTimeoutTask(taskInfo, taskInfo.TimeoutSeconds, callback, context);
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace Game.Common.Tasks
         /// <param name="callback">回调函数</param>
         /// <param name="context">上下文信息</param>
         /// <returns>任务标识</returns>
-        public long AddTimeoutTask(T objectKey, int timeoutSeconds, TimeoutCallback<T> callback, String context)
+        public long AddTimeoutTask(T objectKey, int timeoutSeconds, TimeoutCallback<T> callback, string context)
         {
             TimeoutTask<T> task = new TimeoutTask<T>();
             task.ObjectKey = objectKey;

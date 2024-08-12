@@ -59,11 +59,14 @@ namespace GameServer
             LogUtils.Log("Server Start");
             // 加载服务端各模块并运行
             GameApp.Instance.Init();
+            GameApp.RpcMethodManager.RegisterAllMethodsFromAssembly();
             // TODO : 加载游戏个服务并且运行
             // TestDb.Test();
             //网路服务模块
             NetService netService = new NetService();
+            RPCService RPCService = new RPCService();
             netService.Start();
+            RPCService.Start();
             LogUtils.Log("The network service is started");
             CommandHelper.Run(commandInfo);
         }

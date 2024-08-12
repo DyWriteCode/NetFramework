@@ -1426,7 +1426,7 @@ namespace Proto
             return new NetEntity(this);
         }
 
-        /// <summary>Field number for the "id" field.</summary>
+        /// <summary>Field number for the "ids" field.</summary>
         public const int IdFieldNumber = 1;
         private int id_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1810,7 +1810,7 @@ namespace Proto
             return new NetActor(this);
         }
 
-        /// <summary>Field number for the "id" field.</summary>
+        /// <summary>Field number for the "ids" field.</summary>
         public const int IdFieldNumber = 1;
         private int id_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4954,7 +4954,7 @@ namespace Proto
             return new SkillInfo(this);
         }
 
-        /// <summary>Field number for the "id" field.</summary>
+        /// <summary>Field number for the "ids" field.</summary>
         public const int IdFieldNumber = 1;
         private int id_;
         /// <summary>

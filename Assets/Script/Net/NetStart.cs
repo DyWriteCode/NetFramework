@@ -63,12 +63,12 @@ namespace Game.Net
         /// <summary>
         /// Queue任务执行者
         /// </summary>
-        public QueueTaskRunner<TaskInfo> QueueRunner = new QueueTaskRunner<TaskInfo>();
+        public QueueTaskRunner<TimeoutTaskInfo> QueueRunner = new QueueTaskRunner<TimeoutTaskInfo>();
 
         /// <summary>
         /// 超时任务执行者
         /// </summary>
-        public TimeoutTaskRunner<TaskInfo> TimeoutRunner = new TimeoutTaskRunner<TaskInfo>();
+        public TimeoutTaskRunner<TimeoutTaskInfo> TimeoutRunner = new TimeoutTaskRunner<TimeoutTaskInfo>();
 
         /// <summary>
         /// 初始化

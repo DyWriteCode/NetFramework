@@ -1,0 +1,281 @@
+﻿[LOG]# [2024:03:47:31-681]  ThreadID:1 >>> LogUtils Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-694]  ThreadID:1 >>> Server Start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-700]  ThreadID:1 >>> ArchiveManager Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-701]  ThreadID:1 >>> MessageManager Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-722]  ThreadID:1 >>> DatabaseUser Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-722]  ThreadID:1 >>> BufferEntityFactory Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-741]  ThreadID:1 >>> RPC method load finished
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-774]  ThreadID:1 >>> Start listening on the port : 32510
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-783]  ThreadID:11 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-783]  ThreadID:10 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-785]  ThreadID:5 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-783]  ThreadID:7 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-896]  ThreadID:1 >>> Proto.HeartBeatRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-897]  ThreadID:1 >>> Proto.RpcResponse:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-897]  ThreadID:1 >>> Proto.RpcRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:31-897]  ThreadID:1 >>> The network service is started
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-221]  ThreadID:16 >>> Client access
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-519]  ThreadID:16 >>> Proto Type registry：10000 - proto.Vec3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10001 - proto.Damage
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10002 - proto.Vector3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10003 - proto.CastInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10004 - proto.ItemInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10005 - proto.NetActor
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10006 - proto.NetEntity
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10007 - proto.SkillInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10008 - proto.ACKRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10009 - proto.ItemUpdate
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10010 - proto.RpcRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10011 - proto.ACKResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10012 - proto.ChatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10013 - proto.RpcResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10014 - proto.ChatResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10015 - proto.SpellRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10016 - proto.InventoryInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10017 - proto.NetEntitySync
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10018 - proto.ReviveRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10019 - proto.SpellResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-520]  ThreadID:16 >>> Proto Type registry：10020 - proto.DamageResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10021 - proto.ItemUseRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10022 - proto.PropertyUpdate
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10023 - proto.GameEnterRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10024 - proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10025 - proto.InventoryRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10026 - proto.UserLoginRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10027 - proto.GameEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10028 - proto.HeartBeatResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10029 - proto.InventoryResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10030 - proto.PickupItemRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10031 - proto.SpellFailResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10032 - proto.UserLoginResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10033 - proto.EntitySyncResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10034 - proto.InstantiateRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10035 - proto.ItemDiscardRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10036 - proto.SpaceEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-521]  ThreadID:16 >>> Proto Type registry：10037 - proto.EntityEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10038 - proto.UserRegisterRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10039 - proto.CharacterListRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10040 - proto.ItemPlacementRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10041 - proto.UserRegisterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10042 - proto.CharacterListResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10043 - proto.CharacterCreateRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10044 - proto.CharacterDeleteRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10045 - proto.ChracterCreateResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10046 - proto.PropertyUpdateResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10047 - proto.SpaceEntitySyncRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10048 - proto.CharacterDeleteResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10049 - proto.SpaceEntitySyncResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10050 - proto.SpaceCharacterLeaveResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10051 - proto.PropertyUpdate.PropertyValue
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-522]  ThreadID:16 >>> Proto Type registry：10052 - proto.SpaceCharactersEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:38-524]  ThreadID:16 >>> Descriptor Message：code=10010 - Proto.RpcRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:03:47:38-577]  ThreadID:5 >>> An exception occurred while calling the method 'Add': System.Reflection.TargetParameterCountException: Parameter count mismatch.
+   at System.Reflection.MethodBaseInvoker.ThrowTargetParameterCountException()
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at GameServer.Net.Rpc.RpcMethodManager.InvokeSync(String methodName, Object[] parameters) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Rpc\RpcMethodManager.cs:line 235
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Rpc\RpcMethodManager.cs::System.Object InvokeSync(System.String, System.Object[]) Line:235
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Rpc\RpcMethodManager.cs::Void RPCRequestHander(GameServer.Net.Connection, Proto.RpcRequest) Line:363
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Service\RPCService.cs::Void _RpcRequest(GameServer.Net.Connection, Proto.RpcRequest) Line:43
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageManager.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeMethod(System.Object, Void**, System.Signature, Boolean) Line:0
+    ::System.Object InvokeDirectByRefWithFewArgs(System.Object, System.Span`1[System.Object], System.Reflection.BindingFlags) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageManager.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:258
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageManager.cs::Void MessageWork(System.Object) Line:233
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:03:47:38-588]  ThreadID:5 >>> MessageManager.Fire error : Parameter count mismatch.
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageManager.cs::Void Fire[T](GameServer.Net.Connection, T) Line:123
+    ::System.Object InvokeMethod(System.Object, Void**, System.Signature, Boolean) Line:0
+    ::System.Object InvokeDirectByRefWithFewArgs(System.Object, System.Span`1[System.Object], System.Reflection.BindingFlags) Line:0
+    ::System.Object InvokeWithFewArgs(System.Object, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object[], System.Globalization.CultureInfo) Line:0
+    ::System.Object Invoke(System.Object, System.Object[]) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageManager.cs::Void _executeMessage(GameServer.Net.Connection, Google.Protobuf.IMessage) Line:258
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Manager\MessageManager.cs::Void MessageWork(System.Object) Line:233
+    ::Void Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:39-462]  ThreadID:15 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:39-714]  ThreadID:15 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:39-963]  ThreadID:15 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:40-217]  ThreadID:15 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:40-467]  ThreadID:15 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:40-720]  ThreadID:15 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:40-970]  ThreadID:15 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:41-223]  ThreadID:15 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:41-476]  ThreadID:18 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:41-728]  ThreadID:18 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:41-980]  ThreadID:18 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:42-233]  ThreadID:18 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:42-485]  ThreadID:18 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:42-739]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:42-993]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:43-243]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:43-496]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:43-756]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:44-008]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:44-258]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:44-510]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:44-761]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:45-014]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:45-266]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:45-518]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:45-770]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:46-024]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:46-275]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:46-527]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:46-777]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:47-031]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:47-285]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:47-537]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:47-788]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:48-039]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:48-294]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:48-544]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:48-796]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:49-049]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:49-301]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:49-569]  ThreadID:16 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:49-827]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:50-081]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:50-335]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:50-587]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:50-837]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:51-088]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:51-339]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:51-590]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:51-840]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:52-091]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:52-341]  ThreadID:17 >>> Descriptor Message：code=10024 - Proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:03:47:52-465]  ThreadID:17 >>> The connection is lost : GameServer.Net.Connection
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->

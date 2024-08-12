@@ -10,7 +10,7 @@ using Google.Protobuf;
 using System.Runtime.Serialization.Formatters.Binary;
 using Game.Log;
 using System.Security.Cryptography;
-using UnityEditor.PackageManager.Requests;
+using Game.Net;
 
 namespace Game.Test
 {
@@ -21,9 +21,9 @@ namespace Game.Test
     {
         private RpcMethodManager _rpcMethodManager;
         private MathService _mathService;
-        private string id = Guid.NewGuid().ToString();
+        //private string ids = Guid.NewGuid().ToString();
 
-        void Start()
+        private async void Start()
         {
             _rpcMethodManager = new RpcMethodManager();
 
@@ -40,10 +40,15 @@ namespace Game.Test
             //    _rpcMethodManager.RPCResponseHander(new RpcResponse
             //    {
             //        State = true,
-            //        Id = id,
+            //        Id = ids,
             //        Result = ByteString.CopyFrom(dataStream.ToArray()),
             //    });
             //}
+            if (NetClient.Instance.Running == true)
+            {
+                object result = await RpcMethodManager.Instance.Call("Add", 10, 1);
+                LogUtils.Warn(result);
+            }
         }
 
         private async void Update()
@@ -58,7 +63,6 @@ namespace Game.Test
                 //    Parameters = ByteString.CopyFrom(dataStream.ToArray())
                 //});
             }
-            
             //LogUtils.ColorLog(LogColor.Red, a);
         }
     }
