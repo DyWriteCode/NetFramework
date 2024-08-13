@@ -122,9 +122,8 @@ namespace Game.Net
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"MessageManager.Fire error : {e.StackTrace}");
+                    Debug.LogError($"MessageManager.Fire error : {e.Message}");
                 }
-
             }
         }
 

@@ -14,7 +14,7 @@ namespace Game.Test
         [RunRpc("a")]
         public void Add(int a, int b) 
         {
-            Debug.Log(a + b);
+            Debug.LogError(a + b);
             return; 
         }
 
@@ -22,7 +22,7 @@ namespace Game.Test
         public int A(int i)
         {
             Debug.Log(i);
-            return i;
+            return i + i;
         }
 
         // 这个方法可以被异步调用
@@ -41,16 +41,16 @@ namespace Game.Test
 
         void Start()
         {
-            _rpcMethodManager = new RpcMethodManager();
+            //_rpcMethodManager = new RpcMethodManager();
 
             // 也可以这样手动的去注册方法
             // 手动注册方法
             // _rpcMethodManager.RegisterMethod("Add", new Func<int, int, int>(_mathService.Add));
             // 注意：对于异步方法，您需要传递方法的委托
             // _rpcMethodManager.RegisterMethod("MultiplyAsync", new Func<int, int, Tasks<int>>(_mathService.MultiplyAsync));
-            _rpcMethodManager.RegisterAllMethodsFromAssembly();
+            //_rpcMethodManager.RegisterAllMethodsFromAssembly();
 
-            PerformOperations();
+            //PerformOperations();
         }
 
         async void PerformOperations()

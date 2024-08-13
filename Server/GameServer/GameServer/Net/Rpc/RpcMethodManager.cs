@@ -19,7 +19,7 @@ namespace GameServer.Net.Rpc
     /// <summary>
     /// RPC方法管理
     /// </summary>
-    public class RpcMethodManager : Singleton<RpcMethodManager>
+    public class RpcMethodManager
     {
         /// <summary>
         /// 存储RPC方法
@@ -370,7 +370,9 @@ namespace GameServer.Net.Rpc
         /// <summary>
         /// 远程调用方法
         /// </summary>
+        /// <param name="connection">与客户端的连接</param>
         /// <param name="methodName">方法的名字</param>
+        /// <param name="timeoutSeconds">多少秒后自动结束</param>
         /// <param name="parameters">需要传入的参数数组</param>
         /// <returns>一个task对象可以从中获取结果</returns>
         public async Task<object> Call(Connection connection, string methodName, int timeoutSeconds = 2, params object[] parameters)
@@ -454,8 +456,8 @@ namespace GameServer.Net.Rpc
             }
             else
             {
-                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(null));
-                response.State = false;
+                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject("null-null"));
+                response.State = true;
             }
             RPCService.Instance.Send(sender, response, false);
         }

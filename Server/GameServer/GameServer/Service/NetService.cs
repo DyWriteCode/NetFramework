@@ -111,7 +111,7 @@ namespace GameServer.Net.Service
         /// </summary>
         /// <param name="conn">连接的客户端</param>
         /// <param name="msg">需要发送的内容</param>
-        private void _HeartBeatRequest(Connection conn, HeartBeatRequest msg)
+        private async void _HeartBeatRequest(Connection conn, HeartBeatRequest msg)
         {
             heartBeatPairs[conn] = DateTime.Now;
             HeartBeatResponse resp = new HeartBeatResponse() 
@@ -119,6 +119,10 @@ namespace GameServer.Net.Service
                 State = msg.State,
             };
             Send(conn, resp, false);
+            // test start
+            object result = await GameApp.RpcMethodManager.Call(conn, "c", 2, 4);
+            LogUtils.Warn(result);
+            // test end
         }
 
         /// <summary>

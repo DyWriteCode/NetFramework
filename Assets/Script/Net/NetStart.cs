@@ -8,6 +8,7 @@ using Game.Log;
 using Game.Common;
 using Game.Common.Tasks;
 using Game.Net.Rpc;
+using Game.Test;
 
 namespace Game.Net
 {
@@ -91,6 +92,8 @@ namespace Game.Net
             });
             // 连接服务器
             NetClient.Instance.ConnectToServer(HOST, PORT, 1);
+            RpcMethodManager.Instance.RegisterAllMethodsFromAssembly();
+            //RpcMethodManager.Instance.RegisterMethod("d", new Func<int, int>(TestRPC.d));
             //心跳包任务，每秒1次
             StartCoroutine(SendHeartMessage());
             // MessageRouter这个是事件处理器

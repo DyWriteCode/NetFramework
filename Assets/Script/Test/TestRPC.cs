@@ -11,6 +11,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using Game.Log;
 using System.Security.Cryptography;
 using Game.Net;
+using UnityEditor;
 
 namespace Game.Test
 {
@@ -23,16 +24,20 @@ namespace Game.Test
         private MathService _mathService;
         //private string ids = Guid.NewGuid().ToString();
 
+        public static int d(int i)
+        {
+            return i + i;
+        }
+
         private async void Start()
         {
-            _rpcMethodManager = new RpcMethodManager();
-
+            //_rpcMethodManager = new RpcMethodManager();
             // 也可以这样手动的去注册方法
             // 手动注册方法
             // _rpcMethodManager.RegisterMethod("Add", new Func<int, int, int>(_mathService.Add));
             // 注意：对于异步方法，您需要传递方法的委托
             // _rpcMethodManager.RegisterMethod("MultiplyAsync", new Func<int, int, Tasks<int>>(_mathService.MultiplyAsync));
-            _rpcMethodManager.RegisterAllMethodsFromAssembly();
+            //_rpcMethodManager.RegisterAllMethodsFromAssembly();
             //using (var dataStream = new DataStream())
             //{
             //    var binaryFormatter = new BinaryFormatter();
@@ -46,23 +51,26 @@ namespace Game.Test
             //}
             if (NetClient.Instance.Running == true)
             {
-                object result = await RpcMethodManager.Instance.Call("Add", 10, 1);
-                LogUtils.Warn(result);
+                //object result = await RpcMethodManager.Instance.Call("Add", 4, 1, 10); // 11
+                //LogUtils.Warn(result);
+                //result = await RpcMethodManager.Instance.Call("Get", 4, 1); // aaa
+                //LogUtils.Warn(result);
+                //await RpcMethodManager.Instance.Call("Warn", 4, "test"); // aaa
             }
         }
 
         private async void Update()
         {
-            using (var dataStream = new DataStream())
-            {
-                var binaryFormatter = new BinaryFormatter();
-                binaryFormatter.Serialize(dataStream, 1);
-                //_rpcMethodManager.RPCRequestHander(new RpcRequest
-                //{
-                //    MethodName = "c",
-                //    Parameters = ByteString.CopyFrom(dataStream.ToArray())
-                //});
-            }
+            //using (var dataStream = new DataStream())
+            //{
+            //    var binaryFormatter = new BinaryFormatter();
+            //    binaryFormatter.Serialize(dataStream, 1);
+            //    //_rpcMethodManager.RPCRequestHander(new RpcRequest
+            //    //{
+            //    //    MethodName = "c",
+            //    //    Parameters = ByteString.CopyFrom(dataStream.ToArray())
+            //    //});
+            //}
             //LogUtils.ColorLog(LogColor.Red, a);
         }
     }

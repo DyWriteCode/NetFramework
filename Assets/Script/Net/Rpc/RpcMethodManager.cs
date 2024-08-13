@@ -64,7 +64,7 @@ namespace Game.Net.Rpc
                         Type delegateType;
                         if (isAsync || method.ReturnType != typeof(void))
                         {
-                            // 有返回值 | 异步方法
+                            // 有返回值 | 异步方法 16
                             switch (typeArguments.Length) {
                                 case 2:
                                     delegateType = typeof(Func<,>).MakeGenericType(typeArguments);
@@ -122,7 +122,7 @@ namespace Game.Net.Rpc
                         }
                         else
                         {
-                            // 同步方法且返回 void 使用 Action | 无返回值
+                            // 同步方法且返回 void 使用 Action | 无返回值 16
                             switch (typeArguments.Length)
                             {
                                 case 1:
@@ -391,7 +391,7 @@ namespace Game.Net.Rpc
                 // 检查是否超时
                 if (isTimeout == true)
                 {
-                    break;
+                    return null;
                 }
                 await Task.Delay(1000); // 等待一段时间，避免密集轮询
             }
@@ -439,7 +439,7 @@ namespace Game.Net.Rpc
         /// 处理RPC请求内容
         /// </summary>
         /// <param name="sender">发送者</param>
-        /// <param name="response">response</param>
+        /// <param name="request">response</param>
         public void RPCRequestHander(Connection sender, RpcRequest request)
         //public void RPCRequestHander(RpcRequest request)
         {
@@ -452,8 +452,8 @@ namespace Game.Net.Rpc
             }
             else
             {
-                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(null));
-                response.State = false;
+                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject("null-null"));
+                response.State = true;
             }
             if (NetClient.Instance.Running == true)
             {
@@ -469,6 +469,7 @@ namespace Game.Net.Rpc
         public void RPCResponseHander(Connection sender, RpcResponse response)
         // public void RPCResponseHander(RpcResponse response)
         {
+            // result error
             if (response.State == false)
             {
                 return;

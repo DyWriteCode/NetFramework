@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameServer.Log;
 using GameServer.Net.Rpc;
 
 namespace GameServer.Test
@@ -14,9 +15,21 @@ namespace GameServer.Test
     public class TestRPC
     {
         [RunRpc("Add", "a add b")]
-        public int Add(int a)
+        public int Add(int a, int b)
         {
-            return a + a;
+            return a + b;
+        }
+
+        [RunRpc("Get")]
+        public string GetInfo(int i)
+        {
+            return "aaa";
+        }
+
+        [RunRpc("Warn")] // GameServer.TestRPC.Warn
+        public void Warn(string msg)
+        {
+            LogUtils.Warn(msg);
         }
     }
 }
