@@ -1,0 +1,30 @@
+﻿[ERROR_LOG]# [2024:10:41:49-320]  ThreadID:1 >>> SyncVar 'test1' not found.
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\SyncVar\SyncVarManager.cs::System.Object GetSyncVarValue(System.String) Line:95
+    D:\unity\SocketLearn\Assets\Script\Test\TestSyncVar.cs::Void Update() Line:29
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:10:41:53-108]  ThreadID:1 >>> SyncVar 'test1' not found.
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\SyncVar\SyncVarManager.cs::System.Object GetSyncVarValue(System.String) Line:95
+    D:\unity\SocketLearn\Assets\Script\Test\TestSyncVar.cs::Void Update() Line:29
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:10:41:53-959]  ThreadID:1 >>> SyncVar 'test1' not found.
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\SyncVar\SyncVarManager.cs::System.Object GetSyncVarValue(System.String) Line:95
+    D:\unity\SocketLearn\Assets\Script\Test\TestSyncVar.cs::Void Update() Line:29
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:10:41:54-558]  ThreadID:1 >>> SyncVar 'test1' not found.
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\SyncVar\SyncVarManager.cs::System.Object GetSyncVarValue(System.String) Line:95
+    D:\unity\SocketLearn\Assets\Script\Test\TestSyncVar.cs::Void Update() Line:29
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:10:41:55-183]  ThreadID:1 >>> SyncVar 'test1' not found.
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\SyncVar\SyncVarManager.cs::System.Object GetSyncVarValue(System.String) Line:95
+    D:\unity\SocketLearn\Assets\Script\Test\TestSyncVar.cs::Void Update() Line:29
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:10:41:55-919]  ThreadID:1 >>> SyncVar 'test1' not found.
+StackTrace:
+    D:\unity\SocketLearn\Assets\Script\Net\SyncVar\SyncVarManager.cs::System.Object GetSyncVarValue(System.String) Line:95
+    D:\unity\SocketLearn\Assets\Script\Test\TestSyncVar.cs::Void Update() Line:29
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->

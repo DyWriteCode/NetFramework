@@ -14,6 +14,8 @@ namespace Game.Net.Rpc
     {
         /// <summary>
         /// 自己设置的别名
+        /// method.FullName ==> Game.Rpc.xxx
+        /// xxxx
         /// </summary>
         public string MethodName { get; }
         /// <summary>

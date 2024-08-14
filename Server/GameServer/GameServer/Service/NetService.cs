@@ -120,8 +120,8 @@ namespace GameServer.Net.Service
             };
             Send(conn, resp, false);
             // test start
-            object result = await GameApp.RpcMethodManager.Call(conn, "c", 2, 4);
-            LogUtils.Warn(result);
+            //object result = await GameApp.RpcMethodManager.Call(conn, "c", 2, 4);
+            //LogUtils.Warn(result);
             // test end
         }
 

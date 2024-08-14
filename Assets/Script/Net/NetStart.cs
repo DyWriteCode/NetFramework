@@ -9,6 +9,7 @@ using Game.Common;
 using Game.Common.Tasks;
 using Game.Net.Rpc;
 using Game.Test;
+using Game.Net.SyncVar;
 
 namespace Game.Net
 {
@@ -92,7 +93,9 @@ namespace Game.Net
             });
             // 连接服务器
             NetClient.Instance.ConnectToServer(HOST, PORT, 1);
+            // 初始化RPC以及同步变量
             RpcMethodManager.Instance.RegisterAllMethodsFromAssembly();
+            SyncVarManager.Instance.RegisterAllVarsFromAssembly();
             //RpcMethodManager.Instance.RegisterMethod("d", new Func<int, int>(TestRPC.d));
             //心跳包任务，每秒1次
             StartCoroutine(SendHeartMessage());
@@ -100,8 +103,30 @@ namespace Game.Net
             MessageManager.Instance.Subscribe<HeartBeatResponse>(_HeartBeatResponse);
             MessageManager.Instance.Subscribe<RpcResponse>(_RpcResponse);
             MessageManager.Instance.Subscribe<RpcRequest>(_RpcRequest);
+            MessageManager.Instance.Subscribe<SyncVarResponse>(_SyncVarResponse);
+            MessageManager.Instance.Subscribe<SyncVarRequest>(_SyncVarRequest);
             // 注册out事件
             EventManager.RegisterOut("OnDisconnected", this, "OnDisconnected");
+        }
+
+        /// <summary>
+        /// 接收传回来的SyncVar请求
+        /// </summary>
+        /// <param name="sender">服务器</param>
+        /// <param name="message">发送过来的信息</param>
+        private void _SyncVarRequest(Connection sender, SyncVarRequest msg)
+        {
+            SyncVarManager.Instance.SyncVarRequestHander(sender, msg);
+        }
+
+        /// <summary>
+        /// 接收传回来的SyncVar请求
+        /// </summary>
+        /// <param name="sender">服务器</param>
+        /// <param name="message">发送过来的信息</param>
+        private void _SyncVarResponse(Connection sender, SyncVarResponse msg)
+        {
+            SyncVarManager.Instance.SyncVarResponseHander(sender, msg);
         }
 
         /// <summary>

@@ -407,6 +407,39 @@ namespace GameServer.Net.Rpc
         }
 
         /// <summary>
+        /// 远程调用方法
+        /// </summary>
+        /// <param name="connectionList">与客户端的连接</param>
+        /// <param name="methodName">方法的名字</param>
+        /// <param name="timeoutSeconds">多少秒后自动结束</param>
+        /// <param name="parameters">需要传入的参数数组</param>
+        /// <returns>一个task对象可以从中获取结果</returns>
+        public async Task<List<object>> Call(List<Connection> connectionList, string methodName, int timeoutSeconds = 2, params object[] parameters)
+        {
+            List<Task<object>> tasks = new List<Task<object>>();
+            foreach (Connection connection in connectionList)
+            {
+                tasks.Add(Call(connection, methodName, timeoutSeconds, parameters));
+            }
+            await Task.WhenAll(tasks); // 等待所有任务完成
+            // 提取所有任务的结果
+            List<object> results = new List<object>(tasks.Count);
+            foreach (var task in tasks)
+            {
+                if (task.IsCompletedSuccessfully)
+                {
+                    results.Add(task.Result);
+                }
+                else
+                {
+                    // 处理任务失败的情况，例如记录日志或抛出异常
+                    results.Add(null); // 或者其他适当的默认值
+                }
+            }
+            return results; // 返回包含所有结果的列表
+        }
+
+        /// <summary>
         /// 构建RPC请求
         /// </summary>
         /// <param name="methodName">方法的名字</param>
@@ -448,15 +481,26 @@ namespace GameServer.Net.Rpc
         //public void RPCRequestHander(RpcRequest request)
         {
             RpcResponse response = MakeResponse(request.Id);
-            object result = InvokeSync(request.MethodName, TypeHelper.ConvertFromBinaryByteArray(request.Parameters.ToByteArray()));
-            if (result != null)
+            object result = new object();
+            try
             {
-                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(result));
-                response.State = true;
+                result = InvokeSync(request.MethodName, TypeHelper.ConvertFromBinaryByteArray(request.Parameters.ToByteArray()));
             }
-            else
+            catch (Exception ex)
             {
-                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject("null-null"));
+                response.State = false;
+                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject("ERROR"));
+            }
+            finally
+            {
+                if (result == null)
+                {
+                    response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject("NULL"));
+                }
+                else
+                {
+                    response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(result));
+                }
                 response.State = true;
             }
             RPCService.Instance.Send(sender, response, false);

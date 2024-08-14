@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
 using Game.Helper;
 using Game.Common;
@@ -27,7 +26,7 @@ namespace Game.Net.Rpc
         private readonly Dictionary<string, Delegate> _rpcMethods = new Dictionary<string, Delegate>();
         /// <summary>
         /// 存储RPC方法返回值缓存
-        /// Key是id
+        /// Key是id 
         /// Value是返回值
         /// </summary>
         private Dictionary<string, object> _responseCache = new Dictionary<string, object>();
@@ -366,6 +365,7 @@ namespace Game.Net.Rpc
         /// 远程调用方法
         /// </summary>
         /// <param name="methodName">方法的名字</param>
+        /// <param name="timeoutSeconds">任务超时时间</param>
         /// <param name="parameters">需要传入的参数数组</param>
         /// <returns>一个task对象可以从中获取结果</returns>
         public async Task<object> Call(string methodName, int timeoutSeconds = 2, params object[] parameters)
@@ -444,15 +444,26 @@ namespace Game.Net.Rpc
         //public void RPCRequestHander(RpcRequest request)
         {
             RpcResponse response = MakeResponse(request.Id);
-            object result = InvokeSync(request.MethodName, TypeHelper.ConvertFromBinaryByteArray(request.Parameters.ToByteArray()));
-            if (result != null)
+            object result = new object();
+            try
             {
-                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(result));
-                response.State = true;
+                result = InvokeSync(request.MethodName, TypeHelper.ConvertFromBinaryByteArray(request.Parameters.ToByteArray()));
             }
-            else
+            catch (Exception ex)
             {
-                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject("null-null"));
+                response.State = false;
+                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject("ERROR"));
+            }
+            finally
+            {
+                if (result == null)
+                {
+                    response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject("NULL"));
+                }
+                else
+                {
+                    response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(result));
+                }
                 response.State = true;
             }
             if (NetClient.Instance.Running == true)

@@ -21,9 +21,9 @@ namespace GameServer.Test
         }
 
         [RunRpc("Get")]
-        public string GetInfo(int i)
+        public string GetInfo(string i)
         {
-            return "aaa";
+            return $"{i} is coding";
         }
 
         [RunRpc("Warn")] // GameServer.TestRPC.Warn

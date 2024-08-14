@@ -20,6 +20,17 @@ message RpcResponse {
 	bytes result = 3;
 }
 
+message SyncVarRequest {
+	string varName = 1;
+	string id = 2;
+}
+
+message SyncVarResponse {
+	bool state = 1;
+	string id = 2;
+	bytes result = 3;
+}
+
 message InstantiateRequest{
 	string prefabName = 1;
 	Vector3 position = 2;
