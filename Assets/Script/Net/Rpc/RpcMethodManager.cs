@@ -32,6 +32,20 @@ namespace Game.Net.Rpc
         private Dictionary<string, object> _responseCache = new Dictionary<string, object>();
 
         /// <summary>
+        /// 执行完CALL之后的回调
+        /// </summary>
+        /// <param name="taskId">Call ID</param>
+        /// <param name="result">执行完后的结果</param>
+        public delegate void CallRunRpcCallback(string taskId, object result = null);
+
+        /// <summary>
+        /// 执行完CALL之后的回调
+        /// </summary>
+        /// <param name="taskId">Call ID</param>
+        /// <param name="result">执行完后的结果</param>
+        public delegate void CallRunRpcCallbackList(List<string> taskId, object result = null);
+
+        /// <summary>
         /// 从本Assembly拿到所有run RPC标签的函数去注册为RPC函数
         /// </summary>
         public void RegisterAllMethodsFromAssembly()
@@ -368,6 +382,50 @@ namespace Game.Net.Rpc
         /// <param name="timeoutSeconds">任务超时时间</param>
         /// <param name="parameters">需要传入的参数数组</param>
         /// <returns>一个task对象可以从中获取结果</returns>
+        public async Task<object> Call(string methodName, int timeoutSeconds = 2, CallRunRpcCallback callback = null, params object[] parameters)
+        //public async Task<object> Call(string ids, string methodName, params object[] parameters)
+        {
+            RpcRequest request = MakeRequest(methodName, parameters);
+            // RpcRequest request = MakeRequest(ids, methodName, parameters);
+            if (NetClient.Instance.Running == true)
+            {
+                NetClient.Instance.Send(request, false);
+            }
+            bool isTimeout = false;
+            NetStart.Instance.TimeoutRunner.AddTimeoutTask(new TimeoutTaskInfo
+            {
+                Name = request.Id,
+                TimeoutSeconds = timeoutSeconds,
+            }, (TimeoutTaskInfo objectKey, string context) =>
+            {
+                isTimeout = true;
+            });
+            while (_responseCache.ContainsKey(request.Id) == false)
+            {
+                // 检查是否超时
+                if (isTimeout == true)
+                {
+                    return null;
+                }
+                await Task.Delay(1000); // 等待一段时间，避免密集轮询
+            }
+            callback.Invoke(request.Id, _responseCache[request.Id]);
+            // 从字典中获取结果
+            lock(_responseCache)
+            {
+                return _responseCache[request.Id];
+            }
+        }
+
+        /// <summary>
+        /// 远程调用方法
+        /// 这个是为了保持以前的饮用能够正确使用 
+        /// 因为大部分以前我是没有添加callback的
+        /// </summary>
+        /// <param name="methodName">方法的名字</param>
+        /// <param name="timeoutSeconds">任务超时时间</param>
+        /// <param name="parameters">需要传入的参数数组</param>
+        /// <returns>一个task对象可以从中获取结果</returns>
         public async Task<object> Call(string methodName, int timeoutSeconds = 2, params object[] parameters)
         //public async Task<object> Call(string ids, string methodName, params object[] parameters)
         {
@@ -396,7 +454,7 @@ namespace Game.Net.Rpc
                 await Task.Delay(1000); // 等待一段时间，避免密集轮询
             }
             // 从字典中获取结果
-            lock(_responseCache)
+            lock (_responseCache)
             {
                 return _responseCache[request.Id];
             }

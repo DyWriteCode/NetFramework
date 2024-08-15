@@ -33,6 +33,19 @@ namespace GameServer.Net.Rpc
         /// Value是返回值
         /// </summary>
         private Dictionary<string, object> _responseCache = new Dictionary<string, object>();
+        /// <summary>
+        /// 执行完CALL之后的回调
+        /// </summary>
+        /// <param name="taskId">Call ID</param>
+        /// <param name="result">执行完后的结果</param>
+        public delegate void CallRunRpcCallback(string taskId, object result = null);
+
+        /// <summary>
+        /// 执行完CALL之后的回调
+        /// </summary>
+        /// <param name="taskId">Call ID</param>
+        /// <param name="result">执行完后的结果</param>
+        public delegate void CallRunRpcCallbackList(List<string> taskId, object result = null);
 
         /// <summary>
         /// 从本Assembly拿到所有run RPC标签的函数去注册为RPC函数
@@ -375,6 +388,86 @@ namespace GameServer.Net.Rpc
         /// <param name="timeoutSeconds">多少秒后自动结束</param>
         /// <param name="parameters">需要传入的参数数组</param>
         /// <returns>一个task对象可以从中获取结果</returns>
+        public async Task<object> Call(Connection connection, string methodName, int timeoutSeconds = 2, CallRunRpcCallback callback = null, params object[] parameters)
+        //public async Task<object> Call(string id, string methodName, params object[] parameters)
+        {
+            RpcRequest request = MakeRequest(methodName, parameters);
+            // RpcRequest request = MakeRequest(id, methodName, parameters);
+            RPCService.Instance.Send(connection, request, false);
+            bool isTimeout = false;
+            GameApp.TimeoutRunner.AddTimeoutTask(new TimeoutTaskInfo
+            {
+                Name = request.Id,
+                TimeoutSeconds = timeoutSeconds,
+            }, (TimeoutTaskInfo objectKey, string context) =>
+            {
+                isTimeout = true;
+            });
+            while (_responseCache.ContainsKey(request.Id) == false)
+            {
+                // 检查是否超时
+                if (isTimeout == true)
+                {
+                    return null;
+                }
+                await Task.Delay(100); // 等待一段时间，避免密集轮询
+            }
+            callback.Invoke(request.Id, _responseCache[request.Id]);
+            // 从字典中获取结果
+            lock (_responseCache)
+            {
+                return _responseCache[request.Id];
+            }
+        }
+
+        /// <summary>
+        /// 远程调用方法
+        /// </summary>
+        /// <param name="connectionList">与客户端的连接</param>
+        /// <param name="methodName">方法的名字</param>
+        /// <param name="timeoutSeconds">多少秒后自动结束</param>
+        /// <param name="parameters">需要传入的参数数组</param>
+        /// <returns>一个task对象可以从中获取结果</returns>
+        public async Task<List<object>> Call(List<Connection> connectionList, string methodName, int timeoutSeconds = 2, CallRunRpcCallbackList callback = null, params object[] parameters)
+        {
+            List<Task<object>> tasks = new List<Task<object>>();
+            List<string> ids = new List<string>();
+            foreach (Connection connection in connectionList)
+            {
+                tasks.Add(Call(connection, methodName, timeoutSeconds, (string id, object result) =>
+                {
+                    ids.Add(id);
+                },parameters));
+            }
+            await Task.WhenAll(tasks); // 等待所有任务完成
+            // 提取所有任务的结果
+            List<object> results = new List<object>(tasks.Count);
+            foreach (var task in tasks)
+            {
+                if (task.IsCompletedSuccessfully)
+                {
+                    results.Add(task.Result);
+                }
+                else
+                {
+                    // 处理任务失败的情况，例如记录日志或抛出异常
+                    results.Add(null); // 或者其他适当的默认值
+                }
+            }
+            callback.Invoke(ids, results);
+            return results; // 返回包含所有结果的列表
+        }
+
+        /// <summary>
+        /// 远程调用方法
+        /// 这个是为了保持以前的饮用能够正确使用 
+        /// 因为大部分以前我是没有添加callback的
+        /// </summary>
+        /// <param name="connection">与客户端的连接</param>
+        /// <param name="methodName">方法的名字</param>
+        /// <param name="timeoutSeconds">多少秒后自动结束</param>
+        /// <param name="parameters">需要传入的参数数组</param>
+        /// <returns>一个task对象可以从中获取结果</returns>
         public async Task<object> Call(Connection connection, string methodName, int timeoutSeconds = 2, params object[] parameters)
         //public async Task<object> Call(string id, string methodName, params object[] parameters)
         {
@@ -408,6 +501,8 @@ namespace GameServer.Net.Rpc
 
         /// <summary>
         /// 远程调用方法
+        /// 这个是为了保持以前的饮用能够正确使用 
+        /// 因为大部分以前我是没有添加callback的
         /// </summary>
         /// <param name="connectionList">与客户端的连接</param>
         /// <param name="methodName">方法的名字</param>

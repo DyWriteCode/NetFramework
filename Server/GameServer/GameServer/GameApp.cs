@@ -10,6 +10,7 @@ using GameServer.Manager.MessageRouters;
 using GameServer.Log;
 using GameServer.Net.Rpc;
 using GameServer.Common.Tasks;
+using GameServer.Net.SyncVar;
 
 namespace GameServer.Manager
 {
@@ -46,6 +47,10 @@ namespace GameServer.Manager
         /// rpc网络管理器
         /// </summary>
         public static RpcMethodManager? RpcMethodManager;
+        /// <summary>
+        /// SyncVar网络管理器
+        /// </summary>
+        public static SyncVarManager? SyncVarManager;
 
         /// <summary>
         /// 初始化
@@ -60,6 +65,7 @@ namespace GameServer.Manager
             QueueRunner = new QueueTaskRunner<TimeoutTaskInfo>();
             TimeoutRunner = new TimeoutTaskRunner<TimeoutTaskInfo>();
             RpcMethodManager = new RpcMethodManager();
+            SyncVarManager = new SyncVarManager();
         }
 
         /// <summary>

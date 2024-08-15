@@ -20,6 +20,13 @@ namespace Game.Test
     /// </summary>
     public class TestRPC : MonoBehaviour
     {
+        [RunRpc("Err")]
+        public void Error(string message)
+        {
+            LogUtils.Error(message);
+        }
+
+
         private async void Start()
         {
             
@@ -29,9 +36,20 @@ namespace Game.Test
         {
             if (NetClient.Instance.Running == true)
             {
-                LogUtils.Warn(await RpcMethodManager.Instance.Call("Add", 3, 10, 15));
-                LogUtils.Warn(await RpcMethodManager.Instance.Call("Get", 3, "DyCode"));
-                await RpcMethodManager.Instance.Call("Warn", 3, "warning");
+                //if (Input.GetKeyDown(KeyCode.A))
+                //{
+                //    RpcMethodManager.Instance.Call("Add", 3, (string id, object result) =>
+                //    {
+                //        LogUtils.Warn(id);
+                //        LogUtils.Warn(result);
+                //    }, 10, 15);
+                //    RpcMethodManager.Instance.Call("Get", 3, (string id, object result) =>
+                //    {
+                //        LogUtils.Warn(id);
+                //        LogUtils.Warn(result);
+                //    }, "DyCode");
+                //    RpcMethodManager.Instance.Call("Warn", 3, "warning");
+                //}
             }
         }
     }

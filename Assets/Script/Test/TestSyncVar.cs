@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Game.Log;
+using Game.Net;
 using Game.Net.SyncVar;
 using UnityEngine;
 
@@ -20,18 +21,20 @@ namespace Game.Test
         // Start is called before the first frame update
         void Start()
         {
-            //LogUtils.InitSettings(new LogUtilsConfig()
-            //{
-            //    savePath = Application.streamingAssetsPath,
-            //});
-            //SyncVarManager.Instance.RegisterAssembly();
+            
         }
 
         // Update is called once per frame
-        void Update()
+        async void Update()
         {
-            //LogUtils.Log(SyncVarManager.Instance.GetSyncVarValue("test1"));
-            //LogUtils.Log(SyncVarManager.Instance.GetSyncVarValue("test2"));
+            if (NetClient.Instance.Running == true)
+            {
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    LogUtils.Warn(await SyncVarManager.Instance.GetVar("token_long", 3));
+                    LogUtils.Warn(await SyncVarManager.Instance.GetVar("token_string", 3));
+                }
+            }
         }
     }
 }

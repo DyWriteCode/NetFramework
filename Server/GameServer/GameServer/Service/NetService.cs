@@ -120,8 +120,16 @@ namespace GameServer.Net.Service
             };
             Send(conn, resp, false);
             // test start
-            //object result = await GameApp.RpcMethodManager.Call(conn, "c", 2, 4);
-            //LogUtils.Warn(result);
+            //GameApp.RpcMethodManager.Call(conn, "Err", 3, (string id, object result) =>
+            //{
+            //    LogUtils.ColorLog(LogColor.Green, id);
+            //    LogUtils.ColorLog(LogColor.Green, result);
+            //}, "the server call rpc");
+            //GameApp.SyncVarManager.GetVar(conn, "test1", 3, (string id, object result) =>
+            //{
+            //    LogUtils.Warn(id);
+            //    LogUtils.Warn(result);
+            //});
             // test end
         }
 

@@ -114,9 +114,9 @@ namespace Game.Net
         /// </summary>
         /// <param name="sender">服务器</param>
         /// <param name="message">发送过来的信息</param>
-        private void _SyncVarRequest(Connection sender, SyncVarRequest msg)
+        private void _SyncVarRequest(Connection sender, SyncVarRequest message)
         {
-            SyncVarManager.Instance.SyncVarRequestHander(sender, msg);
+            SyncVarManager.Instance.SyncVarRequestHander(sender, message);
         }
 
         /// <summary>
@@ -124,9 +124,9 @@ namespace Game.Net
         /// </summary>
         /// <param name="sender">服务器</param>
         /// <param name="message">发送过来的信息</param>
-        private void _SyncVarResponse(Connection sender, SyncVarResponse msg)
+        private void _SyncVarResponse(Connection sender, SyncVarResponse message)
         {
-            SyncVarManager.Instance.SyncVarResponseHander(sender, msg);
+            SyncVarManager.Instance.SyncVarResponseHander(sender, message);
         }
 
         /// <summary>

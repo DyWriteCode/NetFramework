@@ -34,6 +34,20 @@ namespace Game.Net.SyncVar
         private Dictionary<string, object> _responseCache = new Dictionary<string, object>();
 
         /// <summary>
+        /// 执行完Get之后的回调
+        /// </summary>
+        /// <param name="taskId">Call ID</param>
+        /// <param name="result">执行完后的结果</param>
+        public delegate void GetSyncVarCallback(string taskId, object result = null);
+
+        /// <summary>
+        /// 执行完Get之后的回调
+        /// </summary>
+        /// <param name="taskId">Call ID</param>
+        /// <param name="result">执行完后的结果</param>
+        public delegate void GetSyncVarCallbackList(List<string> taskId, object result = null);
+
+        /// <summary>
         /// 从本Assembly拿到所有SyncVar标签的函数去注册为SyncVar
         /// </summary>
         public void RegisterAllVarsFromAssembly()
@@ -190,13 +204,42 @@ namespace Game.Net.SyncVar
         }
 
         /// <summary>
-        /// 设置变量值
+        /// 获取变量值
         /// </summary>
         /// <param name="varName">方法的名字</param>
-        /// <param name="value"></param>
-        public void SetVar(string varName, object value)
+        /// <param name="timeoutSeconds">任务超时时间</param>
+        public async Task<object> GetVar(string varName, int timeoutSeconds = 2, GetSyncVarCallback callback = null)
         {
-
+            SyncVarRequest request = MakeRequest(varName);
+            // RpcRequest request = MakeRequest(ids, methodName, parameters);
+            if (NetClient.Instance.Running == true)
+            {
+                NetClient.Instance.Send(request, false);
+            }
+            bool isTimeout = false;
+            NetStart.Instance.TimeoutRunner.AddTimeoutTask(new TimeoutTaskInfo
+            {
+                Name = request.Id,
+                TimeoutSeconds = timeoutSeconds,
+            }, (TimeoutTaskInfo objectKey, string context) =>
+            {
+                isTimeout = true;
+            });
+            while (_responseCache.ContainsKey(request.Id) == false)
+            {
+                // 检查是否超时
+                if (isTimeout == true)
+                {
+                    return null;
+                }
+                await Task.Delay(1000); // 等待一段时间，避免密集轮询
+            }
+            callback.Invoke(request.Id, _responseCache[request.Id]);
+            // 从字典中获取结果
+            lock (_responseCache)
+            {
+                return _responseCache[request.Id];
+            }
         }
 
         /// <summary>
