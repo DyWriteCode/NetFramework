@@ -36,3 +36,9 @@ D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\runtimes\win-
 D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\unity\SocketLearn\Server\GameServer\GameServer\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

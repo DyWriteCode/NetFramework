@@ -5,7 +5,6 @@ using System.Linq;
 using System.Reflection;
 using Google.Protobuf;
 using Google.Protobuf.Reflection;
-using Proto;
 using UnityEngine;
 
 namespace Game.Helper
@@ -73,7 +72,8 @@ namespace Game.Helper
                     list.Add(desc.FullName);
                 }
             });
-            list.Sort((x, y) => {
+            list.Sort((x, y) =>
+            {
                 // 按照字符串长度排序，
                 if (x.Length != y.Length)
                 {
@@ -112,7 +112,7 @@ namespace Game.Helper
         public static Type SeqType(int code)
         {
             Type type = null;
-             _DictIntType.TryGetValue(code, out type);
+            _DictIntType.TryGetValue(code, out type);
             return type;
         }
 

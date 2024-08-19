@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 269992168}
   - component: {fileID: 269992169}
   - component: {fileID: 269992170}
+  - component: {fileID: 269992171}
   m_Layer: 0
   m_Name: NetStart
   m_TagString: Untagged
@@ -324,7 +325,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269992164}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f248c97ad75f9a448185c707d8aecb3, type: 3}
   m_Name: 
@@ -361,7 +362,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269992164}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fea72f7ece2d79841b21891f2e24a82d, type: 3}
   m_Name: 
@@ -373,7 +374,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269992164}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b14a941cd8b0514683c7b92d8f4ec7a, type: 3}
   m_Name: 
@@ -385,7 +386,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269992164}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad6cc26e7a0b334ea409618b02cb609, type: 3}
   m_Name: 
@@ -397,9 +398,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269992164}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad9b955c7139a6d4bb4173a283873592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &269992171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269992164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9213078b1839841bb4d1e2ec2dd728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &722992930

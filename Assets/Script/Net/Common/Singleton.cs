@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace Game.Common
@@ -72,11 +70,11 @@ namespace Game.Common
         {
             get
             {
-                lock(locker)
+                lock (locker)
                 {
                     return instance;
                 }
-                
+
             }
             set
             {

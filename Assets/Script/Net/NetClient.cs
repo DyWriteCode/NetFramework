@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Net.Sockets;
-using System.Net;
-using Google.Protobuf;
+using System.Collections;
 using System.Collections.Concurrent;
+using System.Net;
+using System.Net.Sockets;
 using System.Threading.Tasks;
+using Game.Common;
 using Game.Helper;
 using Game.Log;
-using Game.Common;
-using System.Collections;
+using Google.Protobuf;
 
 namespace Game.Net
 {
@@ -23,7 +23,7 @@ namespace Game.Net
         /// <summary>
         /// 是否正在运行
         /// </summary>
-        public bool Running 
+        public bool Running
         {
             get
             {

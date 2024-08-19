@@ -1,11 +1,12 @@
 ﻿using System;
-using UnityEngine;
 
-namespace Game.Log {
+namespace Game.Log
+{
     /// <summary>
     /// 打印的类型
     /// </summary>
-    public enum LoggerType {
+    public enum LoggerType
+    {
         Unity,
         Console,
     }
@@ -13,7 +14,8 @@ namespace Game.Log {
     /// <summary>
     /// 打印的颜色
     /// </summary>
-    public enum LogColor {
+    public enum LogColor
+    {
         None,
         Red,
         Green,
@@ -27,7 +29,8 @@ namespace Game.Log {
     /// <summary>
     /// 日志工具的配置类
     /// </summary>
-    public class LogUtilsConfig {
+    public class LogUtilsConfig
+    {
         /// <summary>
         /// 是否启用
         /// </summary>
@@ -81,25 +84,25 @@ namespace Game.Log {
         /// <summary>
         /// 日志文件保存路径
         /// </summary>
-        public string savePath 
+        public string savePath
         {
-            get 
+            get
             {
-                if(_savePath == null) 
+                if (_savePath == null)
                 {
-                    if(loggerEnum == LoggerType.Unity) 
+                    if (loggerEnum == LoggerType.Unity)
                     {
                         Type type = Type.GetType("UnityEngine.Application, UnityEngine");
                         _savePath = $"{type.GetProperty("streamingAssetsPath").GetValue(null).ToString()}/LogUtils/";
                     }
-                    else 
+                    else
                     {
                         _savePath = string.Format("{0}Logs\\", AppDomain.CurrentDomain.BaseDirectory);
                     }
                 }
                 return _savePath;
             }
-            set 
+            set
             {
                 _savePath = value;
             }
@@ -114,7 +117,8 @@ namespace Game.Log {
     /// <summary>
     /// 打印器接口
     /// </summary>
-    interface ILogger {
+    interface ILogger
+    {
         /// <summary>
         /// 普通日志
         /// </summary>

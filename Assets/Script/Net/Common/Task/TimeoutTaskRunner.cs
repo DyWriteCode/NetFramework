@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading;
 
 namespace Game.Common.Tasks
@@ -14,7 +12,7 @@ namespace Game.Common.Tasks
     /// </summary>
     /// <typeparam name="T">任意类型</typeparam>
     public class TimeoutTaskRunner<T> where T : TimeoutTaskInfo, new()
-    {        
+    {
         /// <summary>
         /// 为添加的超时任务分配的 TaskId 任务标识序列
         /// </summary>
@@ -34,7 +32,7 @@ namespace Game.Common.Tasks
         /// <summary>
         /// 用于同步操作上述两个清单字典，使得线程安全
         /// </summary>
-        private object _DictionaryLocker = new object(); 
+        private object _DictionaryLocker = new object();
         /// <summary>
         /// 已超时任务队列，由任务运行线程逐个执行
         /// </summary>
@@ -56,7 +54,7 @@ namespace Game.Common.Tasks
         /// </summary>
         private bool _Working = true;
 
-        
+
         /// <summary>
         /// 创建实例时 开启 :
         /// (1) 超时检测者 
@@ -70,7 +68,7 @@ namespace Game.Common.Tasks
             _TimeoutChecker.Start();
             // (2) 超时任务执行线程
             _TaskRunThread = new Thread(new ThreadStart(TaskRunning));
-            _TaskRunThread.Start();            
+            _TaskRunThread.Start();
         }
 
         /// <summary>
@@ -111,11 +109,11 @@ namespace Game.Common.Tasks
             while (_Working)
             {
                 TimeoutTask<T> task = null;
-                lock (_RunLocker)   
+                lock (_RunLocker)
                 {
                     if (_TaskRunQueue.Count > 0)
                     {
-                        task = _TaskRunQueue.Dequeue();  
+                        task = _TaskRunQueue.Dequeue();
                     }
                 }
                 // 存在超时任务执行其回调

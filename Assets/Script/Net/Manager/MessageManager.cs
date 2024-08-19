@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
+using Game.Common;
 using Google.Protobuf;
 using UnityEngine;
-using Game.Common;
 
 namespace Game.Net
 {

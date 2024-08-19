@@ -1,17 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System;
-using Proto;
-using Game.Net.Rpc;
-using Game.Common;
-using UnityEngine;
-using Google.Protobuf;
-using System.Runtime.Serialization.Formatters.Binary;
 using Game.Log;
-using System.Security.Cryptography;
 using Game.Net;
-using UnityEditor;
+using Game.Net.Rpc;
+using UnityEngine;
 
 namespace Game.Test
 {
@@ -29,7 +19,7 @@ namespace Game.Test
 
         private async void Start()
         {
-            
+
         }
 
         private async void Update()

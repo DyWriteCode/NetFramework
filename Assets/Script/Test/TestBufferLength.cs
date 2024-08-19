@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Game.Net.Rpc;
 using System.Threading.Tasks;
-using System;
+using Game.Net.Rpc;
+using UnityEngine;
 
 namespace Game.Test
 {
@@ -12,10 +9,10 @@ namespace Game.Test
         // 可以这样自动的去注册方法
         // 这个方法可以被同步调用
         [RunRpc("a")]
-        public void Add(int a, int b) 
+        public void Add(int a, int b)
         {
             Debug.LogError(a + b);
-            return; 
+            return;
         }
 
         [RunRpc("c")]

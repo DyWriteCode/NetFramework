@@ -1,15 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using Proto;
-using UnityEngine.UI;
-using Game.Log;
 using Game.Common;
 using Game.Common.Tasks;
+using Game.Log;
 using Game.Net.Rpc;
-using Game.Test;
 using Game.Net.SyncVar;
+using Proto;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.Net
 {
@@ -52,8 +51,8 @@ namespace Game.Net
         /// 心跳包：确认连接状态
         /// ACK报文：确认报文接收状态
         /// </summary>
-        private HeartBeatRequest beatRequest = new HeartBeatRequest() 
-        { 
+        private HeartBeatRequest beatRequest = new HeartBeatRequest()
+        {
             State = 1
         };
 

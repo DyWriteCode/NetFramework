@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Game.Net.SyncVar
 {
@@ -14,6 +10,7 @@ namespace Game.Net.SyncVar
     {
         /// <summary>
         /// 自己设置的别名
+        /// xxx.xxx.xxx.xxx.......
         /// </summary>
         public string VarName { get; }
         /// <summary>

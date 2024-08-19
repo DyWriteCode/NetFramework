@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Game.Common
 {
@@ -25,7 +25,8 @@ namespace Game.Common
         {
             lock (_executionQueue)
             {
-                _executionQueue.Enqueue(() => {
+                _executionQueue.Enqueue(() =>
+                {
                     StartCoroutine(action);
                 });
             }

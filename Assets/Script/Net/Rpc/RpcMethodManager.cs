@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using Game.Helper;
 using Game.Common;
 using Game.Common.Tasks;
+using Game.Helper;
 using Game.Log;
 using Google.Protobuf;
 using Proto;
@@ -78,7 +78,8 @@ namespace Game.Net.Rpc
                         if (isAsync || method.ReturnType != typeof(void))
                         {
                             // 有返回值 | 异步方法 16
-                            switch (typeArguments.Length) {
+                            switch (typeArguments.Length)
+                            {
                                 case 2:
                                     delegateType = typeof(Func<,>).MakeGenericType(typeArguments);
                                     break;
@@ -202,7 +203,8 @@ namespace Game.Net.Rpc
                         {
                             methodName = $"{type.FullName}.{method.Name}";
                         }
-                        else {
+                        else
+                        {
                             methodName = attribute.MethodName;
                         }
                         // 注册委托
@@ -411,7 +413,7 @@ namespace Game.Net.Rpc
             }
             callback.Invoke(request.Id, _responseCache[request.Id]);
             // 从字典中获取结果
-            lock(_responseCache)
+            lock (_responseCache)
             {
                 return _responseCache[request.Id];
             }

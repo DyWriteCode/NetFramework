@@ -1,17 +1,14 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using Game.Common;
 using Game.Common.Tasks;
-using Game.Log;
 using Game.Helper;
+using Game.Log;
 using Google.Protobuf;
 using Proto;
-using UnityEngine;
-using System.Threading.Tasks;
-using System.Security.Cryptography;
 
 namespace Game.Net.SyncVar
 {
@@ -21,7 +18,7 @@ namespace Game.Net.SyncVar
     public class SyncVarManager : Singleton<SyncVarManager>
     {
         /// <summary>
-        /// 存储SyncVar方法
+        /// 存储SyncVar变量
         /// Key是名称，即是get API时候的名称
         /// Value是委托
         /// </summary>
@@ -243,7 +240,7 @@ namespace Game.Net.SyncVar
         }
 
         /// <summary>
-        /// 处理RPC请求内容
+        /// 处理SyncVar请求内容
         /// </summary>
         /// <param name="sender">发送者</param>
         /// <param name="request">response</param>
@@ -279,7 +276,7 @@ namespace Game.Net.SyncVar
         }
 
         /// <summary>
-        /// 处理RPC返回内容
+        /// 处理SyncVar返回内容
         /// </summary>
         /// <param name="sender">发送者</param>
         /// <param name="response">response</param>

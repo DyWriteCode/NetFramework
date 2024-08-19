@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Threading;
-using System.Diagnostics;
 
-namespace Game.Log {
+namespace Game.Log
+{
     /// <summary>
     /// 日志工具类
     /// </summary>
-    public static class LogUtils {
+    public static class LogUtils
+    {
         /// <summary>
         /// 打印者即是谁打印的
         /// 因为这是个跨平台日志工具
@@ -31,7 +33,7 @@ namespace Game.Log {
         /// <summary>
         /// Unity打印类
         /// </summary>
-        public class UnityLogger : ILogger 
+        public class UnityLogger : ILogger
         {
             /// <summary>
             /// 类型 : UnityEngine.Debug
@@ -43,9 +45,9 @@ namespace Game.Log {
             /// </summary>
             /// <param name="msg">打印的内容</param>
             /// <param name="color">打印的颜色</param>
-            public void Log(string msg, LogColor color = LogColor.None) 
+            public void Log(string msg, LogColor color = LogColor.None)
             {
-                if(color != LogColor.None) 
+                if (color != LogColor.None)
                 {
                     msg = ColorUnityLog(msg, color);
                 }
@@ -56,7 +58,7 @@ namespace Game.Log {
             /// 警告日志
             /// </summary>
             /// <param name="msg">打印的内容</param>
-            public void Warn(string msg) 
+            public void Warn(string msg)
             {
                 type.GetMethod("LogWarning", new Type[] { typeof(object) }).Invoke(null, new object[] { msg });
             }
@@ -65,7 +67,7 @@ namespace Game.Log {
             /// 错误日志
             /// </summary>
             /// <param name="msg">打印的内容</param>
-            public void Error(string msg) 
+            public void Error(string msg)
             {
                 type.GetMethod("LogError", new Type[] { typeof(object) }).Invoke(null, new object[] { msg });
             }
@@ -76,9 +78,9 @@ namespace Game.Log {
             /// <param name="msg">要打印的内容</param>
             /// <param name="color">要打印的颜色</param>
             /// <returns>打印出来会有颜色的字符串</returns>
-            private string ColorUnityLog(string msg, LogColor color) 
+            private string ColorUnityLog(string msg, LogColor color)
             {
-                switch(color) 
+                switch (color)
                 {
                     case LogColor.Red:
                         msg = string.Format("<color=#FF0000>{0}</color>", msg);
@@ -109,14 +111,14 @@ namespace Game.Log {
         /// <summary>
         /// Console打印类
         /// </summary>
-        public class ConsoleLogger : ILogger 
+        public class ConsoleLogger : ILogger
         {
             /// <summary>
             /// 普通日志
             /// </summary>
             /// <param name="msg">打印的内容</param>
             /// <param name="color">打印的颜色</param>
-            public void Log(string msg, LogColor color = LogColor.None) 
+            public void Log(string msg, LogColor color = LogColor.None)
             {
                 WriteConsoleLog(msg, color);
             }
@@ -125,7 +127,7 @@ namespace Game.Log {
             /// 警告日志
             /// </summary>
             /// <param name="msg">打印的内容</param>
-            public void Warn(string msg) 
+            public void Warn(string msg)
             {
                 WriteConsoleLog(msg, LogColor.Yellow);
             }
@@ -134,7 +136,7 @@ namespace Game.Log {
             /// 错误日志
             /// </summary>
             /// <param name="msg">打印的内容</param>
-            public void Error(string msg) 
+            public void Error(string msg)
             {
                 WriteConsoleLog(msg, LogColor.Red);
             }
@@ -144,9 +146,10 @@ namespace Game.Log {
             /// </summary>
             /// <param name="msg">打印的内容</param>
             /// <param name="color">打印的颜色</param>
-            private void WriteConsoleLog(string msg, LogColor color) 
+            private void WriteConsoleLog(string msg, LogColor color)
             {
-                switch(color) {
+                switch (color)
+                {
                     case LogColor.Red:
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine(msg);
@@ -191,59 +194,63 @@ namespace Game.Log {
         /// 初始化 加载日志工具的配置
         /// </summary>
         /// <param name="config">日志工具的配置</param>
-        public static void InitSettings(LogUtilsConfig config = null) {
-            if(config == null)
+        public static void InitSettings(LogUtilsConfig config = null)
+        {
+            if (config == null)
             {
                 config = new LogUtilsConfig();
             }
             LogUtils.config = config;
-            if(config.loggerEnum == LoggerType.Console) 
+            if (config.loggerEnum == LoggerType.Console)
             {
                 logger = new ConsoleLogger();
             }
-            else 
+            else
             {
                 logger = new UnityLogger();
             }
-            if(config.enableSave == false) 
+            if (config.enableSave == false)
             {
                 return;
             }
-            if(config.enableCover) 
+            if (config.enableCover)
             {
-                string path = config.savePath + "/" + config.saveName; 
-                try {
-                    if(Directory.Exists(config.savePath)) 
+                string path = config.savePath + "/" + config.saveName;
+                try
+                {
+                    if (Directory.Exists(config.savePath))
                     {
-                        if(File.Exists(path)) 
+                        if (File.Exists(path))
                         {
                             File.Delete(path);
                         }
                     }
-                    else 
+                    else
                     {
                         Directory.CreateDirectory(config.savePath);
                     }
                     LogFileWriter = new StreamWriter(path, false, Encoding.UTF8);
                     LogFileWriter.AutoFlush = true;
                 }
-                catch(Exception) 
+                catch (Exception)
                 {
                     LogFileWriter = null;
                 }
             }
-            else {
+            else
+            {
                 string prefix = DateTime.Now.ToString("yyyyMMdd@HH-mm-ss");
                 string path = config.savePath + "/" + prefix + config.saveName;
-                try {
-                    if(Directory.Exists(config.savePath) == false) 
+                try
+                {
+                    if (Directory.Exists(config.savePath) == false)
                     {
                         Directory.CreateDirectory(config.savePath);
                     }
                     LogFileWriter = new StreamWriter(path, false, Encoding.UTF8);
                     LogFileWriter.AutoFlush = true;
                 }
-                catch(Exception) 
+                catch (Exception)
                 {
                     LogFileWriter = null;
                 }
@@ -255,17 +262,17 @@ namespace Game.Log {
         /// </summary>
         /// <param name="msg">打印的内容</param>
         /// <param name="args">多传入的参数</param>
-        public static void Log(string msg, params object[] args) 
+        public static void Log(string msg, params object[] args)
         {
-            if(config.enableLog == false) 
+            if (config.enableLog == false)
             {
                 return;
             }
             msg = DecorateLog(string.Format(msg, args));
-            lock(logLock) 
+            lock (logLock)
             {
                 logger.Log(msg);
-                if(config.enableSave) 
+                if (config.enableSave)
                 {
                     WriteToFile(string.Format("[LOG]{0}", msg));
                 }
@@ -276,17 +283,17 @@ namespace Game.Log {
         /// 正常的日志
         /// </summary>
         /// <param name="obj">需要打印的内容</param>
-        public static void Log(object obj) 
+        public static void Log(object obj)
         {
-            if(config.enableLog == false) 
+            if (config.enableLog == false)
             {
                 return;
             }
             string msg = DecorateLog(obj.ToString());
-            lock(logLock) 
+            lock (logLock)
             {
                 logger.Log(msg);
-                if(config.enableSave) 
+                if (config.enableSave)
                 {
                     WriteToFile(string.Format("[LOG]{0}", msg));
                 }
@@ -299,17 +306,17 @@ namespace Game.Log {
         /// <param name="color">打印的颜色</param>
         /// <param name="msg">打印的内容</param>
         /// <param name="args">多传的参数</param>
-        public static void ColorLog(LogColor color, string msg, params object[] args) 
+        public static void ColorLog(LogColor color, string msg, params object[] args)
         {
-            if(config.enableLog == false) 
+            if (config.enableLog == false)
             {
                 return;
             }
             msg = DecorateLog(string.Format(msg, args));
-            lock(logLock) 
+            lock (logLock)
             {
                 logger.Log(msg, color);
-                if(config.enableSave)
+                if (config.enableSave)
                 {
                     WriteToFile(string.Format("[COLOR_LOG]{0}", msg));
                 }
@@ -321,17 +328,17 @@ namespace Game.Log {
         /// </summary>
         /// <param name="color">打印的颜色</param>
         /// <param name="obj">打印的内容</param>
-        public static void ColorLog(LogColor color, object obj) 
+        public static void ColorLog(LogColor color, object obj)
         {
-            if(config.enableLog == false) 
+            if (config.enableLog == false)
             {
                 return;
             }
             string msg = DecorateLog(obj.ToString());
-            lock(logLock) 
+            lock (logLock)
             {
                 logger.Log(msg, color);
-                if(config.enableSave) 
+                if (config.enableSave)
                 {
                     WriteToFile(string.Format("[COLOR_LOG]{0}", msg));
                 }
@@ -343,17 +350,17 @@ namespace Game.Log {
         /// </summary>
         /// <param name="msg">打印的内容</param>
         /// <param name="args">多传的参数</param>
-        public static void Trace(string msg, params object[] args) 
+        public static void Trace(string msg, params object[] args)
         {
-            if(config.enableLog == false) 
+            if (config.enableLog == false)
             {
                 return;
             }
             msg = DecorateLog(string.Format(msg, args), config.enableTrace);
-            lock(logLock) 
+            lock (logLock)
             {
                 logger.Log(msg, LogColor.Magenta);
-                if(config.enableSave) 
+                if (config.enableSave)
                 {
                     WriteToFile(string.Format("[TRACE_LOG]{0}", msg));
                 }
@@ -364,17 +371,17 @@ namespace Game.Log {
         /// 堆栈日志
         /// </summary>
         /// <param name="obj">打印的内容</param>
-        public static void Trace(object obj) 
+        public static void Trace(object obj)
         {
-            if(config.enableLog == false) 
+            if (config.enableLog == false)
             {
                 return;
             }
             string msg = DecorateLog(obj.ToString(), config.enableTrace);
-            lock(logLock) 
+            lock (logLock)
             {
                 logger.Log(msg, LogColor.Magenta);
-                if(config.enableSave) 
+                if (config.enableSave)
                 {
                     WriteToFile(string.Format("[TRACE_LOG]{0}", msg));
                 }
@@ -386,17 +393,17 @@ namespace Game.Log {
         /// </summary>
         /// <param name="msg">打印的内容</param>
         /// <param name="args">多传的参数</param>
-        public static void Warn(string msg, params object[] args) 
+        public static void Warn(string msg, params object[] args)
         {
-            if(config.enableLog == false) 
+            if (config.enableLog == false)
             {
                 return;
             }
             msg = DecorateLog(string.Format(msg, args));
-            lock(logLock) 
+            lock (logLock)
             {
                 logger.Warn(msg);
-                if(config.enableSave)
+                if (config.enableSave)
                 {
                     WriteToFile(string.Format("[WARN_LOG]{0}", msg));
                 }
@@ -407,17 +414,17 @@ namespace Game.Log {
         /// 警告日志
         /// </summary>
         /// <param name="obj">需要打印的内容</param>
-        public static void Warn(object obj) 
+        public static void Warn(object obj)
         {
-            if(config.enableLog == false) 
+            if (config.enableLog == false)
             {
                 return;
             }
             string msg = DecorateLog(obj.ToString());
-            lock(logLock)
+            lock (logLock)
             {
                 logger.Warn(msg);
-                if(config.enableSave)
+                if (config.enableSave)
                 {
                     WriteToFile(string.Format("[WARN_LOG]{0}", msg));
                 }
@@ -429,17 +436,17 @@ namespace Game.Log {
         /// </summary>
         /// <param name="msg">打印的内容</param>
         /// <param name="args">多传的参数</param>
-        public static void Error(string msg, params object[] args) 
+        public static void Error(string msg, params object[] args)
         {
-            if(config.enableLog == false) 
+            if (config.enableLog == false)
             {
                 return;
             }
             msg = DecorateLog(string.Format(msg, args), config.enableTrace);
-            lock(logLock) 
+            lock (logLock)
             {
                 logger.Error(msg);
-                if(config.enableSave) 
+                if (config.enableSave)
                 {
                     WriteToFile(string.Format("[ERROR_LOG]{0}", msg));
                 }
@@ -450,17 +457,17 @@ namespace Game.Log {
         /// 错误日志
         /// </summary>
         /// <param name="obj">需要打印的内容</param>
-        public static void Error(object obj) 
+        public static void Error(object obj)
         {
-            if(config.enableLog == false) 
+            if (config.enableLog == false)
             {
                 return;
             }
             string msg = DecorateLog(obj.ToString(), config.enableTrace);
-            lock(logLock) 
+            lock (logLock)
             {
                 logger.Error(msg);
-                if(config.enableSave)
+                if (config.enableSave)
                 {
                     WriteToFile(string.Format("[ERROR_LOG]{0}", msg));
                 }
@@ -475,19 +482,19 @@ namespace Game.Log {
         /// <param name="msg">打印的内容</param>
         /// <param name="isTrace">是否打印堆栈信息</param>
         /// <returns>带有堆栈信息的日志完整内容</returns>
-        private static string DecorateLog(string msg, bool isTrace = false) 
+        private static string DecorateLog(string msg, bool isTrace = false)
         {
             StringBuilder sb = new StringBuilder(config.logPrefix, 100);
-            if(config.enableTime) 
+            if (config.enableTime)
             {
                 sb.AppendFormat(" [{0}]", DateTime.Now.ToString("yyyy:hh:mm:ss-fff"));
             }
-            if(config.enableThreadID)
+            if (config.enableThreadID)
             {
                 sb.AppendFormat(" {0}", GetThreadID());
             }
             sb.AppendFormat(" {0} {1}", config.logSeparate, msg);
-            if(isTrace) 
+            if (isTrace)
             {
                 sb.AppendFormat("\nStackTrace:{0}", GetLogTrace());
             }
@@ -498,7 +505,7 @@ namespace Game.Log {
         /// 获取到线程的ID
         /// </summary>
         /// <returns>线程的ID</returns>
-        private static string GetThreadID() 
+        private static string GetThreadID()
         {
             return string.Format(" ThreadID:{0}", Thread.CurrentThread.ManagedThreadId);
         }
@@ -507,11 +514,11 @@ namespace Game.Log {
         /// 获取堆栈日志那后半部分信息
         /// </summary>
         /// <returns>堆栈日志信息</returns>
-        private static string GetLogTrace() 
+        private static string GetLogTrace()
         {
             StackTrace st = new StackTrace(3, true);//跳跃3帧
             string traceInfo = "";
-            for(int i = 0; i < st.FrameCount; i++) 
+            for (int i = 0; i < st.FrameCount; i++)
             {
                 StackFrame sf = st.GetFrame(i);
                 traceInfo += string.Format("\n    {0}::{1} Line:{2}", sf.GetFileName(), sf.GetMethod(), sf.GetFileLineNumber());
@@ -523,16 +530,16 @@ namespace Game.Log {
         /// 把日志内容写入文件
         /// </summary>
         /// <param name="msg">日志的内容</param>
-        private static void WriteToFile(string msg) 
+        private static void WriteToFile(string msg)
         {
-            if(config.enableSave && LogFileWriter != null) 
+            if (config.enableSave && LogFileWriter != null)
             {
-                try 
+                try
                 {
                     LogFileWriter.WriteLine(msg);
                     LogFileWriter.WriteLine("<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->");
                 }
-                catch(Exception) 
+                catch (Exception)
                 {
                     LogFileWriter = null;
                     return;
@@ -543,18 +550,23 @@ namespace Game.Log {
         /// <summary>
         /// 打印数组数据For Debug
         /// </summary>
-        public static void PrintBytesArray(byte[] bytes, string prefix, Action<string> printer = null) {
+        public static void PrintBytesArray(byte[] bytes, string prefix, Action<string> printer = null)
+        {
             string str = prefix + "->\n";
-            for(int i = 0; i < bytes.Length; i++) {
-                if(i % 10 == 0) {
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                if (i % 10 == 0)
+                {
                     str += bytes[i] + "\n";
                 }
                 str += bytes[i] + " ";
             }
-            if(printer != null) {
+            if (printer != null)
+            {
                 printer(str);
             }
-            else {
+            else
+            {
                 Log(str);
             }
         }

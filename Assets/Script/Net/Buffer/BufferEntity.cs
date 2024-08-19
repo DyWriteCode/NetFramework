@@ -1,6 +1,5 @@
 ﻿using System;
 using Game.Common;
-using Game.Log;
 
 namespace Game.Net
 {

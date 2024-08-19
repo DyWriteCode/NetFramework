@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Net.Sockets;
-using Game.Helper;
-using Google.Protobuf;
-using Game.Log;
 using Game.Common;
-using Proto;
+using Game.Helper;
+using Game.Log;
+using Google.Protobuf;
 
 namespace Game.Net
 {

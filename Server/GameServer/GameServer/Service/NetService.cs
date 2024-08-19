@@ -38,12 +38,15 @@ namespace GameServer.Net.Service
         /// 会话ID
         /// </summary>
         public int sessionID = 1000;
-
         /// <summary>
         /// 客户端列表
-        /// 只要用于RPC
+        /// TODO : 只要用于RPC
         /// </summary>
         public List<Connection> ConnectionList = new List<Connection>();
+        /// <summary>
+        /// 服务端对象
+        /// </summary>
+        public TcpServer ServerTcp { get => tcpServer; set => tcpServer = value; }
 
         /// <summary>
         /// 初始化
@@ -126,6 +129,11 @@ namespace GameServer.Net.Service
             //    LogUtils.ColorLog(LogColor.Green, result);
             //}, "the server call rpc");
             //GameApp.SyncVarManager.GetVar(conn, "test1", 3, (string id, object result) =>
+            //{
+            //    LogUtils.Warn(id);
+            //    LogUtils.Warn(result);
+            //});
+            //GameApp.SyncVarManager.GetVar(conn, "test2", 3, (string id, object result) =>
             //{
             //    LogUtils.Warn(id);
             //    LogUtils.Warn(result);

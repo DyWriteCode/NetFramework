@@ -11,6 +11,7 @@ using GameServer.Log;
 using GameServer.Net.Rpc;
 using GameServer.Common.Tasks;
 using GameServer.Net.SyncVar;
+using GameServer.Net.TokenAuth;
 
 namespace GameServer.Manager
 {
@@ -51,6 +52,10 @@ namespace GameServer.Manager
         /// SyncVar网络管理器
         /// </summary>
         public static SyncVarManager? SyncVarManager;
+        /// <summary>
+        /// Token管理器
+        /// </summary>
+        public static TokenManager? TokenManager;
 
         /// <summary>
         /// 初始化
@@ -66,6 +71,7 @@ namespace GameServer.Manager
             TimeoutRunner = new TimeoutTaskRunner<TimeoutTaskInfo>();
             RpcMethodManager = new RpcMethodManager();
             SyncVarManager = new SyncVarManager();
+            TokenManager = new TokenManager();
         }
 
         /// <summary>
@@ -75,6 +81,7 @@ namespace GameServer.Manager
         public override void Update(float dt)
         {
             base.Update(dt);
+            TokenManager.Update(dt);
         }
     }
 }
