@@ -28,11 +28,11 @@ namespace GameServer.Net.Service
                 var bufferEntity = GameApp.FactoryManager.BufferEntityFactory.Allocate();
                 if (isAck == true)
                 {
-                    bufferEntity.Init(conn.Get<Session>().sessionID, 0, 0, MessageType.ACK.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                    bufferEntity.Init(conn.Get<Session>().sessionID, 0, 0, MessageType.ACK.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), GameApp.TokenManager.ServerFlashToken, GameApp.TokenManager.ServerLongTimeToken, ProtoHelper.Serialize(message));
                 }
                 else
                 {
-                    bufferEntity.Init(conn.Get<Session>().sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                    bufferEntity.Init(conn.Get<Session>().sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), GameApp.TokenManager.ServerFlashToken, GameApp.TokenManager.ServerLongTimeToken, ProtoHelper.Serialize(message));
                 }
                 bufferEntity.time = TimeHelper.ClientNow(); // 暂时先等于0
                 conn.Get<Session>().sendSN += 1; // 已经发送的SN加一
@@ -64,6 +64,22 @@ namespace GameServer.Net.Service
                 }
                 conn.SocketSend(message);
             }
+        }
+
+        /// <summary>
+        /// 开启服务
+        /// </summary>
+        public virtual void Start()
+        {
+
+        }
+
+        /// <summary>
+        /// 关闭服务
+        /// </summary>
+        public virtual void Stop()
+        {
+
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Game.Net
         /// <summary>
         /// 超时重传的间隔时间
         /// </summary>
-        public int OverTime = 150;
+        public int OverTime = 1000;
         /// <summary>
         /// 会话ID
         /// </summary>
@@ -48,6 +48,14 @@ namespace Game.Net
         /// 处理的序号 为了保证报文的顺序性
         /// </summary>
         public int handleSN = 0;
+        /// <summary>
+        /// 刷新token
+        /// </summary>
+        public string FlashToken = "no_payload.no_token";
+        /// <summary>
+        /// 长期的token
+        /// </summary>
+        public string LongTimeToken = "no_payload.no_token";
         /// <summary>
         /// 缓存已经发送的报文
         /// </summary>
@@ -225,11 +233,11 @@ namespace Game.Net
                 var bufferEntity = BufferEntityFactory.Allocate();
                 if (isAck == true)
                 {
-                    bufferEntity.Init(sessionID, 0, 0, MessageType.ACK.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                    bufferEntity.Init(sessionID, 0, 0, MessageType.ACK.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), FlashToken, LongTimeToken, ProtoHelper.Serialize(message));
                 }
                 else
                 {
-                    bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), ProtoHelper.Serialize(message));
+                    bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), FlashToken, LongTimeToken, ProtoHelper.Serialize(message));
                 }
                 bufferEntity.time = TimeHelper.ClientNow(); // 暂时先等于0
                 sendSN += 1; // 已经发送的SN加一

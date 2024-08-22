@@ -12,10 +12,10 @@ namespace GameServer.Test
     /// </summary>
     public class TestSyncVar
     {
-        [SyncVar("token_long")]
+        [SyncVar("i")]
         public long i = 735159852456;
 
-        [SyncVar("token_string")]
+        [SyncVar("j")]
         public string j = "735159852456";
     }
 }

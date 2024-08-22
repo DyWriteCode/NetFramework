@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Text;
 using Game.Common;
+using Game.Log;
+using Game.Net.TokenAuth;
 
 namespace Game.Net
 {
     /// <summary>
-    /// 自定义报文
-    /// 这里原本是想用流去存储的
-    /// （uint）typecode + (byte[]) value + （int32）sn 旧的结构
-    /// 下面是现在的结构
+    /// 自定义数据流
+    /// 其实就是报文
+    /// 采用大端模式进行存储
     /// </summary>
     public class BufferEntity
     {
@@ -29,7 +31,6 @@ namespace Game.Net
         public int sn = 0;
         /// <summary>
         /// 模块ID
-        /// TODO ; 服务器接收到之后会根据模块ID去分发给不同的服务
         /// </summary>
         public int moduleID = 0;
         /// <summary>
@@ -38,33 +39,36 @@ namespace Game.Net
         public long time = 0;
         /// <summary>
         /// 协议类型
-        /// messageType = MessageType.ACK/Logic.GetHashCode()
         /// </summary>
         public int messageType = 0;
         /// <summary>
         /// 协议ID
-        /// 每一个proto类型，在刚开始都绑定了一个对应的协议ID
-        /// 比如
-        /// heartbeatresqust >> 10021
-        /// 英语不是很好 忘了
-        /// ...... >> 10021
-        /// ......
         /// </summary>
         public int messageID = 0;
         /// <summary>
+        /// 刷新token
+        /// </summary>
+        public string FlashToken = "no_payload.no_token";
+        /// <summary>
+        /// 长期的token
+        /// </summary>
+        public string LongTimeToken = "no_payload.no_token";
+        /// <summary>
         /// 业务报文
-        /// protobuff >> protohelper >>byte[]
         /// </summary>
         public byte[] proto = null;
         /// <summary>
         /// 最终要发送的数据 或者是 收到的数据
-        /// 前面都是每个包裹的零部件比如标签之类的这个是打包好的包裹
         /// </summary>
         public byte[] buffer = null;
         /// <summary>
         /// 用来判断报文是否完整
         /// </summary>
         public bool isFull = false;
+        /// <summary>
+        /// Token的大小
+        /// </summary>
+        public int tokenSize;
 
         /// <summary>
         /// 构建请求报文
@@ -75,14 +79,17 @@ namespace Game.Net
         /// <param name="messageType">协议类型</param>
         /// <param name="messageID">协议ID</param>
         /// <param name="proto">业务报文</param>
-        public void Init(int session, int sn, int moduleID, int messageType, int messageID, byte[] proto)
+        public void Init(int session, int sn, int moduleID, int messageType, int messageID, string flashToken, string longTimeToken, byte[] proto)
         {
             this.protoSize = proto.Length; // 业务数据的大小
+            this.tokenSize = TokenManager.Instance.PackTokens(flashToken, longTimeToken).Length;
             this.session = session;
             this.sn = sn;
             this.moduleID = moduleID;
             this.messageType = messageType;
             this.messageID = messageID;
+            this.FlashToken = flashToken;
+            this.LongTimeToken = longTimeToken;
             this.proto = proto;
         }
 
@@ -103,12 +110,15 @@ namespace Game.Net
         public void Init(BufferEntity package)
         {
             protoSize = 0;
+            tokenSize = package.tokenSize;
             this.session = package.session;
             this.sn = package.sn;
             this.moduleID = package.moduleID;
-            this.time = 0;
-            this.messageType = 0;
+            this.time = package.time;
+            this.messageType = package.messageType;
             this.messageID = package.messageID;
+            this.FlashToken = package.FlashToken;
+            this.LongTimeToken = package.LongTimeToken;
             buffer = Encoder(true);
         }
 
@@ -119,12 +129,19 @@ namespace Game.Net
         /// <returns>打包好后的数据</returns>
         public byte[] Encoder(bool isAck = false)
         {
+            byte[] _tokens = TokenManager.Instance.PackTokens(FlashToken, LongTimeToken);
+            tokenSize = _tokens.Length;
             if (isAck == true)
             {
                 protoSize = 0; // 发送的业务数据的大小
             }
-            byte[] data = new byte[32 + protoSize];
-            byte[] _length = BitConverter.GetBytes(protoSize);
+            else
+            {
+                protoSize = proto.Length;
+            }
+            byte[] data = new byte[36 + protoSize + tokenSize];
+            byte[] _protoLength = BitConverter.GetBytes(protoSize);
+            byte[] _tokenLength = BitConverter.GetBytes(tokenSize);
             byte[] _session = BitConverter.GetBytes(session);
             byte[] _sn = BitConverter.GetBytes(sn);
             byte[] _moduleid = BitConverter.GetBytes(moduleID);
@@ -132,13 +149,15 @@ namespace Game.Net
             byte[] _messageType = BitConverter.GetBytes(messageType);
             byte[] _messageID = BitConverter.GetBytes(messageID);
             // 要将字节数组 写入到data
-            Array.Copy(_length, 0, data, 0, 4);
-            Array.Copy(_session, 0, data, 4, 4);
-            Array.Copy(_sn, 0, data, 8, 4);
-            Array.Copy(_moduleid, 0, data, 12, 4);
-            Array.Copy(_time, 0, data, 16, 8);
-            Array.Copy(_messageType, 0, data, 24, 4);
-            Array.Copy(_messageID, 0, data, 28, 4);
+            Array.Copy(_protoLength, 0, data, 0, 4);
+            Array.Copy(_tokenLength, 0, data, 4, 4);
+            Array.Copy(_session, 0, data, 8, 4);
+            Array.Copy(_sn, 0, data, 12, 4);
+            Array.Copy(_moduleid, 0, data, 16, 4);
+            Array.Copy(_time, 0, data, 20, 8);
+            Array.Copy(_messageType, 0, data, 28, 4);
+            Array.Copy(_messageID, 0, data, 32, 4);
+            Array.Copy(_tokens, 0, data, 36, _tokens.Length);
             //DataStream dataStream = DataStream.Allocate();
             //dataStream.WriteInt(protoSize);
             //dataStream.WriteInt(session);
@@ -151,7 +170,7 @@ namespace Game.Net
             {
                 // 业务数据 追加进来
                 //dataStream.WriteBuffer(proto);
-                Array.Copy(proto, 0, data, 32, proto.Length);
+                Array.Copy(proto, 0, data, 36 + _tokens.Length, proto.Length);
             }
             //buffer = dataStream.ToArray();
             //DataStream.Recycle(dataStream);
@@ -165,14 +184,15 @@ namespace Game.Net
         /// </summary>
         private void DeCode()
         {
-            DataStream dataStream = null;
+            // DataStream dataStream = null;
             if (buffer.Length >= 4)
             {
-                //字节数组 转化成 int 或者是long
+                // 字节数组 转化成 int 或者是long
                 protoSize = BitConverter.ToInt32(buffer, 0); // 从0的位置 取4个字节转化成int
-                dataStream = DataStream.Allocate(buffer);
-                //protoSize = dataStream.ReadInt();
-                if (buffer.Length == protoSize + 32)
+                tokenSize = BitConverter.ToInt32(buffer, 4); // 从0的位置 取4个字节转化成int
+                // dataStream = DataStream.Allocate(buffer);
+                // protoSize = dataStream.ReadInt();
+                if (buffer.Length == tokenSize + protoSize + 36)
                 {
                     isFull = true;
                 }
@@ -182,12 +202,16 @@ namespace Game.Net
                 isFull = false;
                 return;
             }
-            session = BitConverter.ToInt32(buffer, 4); // 从4的位置 取4个字节转化成int
-            sn = BitConverter.ToInt32(buffer, 8); // 从8的位置 取4个字节转化成int
-            moduleID = BitConverter.ToInt32(buffer, 12);
-            time = BitConverter.ToInt64(buffer, 16); // 从16的位置 取8个字节转化成int
-            messageType = BitConverter.ToInt32(buffer, 24);
-            messageID = BitConverter.ToInt32(buffer, 28);
+            session = BitConverter.ToInt32(buffer, 8); // 从4的位置 取4个字节转化成int
+            sn = BitConverter.ToInt32(buffer, 12); // 从8的位置 取4个字节转化成int
+            moduleID = BitConverter.ToInt32(buffer, 16);
+            time = BitConverter.ToInt64(buffer, 20); // 从16的位置 取8个字节转化成int
+            messageType = BitConverter.ToInt32(buffer, 28);
+            messageID = BitConverter.ToInt32(buffer, 32);
+            byte[] token = new byte[tokenSize];
+            Array.Copy(buffer, 36, token, 0, tokenSize);
+            (FlashToken, LongTimeToken) = TokenManager.Instance.UnpackTokens(token);
+            (FlashToken, LongTimeToken) = TokenManager.Instance.UnpackTokens(token);
             //session = dataStream.ReadInt();
             //sn = dataStream.ReadInt();
             //moduleID = dataStream.ReadInt();
@@ -198,14 +222,13 @@ namespace Game.Net
             {
                 proto = new byte[protoSize];
                 // 将buffer里剩下的数据 复制到proto 得到最终的业务数据
-                Array.Copy(buffer, 32, proto, 0, protoSize);
+                Array.Copy(buffer, 36 + token.Length, proto, 0, protoSize);
                 //proto = dataStream.ReadBuffer(protoSize);
             }
         }
 
         /// <summary>
         /// 把所有还原为初始值
-        /// 用了对象池需要有一个reset函数
         /// </summary>
         public void Reset()
         {
@@ -219,6 +242,8 @@ namespace Game.Net
             this.buffer = null;
             this.proto = null;
             this.isFull = false;
+            this.FlashToken = "no_payload.no_token";
+            this.LongTimeToken = "no_payload.no_token";
         }
     }
 }

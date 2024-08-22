@@ -1,7 +1,3 @@
-﻿[LOG]# [2024:10:41:01-476]  ThreadID:1 >>> 1
-<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
-[ERROR_LOG]# [2024:10:41:01-486]  ThreadID:1 >>> SyncVar 'test1' not found.
-StackTrace:
-    D:\unity\SocketLearn\Assets\Script\Net\SyncVar\SyncVarManager.cs::System.Object GetSyncVarValue(System.String) Line:96
-    D:\unity\SocketLearn\Assets\Script\Test\TestSyncVar.cs::Void Update() Line:28
-<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+version https://git-lfs.github.com/spec/v1
+oid sha256:683323a46569a96ff26eeaf379f1e48c9a583a8419d07ad37ca10db975fbde85
+size 733
