@@ -77,6 +77,7 @@ namespace GameServer
             StartUpdate(0.1f);
             // TODO : 加载游戏个服务并且运行
             // TestDb.Test();
+            TestBuffers.Test();
             //网路服务模块
             NetService netService = new NetService();
             RPCService RPCService = new RPCService();
@@ -101,6 +102,7 @@ namespace GameServer
         {
             // TODO : 处理游戏退出逻辑
             LogUtils.Log("Server Closed");
+            Environment.Exit(0);
         }
 
         /// <summary>

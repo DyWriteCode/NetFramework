@@ -1,0 +1,1518 @@
+﻿[LOG]# [2024:05:24:18-004]  ThreadID:1 >>> LogUtils Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-015]  ThreadID:1 >>> Server Start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-020]  ThreadID:1 >>> ArchiveManager Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-020]  ThreadID:1 >>> MessageManager Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-037]  ThreadID:1 >>> DatabaseUser Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-038]  ThreadID:1 >>> BufferEntityFactory Initialization Completed
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-061]  ThreadID:1 >>> RPC method load finished
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-091]  ThreadID:1 >>> Start listening on the port : 32510
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-100]  ThreadID:11 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-100]  ThreadID:7 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-100]  ThreadID:5 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-100]  ThreadID:10 >>> worker thread start
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-213]  ThreadID:1 >>> Proto.HeartBeatRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-214]  ThreadID:1 >>> Proto.RpcResponse:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-214]  ThreadID:1 >>> Proto.RpcRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-216]  ThreadID:1 >>> Proto.SyncVarRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-218]  ThreadID:1 >>> Proto.SyncVarResponse:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-218]  ThreadID:1 >>> Proto.GetTokenRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-218]  ThreadID:1 >>> Proto.GetTokenResponse:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-218]  ThreadID:1 >>> Proto.UpdateTokenRequest:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-218]  ThreadID:1 >>> Proto.UpdateTokenResponse:1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:18-218]  ThreadID:1 >>> The network service is started
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:30-864]  ThreadID:15 >>> Client access
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-148]  ThreadID:15 >>> Proto Type registry：10000 - proto.Vec3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10001 - proto.Damage
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10002 - proto.Vector3
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10003 - proto.CastInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10004 - proto.ItemInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10005 - proto.NetActor
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10006 - proto.NetEntity
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10007 - proto.SkillInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10008 - proto.ACKRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10009 - proto.ItemUpdate
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10010 - proto.RpcRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10011 - proto.ACKResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10012 - proto.ChatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10013 - proto.RpcResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-149]  ThreadID:15 >>> Proto Type registry：10014 - proto.ChatResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10015 - proto.SpellRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10016 - proto.InventoryInfo
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10017 - proto.NetEntitySync
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10018 - proto.ReviveRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10019 - proto.SpellResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10020 - proto.DamageResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10021 - proto.ItemUseRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10022 - proto.PropertyUpdate
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10023 - proto.SyncVarRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10024 - proto.GetTokenRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10025 - proto.SyncVarResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10026 - proto.GameEnterRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10027 - proto.GetTokenResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10028 - proto.HeartBeatRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10029 - proto.InventoryRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10030 - proto.UserLoginRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10031 - proto.GameEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10032 - proto.HeartBeatResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-150]  ThreadID:15 >>> Proto Type registry：10033 - proto.InventoryResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10034 - proto.PickupItemRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10035 - proto.SpellFailResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10036 - proto.UserLoginResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10037 - proto.EntitySyncResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10038 - proto.InstantiateRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10039 - proto.ItemDiscardRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10040 - proto.SpaceEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10041 - proto.UpdateTokenRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10042 - proto.EntityEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10043 - proto.TokenExpiredRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10044 - proto.UpdateTokenResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10045 - proto.UserRegisterRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10046 - proto.CharacterListRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10047 - proto.ItemPlacementRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10048 - proto.UserRegisterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10049 - proto.CharacterListResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10050 - proto.CharacterCreateRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-151]  ThreadID:15 >>> Proto Type registry：10051 - proto.CharacterDeleteRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-152]  ThreadID:15 >>> Proto Type registry：10052 - proto.ChracterCreateResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-152]  ThreadID:15 >>> Proto Type registry：10053 - proto.PropertyUpdateResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-152]  ThreadID:15 >>> Proto Type registry：10054 - proto.SpaceEntitySyncRequest
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-152]  ThreadID:15 >>> Proto Type registry：10055 - proto.CharacterDeleteResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-152]  ThreadID:15 >>> Proto Type registry：10056 - proto.SpaceEntitySyncResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-152]  ThreadID:15 >>> Proto Type registry：10057 - proto.SpaceCharacterLeaveResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-152]  ThreadID:15 >>> Proto Type registry：10058 - proto.PropertyUpdate.PropertyValue
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:32-152]  ThreadID:15 >>> Proto Type registry：10059 - proto.SpaceCharactersEnterResponse
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:32-332]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:32-344]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void .ctor(System.Threading.Tasks.Task, System.Object, System.AsyncCallback) Line:0
+    ::System.IAsyncResult Begin(System.Threading.Tasks.Task, System.AsyncCallback, System.Object) Line:0
+    ::System.IAsyncResult BeginReceive(Byte[], Int32, Int32, System.Net.Sockets.SocketFlags, System.AsyncCallback, System.Object) Line:0
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void BeginReceive() Line:82
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:104
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:32-476]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:32-728]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:32-980]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:33-233]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:33-484]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:33-738]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:34-002]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:34-264]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:34-515]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:34-768]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:35-018]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:35-272]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:35-522]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void Invoke(Event) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:35-773]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:36-023]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:36-275]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:36-528]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:36-781]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:37-036]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:37-289]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:37-544]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:37-795]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:38-047]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:38-298]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:38-555]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:38-808]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:39-062]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:39-315]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:24:39-628]  ThreadID:15 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:24:39-748]  ThreadID:15 >>> The connection is lost : GameServer.Net.Connection
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:27:09-172]  ThreadID:16 >>> Client access
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:10-316]  ThreadID:3 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:10-474]  ThreadID:3 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:10-726]  ThreadID:3 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:10-976]  ThreadID:3 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:11-228]  ThreadID:16 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:11-482]  ThreadID:16 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:11-737]  ThreadID:16 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:11-988]  ThreadID:16 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:12-243]  ThreadID:16 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:12-496]  ThreadID:16 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:12-747]  ThreadID:16 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:13-001]  ThreadID:16 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:13-254]  ThreadID:18 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:13-505]  ThreadID:18 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:13-760]  ThreadID:18 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:14-011]  ThreadID:18 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:14-263]  ThreadID:18 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:14-516]  ThreadID:18 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:14-768]  ThreadID:18 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[ERROR_LOG]# [2024:05:27:15-073]  ThreadID:18 >>> 1002 : ProcessReceive exception: Google.Protobuf.InvalidProtocolBufferException: Protocol message contained a tag with an invalid wire type.
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(ParseContext& ctx)
+   at Google.Protobuf.UnknownFieldSet.MergeFieldFrom(UnknownFieldSet unknownFields, ParseContext& ctx)
+   at Proto.HeartBeatRequest.pb::Google.Protobuf.IBufferMessage.InternalMergeFrom(ParseContext& input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 445
+   at Google.Protobuf.ParsingPrimitivesMessages.ReadRawMessage(ParseContext& ctx, IMessage message)
+   at Google.Protobuf.CodedInputStream.ReadRawMessage(IMessage message)
+   at Proto.HeartBeatRequest.MergeFrom(CodedInputStream input) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Proto\Message.cs:line 420
+   at Google.Protobuf.MessageExtensions.MergeFrom(IMessage message, Byte[] data, Int32 offset, Int32 length, Boolean discardUnknownFields, ExtensionRegistry registry)
+   at Google.Protobuf.MessageParser.ParseFrom(Byte[] data, Int32 offset, Int32 length)
+   at GameServer.Helper.ProtoHelper.ParseFrom(Int32 typeCode, Byte[] data, Int32 offset, Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Helper\ProtoHelper.cs:line 126
+   at GameServer.Net.Connection._received(Byte[] data) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\Connection.cs:line 81
+   at GameServer.Net.SocketReceiver.parseReceive(Int32 len) in D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs:line 141
+StackTrace:
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void parseReceive(Int32) Line:141
+    D:\unity\SocketLearn\Server\GameServer\GameServer\Net\SocketReceiver.cs::Void ReceiveCallback(System.IAsyncResult) Line:102
+    ::Void <OutputWaitEtwEvents>b__12_0(System.Action, System.Threading.Tasks.Task) Line:0
+    ::Void RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object) Line:0
+    ::Void RunCallback(System.Threading.ContextCallback, System.Object, System.Threading.Tasks.Task ByRef) Line:0
+    ::Void RunContinuations(System.Object) Line:0
+    ::Boolean TrySetResult(TResult) Line:0
+    ::Void <.cctor>b__4_0(System.Object) Line:0
+    ::Void <.cctor>b__173_0(UInt32, UInt32, System.Threading.NativeOverlapped*) Line:0
+    ::Void System.Threading.IThreadPoolWorkItem.Execute() Line:0
+    ::Boolean Dispatch() Line:0
+    ::Void WorkerThreadStart() Line:0
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:05:27:15-111]  ThreadID:18 >>> The connection is lost : GameServer.Net.Connection
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->

@@ -6,6 +6,7 @@ using Game.Common.Tasks;
 using Game.Log;
 using Game.Net.Rpc;
 using Game.Net.SyncVar;
+using Game.Net.TokenAuth;
 using Proto;
 using UnityEngine;
 using UnityEngine.UI;
@@ -98,14 +99,48 @@ namespace Game.Net
             //RpcMethodManager.Instance.RegisterMethod("d", new Func<int, int>(TestRPC.d));
             //心跳包任务，每秒1次
             StartCoroutine(SendHeartMessage());
+            StartCoroutine(SendGetTokenMessage());
             // MessageRouter这个是事件处理器
             MessageManager.Instance.Subscribe<HeartBeatResponse>(_HeartBeatResponse);
             MessageManager.Instance.Subscribe<RpcResponse>(_RpcResponse);
             MessageManager.Instance.Subscribe<RpcRequest>(_RpcRequest);
             MessageManager.Instance.Subscribe<SyncVarResponse>(_SyncVarResponse);
             MessageManager.Instance.Subscribe<SyncVarRequest>(_SyncVarRequest);
+            MessageManager.Instance.Subscribe<GetTokenResponse>(_GetTokenResponse);
+            MessageManager.Instance.Subscribe<UpdateTokenResponse>(_UpdateTokenResponse);
+            MessageManager.Instance.Subscribe<TokenExpiredRequest>(_TokenExpiredRequest);
             // 注册out事件
             EventManager.RegisterOut("OnDisconnected", this, "OnDisconnected");
+        }
+
+        /// <summary>
+        /// 接收传回来的Token超时请求
+        /// </summary>
+        /// <param name="sender">服务器</param>
+        /// <param name="message">发送过来的信息</param>
+        private void _TokenExpiredRequest(Connection sender, TokenExpiredRequest message)
+        {
+            LogUtils.Warn("yes");
+            if (NetClient.Instance.Running == true)
+            {
+                TokenManager.Instance.UpdateToken(NetClient.Instance.FlashToken, NetClient.Instance.LongTimeToken);
+            }
+        }
+
+        /// <summary>
+        /// 发送获取token的message
+        /// </summary>
+        private IEnumerator SendGetTokenMessage()
+        {
+            while (NetClient.Instance.FlashToken == "no_payload.no_token" && NetClient.Instance.LongTimeToken == "no_payload.no_token")
+            {
+                if (NetClient.Instance.Running == true)
+                {
+                    TokenManager.Instance.GetToken(NetClient.Instance.sessionID);
+                    break;
+                }
+                yield return new WaitForSeconds(1);
+            }
         }
 
         /// <summary>
@@ -166,10 +201,38 @@ namespace Game.Net
         }
 
         /// <summary>
+        /// 更新token的反馈
+        /// </summary>
+        /// <param name="sender">服务器</param>
+        /// <param name="message">发送过来的信息</param>
+        private void _UpdateTokenResponse(Connection sender, UpdateTokenResponse message)
+        {
+            if (message.State == true)
+            {
+                NetClient.Instance.FlashToken = message.FlashToken;
+                NetClient.Instance.LongTimeToken = message.FlashToken;
+            }
+        }
+
+        /// <summary>
+        /// 获取token的返回值
+        /// </summary>
+        /// <param name="sender">服务器</param>
+        /// <param name="message">发送过来的信息</param>
+        private void _GetTokenResponse(Connection sender, GetTokenResponse message)
+        {
+            if (message.State == true)
+            {
+                NetClient.Instance.FlashToken = message.FlashToken;
+                NetClient.Instance.LongTimeToken = message.LongTimeToken;
+            }
+        }
+
+        /// <summary>
         /// 心跳包函数
         /// </summary>
         /// <returns>WaitForSeconds</returns>
-        IEnumerator SendHeartMessage()
+        private IEnumerator SendHeartMessage()
         {
             while (NetClient.Instance.Running == true)
             {

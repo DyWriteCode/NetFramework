@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 using Proto;
 using GameServer.Log;
 using GameServer.Manager;
+using GameServer.Common;
 
 namespace GameServer.Net.Service
 {
     /// <summary>
     /// RPC服务
     /// </summary>
-    public class SyncVarService : BaseService
+    public class SyncVarService : SingletonService<SyncVarService>
     {
         /// <summary>
         /// 开启服务
         /// </summary>
-        public void Start()
+        public override void Start()
         {
+            base.Start();
             GameApp.MessageManager.Subscribe<SyncVarRequest>(_SyncVarRequest);
             GameApp.MessageManager.Subscribe<SyncVarResponse>(_SyncVarResponse);
         }

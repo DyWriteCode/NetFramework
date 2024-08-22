@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 using Proto;
 using GameServer.Log;
 using GameServer.Manager;
+using GameServer.Common;
 
 namespace GameServer.Net.Service
 {
     /// <summary>
     /// RPC服务
     /// </summary>
-    public class RPCService : BaseService
+    public class RPCService : SingletonService<RPCService>
     {
         /// <summary>
         /// 开启服务
         /// </summary>
-        public void Start()
+        public override void Start()
         {
+            base.Start();
             GameApp.MessageManager.Subscribe<RpcResponse>(_RpcResponse);
             GameApp.MessageManager.Subscribe<RpcRequest>(_RpcRequest);
         }

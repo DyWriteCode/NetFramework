@@ -31,6 +31,31 @@ message SyncVarResponse {
 	bytes result = 3;
 }
 
+message GetTokenRequest {
+	int32 id = 1;
+}
+
+message GetTokenResponse {
+	bool state = 1;
+	string flashToken = 2;
+	string longTimeToken = 3;
+}
+
+message UpdateTokenRequest {
+	string flashToken = 1;
+	string longTimeToken = 2;
+}
+
+message UpdateTokenResponse {
+	bool state = 1;
+	string flashToken = 2;
+	string longTimeToken = 3;
+}
+
+message TokenExpiredRequest {
+	int32 state = 1;
+}
+
 message InstantiateRequest{
 	string prefabName = 1;
 	Vector3 position = 2;

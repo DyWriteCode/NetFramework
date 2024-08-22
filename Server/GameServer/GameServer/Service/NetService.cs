@@ -14,13 +14,15 @@ using System.Collections.Concurrent;
 using GameServer.Helper;
 using System.Collections;
 using System.Net.Sockets;
+using GameServer.Common;
+using GameServer.Net.TokenAuth;
 
 namespace GameServer.Net.Service
 {
     /// <summary>
     /// 网络服务
     /// </summary>
-    public class NetService : BaseService
+    public class NetService : SingletonService<NetService>
     {
         /// <summary>
         /// 服务端对象
@@ -39,8 +41,11 @@ namespace GameServer.Net.Service
         /// </summary>
         public int sessionID = 1000;
         /// <summary>
+        /// 客户端字典
+        /// </summary>
+        public Dictionary<string, Connection> ConnectionDict = new Dictionary<string, Connection>();
+        /// <summary>
         /// 客户端列表
-        /// TODO : 只要用于RPC
         /// </summary>
         public List<Connection> ConnectionList = new List<Connection>();
         /// <summary>
@@ -71,15 +76,19 @@ namespace GameServer.Net.Service
             {
                 sessionID += 1;
                 sender.Get<Session>().sessionID = sessionID;
+                ConnectionDict.Add(sender.Get<Session>().sessionID.ToString(), sender);
             }
+            sender.Get<Session>().FlashToken = buffer.FlashToken;
+            sender.Get<Session>().LongTimeToken = buffer.LongTimeToken;
             sender.Get<Session>().Handle(sender, buffer, data);
         }
 
         /// <summary>
         /// 开启服务
         /// </summary>
-        public void Start()
+        public override void Start()
         {
+            base.Start();
             // 启动网络监听，指定消息包装类型
             tcpServer.Start();
             // 启动消息分发器
@@ -92,7 +101,7 @@ namespace GameServer.Net.Service
         /// 关闭超时的客户端连接
         /// </summary>
         /// <param name="state">计时器状态</param>
-        void TimerCallback(object state)
+        private void TimerCallback(object state)
         {
             var now = DateTime.Now;
             foreach (var kv in heartBeatPairs)

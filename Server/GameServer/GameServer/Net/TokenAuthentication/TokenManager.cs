@@ -1,11 +1,18 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using GameServer.Common;
+using GameServer.Common.Tasks;
 using GameServer.Helper;
 using GameServer.Log;
+using GameServer.Manager;
+using GameServer.Net.Service;
+using Proto;
+using static Org.BouncyCastle.Asn1.Cmp.Challenge;
 
 namespace GameServer.Net.TokenAuth
 {
@@ -27,13 +34,57 @@ namespace GameServer.Net.TokenAuth
         /// </summary>
         private readonly string _audience = "client_audience";
         /// <summary>
-        /// 存储 Token 及其过期时间
+        /// 存储 Client Token 及其过期时间
         /// </summary>
-        private readonly Dictionary<string, DateTime> _tokenExpiryMap = new Dictionary<string, DateTime>();
+        private readonly ConcurrentDictionary<string, DateTime> _tokenExpiryMap = new ConcurrentDictionary<string, DateTime>();
         /// <summary>
         /// 存储废弃的 Token
         /// </summary>
         private readonly HashSet<string> _revokedTokens = new HashSet<string>();
+        /// <summary>
+        /// Server Flash Token
+        /// </summary>
+        private string serverFlashToken = string.Empty;
+        /// <summary>
+        /// Server Long Time Token
+        /// </summary>
+        private string serverLongTimeToken = string.Empty;
+        /// <summary>
+        /// Server Flash Token
+        /// </summary>
+        public string ServerFlashToken
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(serverFlashToken))
+                {
+                    serverFlashToken = GenerateToken("server_fresh", TokenType.Flash);
+                }
+                if (ValidateToken(serverFlashToken, true) == false)
+                {
+                    serverFlashToken = GenerateToken("server_fresh", TokenType.Flash);
+                }
+                return serverFlashToken;
+            }
+        }
+        /// <summary>
+        /// Server Flash Token
+        /// </summary>
+        public string ServerLongTimeToken
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(serverLongTimeToken))
+                {
+                    serverLongTimeToken = GenerateToken("server_long", TokenType.Flash);
+                }
+                if (ValidateToken(serverLongTimeToken, true) == false)
+                {
+                    serverLongTimeToken = GenerateToken("server_long", TokenType.Flash);
+                }
+                return serverLongTimeToken;
+            }
+        }
 
         /// <summary>
         /// 创建 Token
@@ -42,20 +93,28 @@ namespace GameServer.Net.TokenAuth
         /// <param name="tokenType">Token的类型</param>
         /// <param name="claims">额外自定义的项</param>
         /// <returns>一个Token</returns>
-        public string GenerateToken(string username, TokenType tokenType, Dictionary<string, object> claims = null)
+        public string GenerateToken(string username, TokenType tokenType = TokenType.Flash, Dictionary<string, object> claims = null)
         {
-            TimeSpan _tokenLifespan;
+            TimeSpan _tokenLifespan = TimeSpan.FromMinutes(10);
             if (tokenType == TokenType.Flash)
             {
-                _tokenLifespan = TimeSpan.FromHours(0.5f);
+                _tokenLifespan = TimeSpan.FromMinutes(10);
             }
-            else
+            else if (tokenType == TokenType.LongTime)
             {
-                _tokenLifespan = TimeSpan.FromDays(10);
+                _tokenLifespan = TimeSpan.FromHours(1);
             }
+            //if (tokenType == TokenType.Flash)
+            //{
+            //    _tokenLifespan = TimeSpan.FromSeconds(30);
+            //}
+            //else if (tokenType == TokenType.LongTime)
+            //{
+            //    _tokenLifespan = TimeSpan.FromMinutes(1);
+            //}
             Token payload = new Token
             {
-                sub = username,
+                sub = $"{username}{new string(Enumerable.Repeat("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", 20).Select(ch => ch[new Random().Next(ch.Length)]).ToArray())}",
                 iss = _issuer,
                 aud = _audience,
                 iat = DateTime.UtcNow,
@@ -65,7 +124,15 @@ namespace GameServer.Net.TokenAuth
             string jsonPayload = JsonHelper.Serialize(payload);
             string base64UrlPayload = Base64UrlEncode(jsonPayload);
             string signature = ComputeHmacSha256Signature(base64UrlPayload, SecretKey);
-            string token = $"{base64UrlPayload}.{signature}";
+            string token = string.Empty;
+            if (tokenType == TokenType.Flash)
+            {
+                token = $"{base64UrlPayload}.{signature}.flash";
+            }
+            else if (tokenType == TokenType.LongTime)
+            {
+                token = $"{base64UrlPayload}.{signature}.long";
+            }
             _tokenExpiryMap[token] = payload.exp;
             return token;
         }
@@ -74,17 +141,22 @@ namespace GameServer.Net.TokenAuth
         /// 验证 Token
         /// </summary>
         /// <param name="token">需要验证的token</param>
-        /// <param name="ifTimeoutDel">如果token验证为超时是否使其废弃</param>
+        /// <param name="ifErrorDel">如果token验证为超时是否使其废弃</param>
         /// <returns>是否超时</returns>
-        public bool ValidateToken(string token, bool ifTimeoutDel = false)
+        public bool ValidateToken(string token, bool ifErrorDel = false)
         {
             if (string.IsNullOrEmpty(token) || _revokedTokens.Contains(token))
             {
                 return false;
             }
             string[] parts = token.Split('.');
-            if (parts.Length != 2)
+            if (parts.Length != 3)
             {
+                if (ifErrorDel == true)
+                {
+                    LogUtils.Warn(token);
+                    InvalidateToken(token);
+                }
                 return false;
             }
             string signatureFromToken = parts[1];
@@ -92,6 +164,11 @@ namespace GameServer.Net.TokenAuth
             string expectedSignature = ComputeHmacSha256Signature(message, SecretKey);
             if (signatureFromToken != expectedSignature)
             {
+                if (ifErrorDel == true)
+                {
+                    LogUtils.Warn(token);
+                    InvalidateToken(token);
+                }
                 return false;
             }
             try
@@ -100,11 +177,19 @@ namespace GameServer.Net.TokenAuth
                 Token payload = JsonHelper.Deserialize<Token>(jsonPayload);
                 if (payload.exp < DateTime.UtcNow)
                 {
+                    if (ifErrorDel == true)
+                    {
+                        InvalidateToken(token);
+                    }
                     return false;
                 }
                 // 检查 Token 是否过期
                 if (_tokenExpiryMap.TryGetValue(token, out DateTime expiryTime) && DateTime.UtcNow > expiryTime)
                 {
+                    if (ifErrorDel == true)
+                    {
+                        InvalidateToken(token);
+                    }
                     return false;
                 }
             }
@@ -112,6 +197,11 @@ namespace GameServer.Net.TokenAuth
             {
                 // 无效的 payload 结构
                 LogUtils.Log(error.Message);
+                if (ifErrorDel == true)
+                {
+                    LogUtils.Warn(token);
+                    InvalidateToken(token);
+                }
                 return false;
             }
             return true;
@@ -126,7 +216,7 @@ namespace GameServer.Net.TokenAuth
             if (ValidateToken(token))
             {
                 _revokedTokens.Add(token);
-                _tokenExpiryMap.Remove(token);
+                _tokenExpiryMap.Remove<string, DateTime>(token, out DateTime temp);
             }
         }
 
@@ -186,7 +276,53 @@ namespace GameServer.Net.TokenAuth
         /// <param name="dt"></param>
         public void Update(float dt)
         {
+            Thread.Sleep(TimeSpan.FromSeconds(dt * 1000));
+            foreach (var item in _tokenExpiryMap)
+            {
+                ValidateToken(item.Key, true);
+            }
+        }
 
+        /// <summary>
+        /// 打包两个Holton
+        /// </summary>
+        /// <param name="flashToken">刷新token</param>
+        /// <param name="longTimeToken">长时间token</param>
+        /// <returns>打包好的bytes</returns>
+        public byte[] PackTokens(string flashToken, string longTimeToken)
+        {
+            // 编码字符串为字节序列
+            byte[] flashTokenByte = Encoding.UTF8.GetBytes(flashToken);
+            byte[] longTimeTokenByte = Encoding.UTF8.GetBytes(longTimeToken);
+            // 记录每个字符串的长度
+            byte[] lengthFlashTokenByte = BitConverter.GetBytes(flashTokenByte.Length); // 4
+            byte[] lengthLongTimeToken = BitConverter.GetBytes(longTimeTokenByte.Length); // 4
+            // 创建一个足够大的数组来存储所有数据
+            byte[] result = new byte[lengthFlashTokenByte.Length + flashTokenByte.Length + lengthLongTimeToken.Length + longTimeTokenByte.Length];
+            // 将长度和字符串字节序列复制到结果数组中
+            Array.Copy(lengthFlashTokenByte, 0, result, 0, lengthFlashTokenByte.Length);
+            Array.Copy(flashTokenByte, 0, result, lengthFlashTokenByte.Length, flashTokenByte.Length);
+            Array.Copy(lengthLongTimeToken, 0, result, lengthFlashTokenByte.Length + flashTokenByte.Length, lengthLongTimeToken.Length);
+            Array.Copy(longTimeTokenByte, 0, result, lengthFlashTokenByte.Length + flashTokenByte.Length + lengthLongTimeToken.Length, longTimeTokenByte.Length);
+            return result;
+        }
+
+        public (string, string) UnpackTokens(byte[] packedTokens)
+        {
+            // 从字节数组中读取第一个字符串的长度
+            int lengthFlashTokenByte = BitConverter.ToInt32(packedTokens, 0);
+            // 从字节数组中提取第一个字符串的字节序列
+            byte[] flashTokenByte = new byte[lengthFlashTokenByte];
+            Array.Copy(packedTokens, 4, flashTokenByte, 0, lengthFlashTokenByte);
+            // 从字节数组中读取第二个字符串的长度
+            int lengthLongTimeToken = BitConverter.ToInt32(packedTokens, 4 + lengthFlashTokenByte);
+            // 从字节数组中提取第二个字符串的字节序列
+            byte[] longTimeTokenByte = new byte[lengthLongTimeToken];
+            Array.Copy(packedTokens, 8 + lengthFlashTokenByte, longTimeTokenByte, 0, lengthLongTimeToken);
+            // 将字节序列解码为字符串
+            string flashToken = Encoding.UTF8.GetString(flashTokenByte);
+            string timeTokenByte = Encoding.UTF8.GetString(longTimeTokenByte);
+            return (flashToken, timeTokenByte);
         }
     }
 }

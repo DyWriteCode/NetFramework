@@ -1,0 +1,32 @@
+﻿[LOG]# [2024:08:04:35-077]  ThreadID:1 >>> Connect To Server
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:35-303]  ThreadID:71 >>> The session ID sent to us by the service is :1002
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[WARN_LOG]# [2024:08:04:35-305]  ThreadID:18 >>> True
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[WARN_LOG]# [2024:08:04:35-306]  ThreadID:18 >>> eyJzdWIiOiIxMDAySktaUTExQkpNNzY4WUw4REVBNlIiLCJpc3MiOiJzZXJ2ZXJfaXNzdWVyIiwiYXVkIjoiY2xpZW50X2F1ZGllbmNlIiwiaWF0IjoiMjAyNC0wOC0yMlQwMDowNDozNS4yOTk4Njg1WiIsImV4cCI6IjIwMjQtMDgtMjJUMDA6MDQ6MzUuMzQ0ODY4OFoiLCJjdXN0b21DbGFpbXMiOm51bGx9.a1FDclkvOTZUb245RSt1ZHlOUHMzQXpjamhJN3VZUW9YeG1uM01wMFY3bz0.flash
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[WARN_LOG]# [2024:08:04:35-306]  ThreadID:18 >>> eyJzdWIiOiIxMDAySktaUTExQkpNNzY4WUw4REVBNlIiLCJpc3MiOiJzZXJ2ZXJfaXNzdWVyIiwiYXVkIjoiY2xpZW50X2F1ZGllbmNlIiwiaWF0IjoiMjAyNC0wOC0yMlQwMDowNDozNS4yOTk4Njg1WiIsImV4cCI6IjIwMjQtMDgtMjJUMDA6MDQ6MzUuMzQ0ODY4OFoiLCJjdXN0b21DbGFpbXMiOm51bGx9.a1FDclkvOTZUb245RSt1ZHlOUHMzQXpjamhJN3VZUW9YeG1uM01wMFY3bz0.flash
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:37-157]  ThreadID:18 >>> Heartbeat response from the server : ms = 1.0018
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:38-158]  ThreadID:18 >>> Heartbeat response from the server : ms = 0.9996
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:39-158]  ThreadID:18 >>> Heartbeat response from the server : ms = 0.9999
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:40-159]  ThreadID:18 >>> Heartbeat response from the server : ms = 1.0351
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:41-161]  ThreadID:18 >>> Heartbeat response from the server : ms = 1.0002
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:42-163]  ThreadID:18 >>> Heartbeat response from the server : ms = 2.5199
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:43-163]  ThreadID:18 >>> Heartbeat response from the server : ms = 1.0073
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:44-165]  ThreadID:18 >>> Heartbeat response from the server : ms = 1
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:45-166]  ThreadID:18 >>> Heartbeat response from the server : ms = 1.3916
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:45-689]  ThreadID:1 >>> Disconnect To Server
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->
+[LOG]# [2024:08:04:45-709]  ThreadID:1223 >>> Disconnect To Server
+<- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ->

@@ -7,7 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using GameServer.Log;
 using GameServer.Manager;
+using GameServer.Net.Service;
 using Google.Protobuf;
+using Proto;
 
 namespace GameServer.Net
 {
@@ -29,6 +31,14 @@ namespace GameServer.Net
         /// </summary>
         public int handleSN = 0;
         /// <summary>
+        /// 刷新token
+        /// </summary>
+        public string FlashToken = "no_payload.no_token";
+        /// <summary>
+        /// 长期的token
+        /// </summary>
+        public string LongTimeToken = "no_payload.no_token";
+        /// <summary>
         /// 缓存已经发送的报文
         /// </summary>
         public ConcurrentDictionary<int, BufferEntity> waitHandle = new ConcurrentDictionary<int, BufferEntity>();
@@ -36,6 +46,10 @@ namespace GameServer.Net
         /// 缓存已经发送的报文
         /// </summary>
         public ConcurrentDictionary<int, BufferEntity> sendPackage = new ConcurrentDictionary<int, BufferEntity>();
+        /// <summary>
+        /// 缓存数值
+        /// </summary>
+        public int tempCount = 0;
 
         /// <summary>
         /// 处理报文
@@ -57,7 +71,7 @@ namespace GameServer.Net
                 case (int)MessageType.Logic: //业务报文
                     // sender.SendACK(buffer); // 先告诉客户端 我已经收到这个报文
                     // 再来处理业务报文
-                    HandleLogincPackage(sender, buffer, data);
+                    HandleLogicPackage(sender, buffer, data);
                     break;
                 default:
                     break;
@@ -70,7 +84,7 @@ namespace GameServer.Net
         /// <param name="sender">服务端连接</param>
         /// <param name="buffer">传过来的报文</param>
         /// <param name="data">protobuf类型</param>
-        private void HandleLogincPackage(Connection sender, BufferEntity buffer, IMessage data)
+        private void HandleLogicPackage(Connection sender, BufferEntity buffer, IMessage data)
         {
             // 接收到的报文是以前处理过的
             if (buffer.sn <= handleSN)
@@ -92,7 +106,29 @@ namespace GameServer.Net
             {
                 if (buffer.isFull == true)
                 {
-                    GameApp.MessageManager.AddMessage(sender, data);
+                    if (data.GetType() == typeof(HeartBeatRequest) || data.GetType() == typeof(HeartBeatResponse) || data.GetType() == typeof(GetTokenRequest) || data.GetType() == typeof(GetTokenResponse))
+                    {
+                        GameApp.MessageManager.AddMessage(sender, data);
+                    }
+                    else if (GameApp.TokenManager.ValidateToken(buffer.FlashToken) == true && GameApp.TokenManager.ValidateToken(buffer.LongTimeToken) == true)
+                    {
+                        GameApp.MessageManager.AddMessage(sender, data);
+                    }
+                    else
+                    {
+                        if (tempCount == 0)
+                        {
+                            BaseService.Instance.Send(sender, new TokenExpiredRequest
+                            {
+                                State = 0
+                            });
+                        }
+                        tempCount++;
+                        if (tempCount == 10)
+                        {
+                            tempCount = 0;
+                        }
+                    }
                 }
             }
             // 检测缓存的数据 有没有包含下一条可以处理的数据
@@ -100,7 +136,7 @@ namespace GameServer.Net
             if (waitHandle.TryRemove(handleSN + 1, out nextBuffer))
             {
                 // 这里是判断缓冲区有没有存在下一条数据
-                HandleLogincPackage(sender, nextBuffer, data);
+                HandleLogicPackage(sender, nextBuffer, data);
             }
         }
     }

@@ -9,6 +9,7 @@ namespace GameServer.Net.TokenAuth
     public enum TokenType
     {
         Flash,
-        LongTime
+        LongTime,
+        Test,
     }
 }

@@ -325,7 +325,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269992164}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f248c97ad75f9a448185c707d8aecb3, type: 3}
   m_Name: 
@@ -339,7 +339,7 @@ MonoBehaviour:
   HOST: 127.0.0.1
   PORT: 32510
   NetworkLatencyText: {fileID: 9763596}
-  beatTime: 0.25
+  beatTime: 0.5
 --- !u!4 &269992166
 Transform:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269992164}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fea72f7ece2d79841b21891f2e24a82d, type: 3}
   m_Name: 
