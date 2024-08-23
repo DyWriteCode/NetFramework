@@ -106,7 +106,7 @@ namespace GameServer.Net
             {
                 if (buffer.isFull == true)
                 {
-                    if (data.GetType() == typeof(HeartBeatRequest) || data.GetType() == typeof(HeartBeatResponse) || data.GetType() == typeof(GetTokenRequest) || data.GetType() == typeof(GetTokenResponse))
+                    if (data.GetType() == typeof(GetTokenRequest) || data.GetType() == typeof(GetTokenResponse) || data.GetType() == typeof(UpdateTokenRequest) || data.GetType() == typeof(UpdateTokenResponse))
                     {
                         GameApp.MessageManager.AddMessage(sender, data);
                     }

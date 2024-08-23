@@ -102,12 +102,12 @@ namespace Game.Net.TokenAuth
         /// 从服务端更新token
         /// </summary>
         /// <param name="id">本客户端的section ID</param>
-        public void UpdataToken(int id)
+        public void UpdateToken(string refreshToken, string longTimeToken)
         {
             NetClient.Instance.Send(new UpdateTokenRequest 
             {
-                FlashToken = NetClient.Instance.FlashToken,
-                LongTimeToken = NetClient.Instance.LongTimeToken,
+                FlashToken = refreshToken,
+                LongTimeToken = longTimeToken,
             }, false);
         }
 

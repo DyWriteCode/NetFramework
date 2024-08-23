@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Game.Net.TokenAuth
 {
     /// <summary>
-    /// 自定义Token类型
+    /// 自定义Token类型 JWT json web token
     /// </summary>
     public class Token
     {

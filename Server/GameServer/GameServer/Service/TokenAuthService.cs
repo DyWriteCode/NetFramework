@@ -87,6 +87,8 @@ namespace GameServer.Net.Service
             GetTokenResponse response = new GetTokenResponse();
             response.FlashToken = GameApp.TokenManager.GenerateToken(sender.Get<Session>().sessionID.ToString(), TokenType.Flash);
             response.LongTimeToken = GameApp.TokenManager.GenerateToken(sender.Get<Session>().sessionID.ToString(), TokenType.LongTime);
+            sender.Get<Session>().FlashToken = response.FlashToken;
+            sender.Get<Session>().LongTimeToken = response.LongTimeToken;
             if (GameApp.TokenManager.ValidateToken(response.FlashToken) == true && GameApp.TokenManager.ValidateToken(response.LongTimeToken) == true)
             {
                 response.State = true;

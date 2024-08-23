@@ -10,6 +10,5 @@ namespace GameServer.Net.TokenAuth
     {
         Flash,
         LongTime,
-        Test,
     }
 }

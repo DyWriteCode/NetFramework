@@ -45,15 +45,21 @@ namespace Game.Test
             //}
             if (NetClient.Instance.Running == true)
             {
-                if (Input.GetKeyUp(KeyCode.A))
+                if (Input.GetKeyDown(KeyCode.A))
                 {
-                    for (int i = 0; i < 10000; i++)
+                    for (int i = 0; i < 10; i++)
                     {
                         SyncVarManager.Instance.GetVar("i", 10, (string id, object result) =>
                         {
                             LogUtils.Warn($"{id} ------------ {result}");
                         });
                     }
+                    //(string test1, string test2) = await TokenManager.Instance.GetToken(6666, 3);
+                    //LogUtils.Warn(test1);
+                    //LogUtils.Warn(test2);
+                    //(test1, test2) = await TokenManager.Instance.UpdateToken(test1, test2, 3);
+                    //LogUtils.Warn(test1);
+                    //LogUtils.Warn(test2);
                 }
             }
         }

@@ -12,7 +12,6 @@ using GameServer.Log;
 using GameServer.Manager;
 using GameServer.Net.Service;
 using Proto;
-using static Org.BouncyCastle.Asn1.Cmp.Challenge;
 
 namespace GameServer.Net.TokenAuth
 {
@@ -34,7 +33,7 @@ namespace GameServer.Net.TokenAuth
         /// </summary>
         private readonly string _audience = "client_audience";
         /// <summary>
-        /// 存储 Client Token 及其过期时间
+        /// 存储 Token 及其过期时间
         /// </summary>
         private readonly ConcurrentDictionary<string, DateTime> _tokenExpiryMap = new ConcurrentDictionary<string, DateTime>();
         /// <summary>
@@ -96,30 +95,31 @@ namespace GameServer.Net.TokenAuth
         public string GenerateToken(string username, TokenType tokenType = TokenType.Flash, Dictionary<string, object> claims = null)
         {
             TimeSpan _tokenLifespan = TimeSpan.FromMinutes(10);
-            if (tokenType == TokenType.Flash)
-            {
-                _tokenLifespan = TimeSpan.FromMinutes(10);
-            }
-            else if (tokenType == TokenType.LongTime)
-            {
-                _tokenLifespan = TimeSpan.FromHours(1);
-            }
             //if (tokenType == TokenType.Flash)
             //{
-            //    _tokenLifespan = TimeSpan.FromSeconds(30);
+            //    _tokenLifespan = TimeSpan.FromMinutes(10);
             //}
             //else if (tokenType == TokenType.LongTime)
             //{
-            //    _tokenLifespan = TimeSpan.FromMinutes(1);
+            //    _tokenLifespan = TimeSpan.FromHours(1);
             //}
+            if (tokenType == TokenType.Flash)
+            {
+                _tokenLifespan = TimeSpan.FromSeconds(10);
+            }
+            else if (tokenType == TokenType.LongTime)
+            {
+                _tokenLifespan = TimeSpan.FromMinutes(0.25);
+            }
             Token payload = new Token
             {
-                sub = $"{username}{new string(Enumerable.Repeat("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", 20).Select(ch => ch[new Random().Next(ch.Length)]).ToArray())}",
+                sub = $"{username}_{new string(Enumerable.Repeat("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", 20).Select(ch => ch[new Random().Next(ch.Length)]).ToArray())}",
                 iss = _issuer,
                 aud = _audience,
-                iat = DateTime.UtcNow,
+                iat = DateTime.UtcNow,   
                 exp = DateTime.UtcNow.Add(_tokenLifespan),
                 customClaims = claims
+             
             };
             string jsonPayload = JsonHelper.Serialize(payload);
             string base64UrlPayload = Base64UrlEncode(jsonPayload);
@@ -181,6 +181,10 @@ namespace GameServer.Net.TokenAuth
                     {
                         InvalidateToken(token);
                     }
+                    return false;
+                }
+                if (payload.aud != _audience || payload.iss != _issuer)
+                {
                     return false;
                 }
                 // 检查 Token 是否过期

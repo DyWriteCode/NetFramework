@@ -120,7 +120,6 @@ namespace Game.Net
         /// <param name="message">发送过来的信息</param>
         private void _TokenExpiredRequest(Connection sender, TokenExpiredRequest message)
         {
-            LogUtils.Warn("yes");
             if (NetClient.Instance.Running == true)
             {
                 TokenManager.Instance.UpdateToken(NetClient.Instance.FlashToken, NetClient.Instance.LongTimeToken);
