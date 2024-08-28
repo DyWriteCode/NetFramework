@@ -2,6 +2,7 @@
 using System.Text;
 using Game.Common;
 using Game.Log;
+using Game.Manager;
 using Game.Net.TokenAuth;
 
 namespace Game.Net
@@ -82,7 +83,7 @@ namespace Game.Net
         public void Init(int session, int sn, int moduleID, int messageType, int messageID, string flashToken, string longTimeToken, byte[] proto)
         {
             this.protoSize = proto.Length; // 业务数据的大小
-            this.tokenSize = TokenManager.Instance.PackTokens(flashToken, longTimeToken).Length;
+            this.tokenSize = GameApp.TokenManager.PackTokens(flashToken, longTimeToken).Length;
             this.session = session;
             this.sn = sn;
             this.moduleID = moduleID;
@@ -129,7 +130,7 @@ namespace Game.Net
         /// <returns>打包好后的数据</returns>
         public byte[] Encoder(bool isAck = false)
         {
-            byte[] _tokens = TokenManager.Instance.PackTokens(FlashToken, LongTimeToken);
+            byte[] _tokens = GameApp.TokenManager.PackTokens(FlashToken, LongTimeToken);
             tokenSize = _tokens.Length;
             if (isAck == true)
             {
@@ -210,8 +211,8 @@ namespace Game.Net
             messageID = BitConverter.ToInt32(buffer, 32);
             byte[] token = new byte[tokenSize];
             Array.Copy(buffer, 36, token, 0, tokenSize);
-            (FlashToken, LongTimeToken) = TokenManager.Instance.UnpackTokens(token);
-            (FlashToken, LongTimeToken) = TokenManager.Instance.UnpackTokens(token);
+            (FlashToken, LongTimeToken) = GameApp.TokenManager.UnpackTokens(token);
+            (FlashToken, LongTimeToken) = GameApp.TokenManager.UnpackTokens(token);
             //session = dataStream.ReadInt();
             //sn = dataStream.ReadInt();
             //moduleID = dataStream.ReadInt();

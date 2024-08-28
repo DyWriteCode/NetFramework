@@ -26,7 +26,7 @@ namespace Game.Net
     /// <summary>
     /// 网络消息分发器
     /// </summary>
-    public class MessageManager : Singleton<MessageManager>
+    public class MessageManager
     {
         /// <summary>
         /// 工作线程数

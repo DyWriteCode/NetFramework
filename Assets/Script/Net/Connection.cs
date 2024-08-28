@@ -3,6 +3,7 @@ using System.Net.Sockets;
 using Game.Common;
 using Game.Helper;
 using Game.Log;
+using Game.Manager;
 using Google.Protobuf;
 
 namespace Game.Net
@@ -64,7 +65,7 @@ namespace Game.Net
             secoder.DataReceived += _received;
             secoder.Disconnected += () => OnDisconnected?.Invoke(this);
             secoder.Init(); // 启动解码器
-            BufferEntityFactory.Init();
+            GameApp.FactoryManager.BufferEntityFactory.Init();
         }
 
         /// <summary>
@@ -73,14 +74,14 @@ namespace Game.Net
         /// <param name="data">数据</param>
         private void _received(byte[] data)
         {
-            BufferEntity bufferEntity = BufferEntityFactory.Allocate(data);
-            var message = ProtoHelper.ParseFrom(bufferEntity.messageID, bufferEntity.proto, 0, bufferEntity.protoSize);
-            if (ProtoHelper.SeqCode(message.GetType()) == 0)
+            BufferEntity bufferEntity = GameApp.FactoryManager.BufferEntityFactory.Allocate(data);
+            var message = GameApp.HelperManager.ProtoHelper.ParseFrom(bufferEntity.messageID, bufferEntity.proto, 0, bufferEntity.protoSize);
+            if (GameApp.HelperManager.ProtoHelper.SeqCode(message.GetType()) == 0)
             {
                 LogUtils.Error($"[{NetErrCode.NET_ERROR_UNKNOW_PROTOCOL}] The client does not have this proto type : {Type.FilterName}");
                 return;
             }
-            if (MessageManager.Instance.Running == true)
+            if (GameApp.MessageManager.Running == true)
             {
                 // 先处理一下ACK报文
             }
@@ -123,8 +124,8 @@ namespace Game.Net
         public void SendACK(BufferEntity message)
         {
             message.messageType = MessageType.ACK.GetHashCode();
-            NetClient.Instance.sendSN += 1;
-            message.sn = NetClient.Instance.sendSN;
+            GameApp.NetClient.sendSN += 1;
+            message.sn = GameApp.NetClient.sendSN;
             message.messageID = 0;
             Send(message, true);
         }

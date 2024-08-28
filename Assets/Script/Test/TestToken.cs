@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Game.Log;
+using Game.Manager;
 using Game.Net;
 using Game.Net.SyncVar;
 using Game.Net.TokenAuth;
@@ -43,13 +44,13 @@ namespace Game.Test
             //    LogUtils.Warn(fresh);
             //    LogUtils.Warn(longs);
             //}
-            if (NetClient.Instance.Running == true)
+            if (GameApp.NetClient.Running == true)
             {
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     for (int i = 0; i < 10; i++)
                     {
-                        SyncVarManager.Instance.GetVar("i", 10, (string id, object result) =>
+                        GameApp.SyncVarManager.GetVar("i", 10, (string id, object result) =>
                         {
                             LogUtils.Warn($"{id} ------------ {result}");
                         });

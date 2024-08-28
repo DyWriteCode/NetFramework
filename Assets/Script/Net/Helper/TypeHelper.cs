@@ -13,7 +13,7 @@ namespace Game.Helper
         /// </summary>
         /// <param name="binaryByteArray">byte[]数组</param>
         /// <returns>object</returns>
-        public static object ConvertFromBinaryByteArray(byte[] binaryByteArray)
+        public object ConvertFromBinaryByteArray(byte[] binaryByteArray)
         {
             using (var memoryStream = DataStream.Allocate(binaryByteArray))
             {
@@ -29,7 +29,7 @@ namespace Game.Helper
         /// </summary>
         /// <param name="obj">object</param>
         /// <returns>byte[]数组</returns>
-        public static byte[] ConvertFromObject(object obj)
+        public byte[] ConvertFromObject(object obj)
         {
             using (var dataStream = new DataStream())
             {

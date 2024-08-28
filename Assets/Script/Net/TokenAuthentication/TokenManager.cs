@@ -9,6 +9,7 @@ using Game.Common;
 using Game.Common.Tasks;
 using Game.Helper;
 using Game.Log;
+using Game.Manager;
 using Proto;
 
 namespace Game.Net.TokenAuth
@@ -19,7 +20,7 @@ namespace Game.Net.TokenAuth
     /// 因为客户端不用处理token验证信息
     /// 只需要把token打包给Server就行了
     /// </summary>
-    public class TokenManager : Singleton<TokenManager>
+    public class TokenManager
     {
         /// <summary>
         /// 向服务端获取token
@@ -27,7 +28,7 @@ namespace Game.Net.TokenAuth
         /// <param name="id">本客户端的section ID</param>
         public async Task<(string, string)> GetToken(int id, int timeoutSeconds = 2)
         {
-            NetClient.Instance.Send(new GetTokenRequest
+            GameApp.NetClient.Send(new GetTokenRequest
             {
                 Id = id
             }, false);
@@ -40,7 +41,7 @@ namespace Game.Net.TokenAuth
             {
                 isTimeout = true;
             });
-            while (NetClient.Instance.FlashToken == "no_payload.no_token" && NetClient.Instance.LongTimeToken == "no_payload.no_token")
+            while (GameApp.NetClient.FlashToken == "no_payload.no_token" && GameApp.NetClient.LongTimeToken == "no_payload.no_token")
             {
                 // 检查是否超时
                 if (isTimeout == true)
@@ -49,7 +50,7 @@ namespace Game.Net.TokenAuth
                 }
                 await Task.Delay(1000); // 等待一段时间，避免密集轮询
             }
-            return (NetClient.Instance.FlashToken, NetClient.Instance.LongTimeToken);
+            return (GameApp.NetClient.FlashToken, GameApp.NetClient.LongTimeToken);
         }
 
         /// <summary>
@@ -58,7 +59,7 @@ namespace Game.Net.TokenAuth
         /// <param name="id">本客户端的section ID</param>
         public void GetToken(int id)
         {
-            NetClient.Instance.Send(new GetTokenRequest
+            GameApp.NetClient.Send(new GetTokenRequest
             {
                 Id = id
             }, false);
@@ -70,7 +71,7 @@ namespace Game.Net.TokenAuth
         /// <param name="id">本客户端的section ID</param>
         public async Task<(string, string)> UpdateToken(string refreshToken, string longTimeToken,  int timeoutSeconds = 2)
         {
-            NetClient.Instance.Send(new UpdateTokenRequest
+            GameApp.NetClient.Send(new UpdateTokenRequest
             {
                 FlashToken = refreshToken,
                 LongTimeToken = longTimeToken,
@@ -84,9 +85,9 @@ namespace Game.Net.TokenAuth
             {
                 isTimeout = true;
             });
-            string tempFresh = NetClient.Instance.FlashToken;
-            string longTemp = NetClient.Instance.LongTimeToken;
-            while (NetClient.Instance.FlashToken == tempFresh && NetClient.Instance.LongTimeToken == longTemp)
+            string tempFresh = GameApp.NetClient.FlashToken;
+            string longTemp = GameApp.NetClient.LongTimeToken;
+            while (GameApp.NetClient.FlashToken == tempFresh && GameApp.NetClient.LongTimeToken == longTemp)
             {
                 // 检查是否超时
                 if (isTimeout == true)
@@ -95,7 +96,7 @@ namespace Game.Net.TokenAuth
                 }
                 await Task.Delay(1000); // 等待一段时间，避免密集轮询
             }
-            return (NetClient.Instance.FlashToken, NetClient.Instance.LongTimeToken);
+            return (GameApp.NetClient.FlashToken, GameApp.NetClient.LongTimeToken);
         }
 
         /// <summary>
@@ -104,7 +105,7 @@ namespace Game.Net.TokenAuth
         /// <param name="id">本客户端的section ID</param>
         public void UpdateToken(string refreshToken, string longTimeToken)
         {
-            NetClient.Instance.Send(new UpdateTokenRequest 
+            GameApp.NetClient.Send(new UpdateTokenRequest 
             {
                 FlashToken = refreshToken,
                 LongTimeToken = longTimeToken,

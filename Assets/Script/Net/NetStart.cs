@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Game.Common;
 using Game.Common.Tasks;
 using Game.Log;
+using Game.Manager;
 using Game.Net.Rpc;
 using Game.Net.SyncVar;
 using Game.Net.TokenAuth;
@@ -91,26 +92,27 @@ namespace Game.Net
             {
                 savePath = Application.streamingAssetsPath,
             });
+            GameApp.Instance.Init();
             // 连接服务器
-            NetClient.Instance.ConnectToServer(HOST, PORT, 1);
+            GameApp.NetClient.ConnectToServer(HOST, PORT, 1);
             // 初始化RPC以及同步变量
-            RpcMethodManager.Instance.RegisterAllMethodsFromAssembly();
-            SyncVarManager.Instance.RegisterAllVarsFromAssembly();
+            GameApp.RpcMethodManager.RegisterAllMethodsFromAssembly();
+            GameApp.SyncVarManager.RegisterAllVarsFromAssembly();
             //RpcMethodManager.Instance.RegisterMethod("d", new Func<int, int>(TestRPC.d));
             //心跳包任务，每秒1次
             StartCoroutine(SendHeartMessage());
             StartCoroutine(SendGetTokenMessage());
             // MessageRouter这个是事件处理器
-            MessageManager.Instance.Subscribe<HeartBeatResponse>(_HeartBeatResponse);
-            MessageManager.Instance.Subscribe<RpcResponse>(_RpcResponse);
-            MessageManager.Instance.Subscribe<RpcRequest>(_RpcRequest);
-            MessageManager.Instance.Subscribe<SyncVarResponse>(_SyncVarResponse);
-            MessageManager.Instance.Subscribe<SyncVarRequest>(_SyncVarRequest);
-            MessageManager.Instance.Subscribe<GetTokenResponse>(_GetTokenResponse);
-            MessageManager.Instance.Subscribe<UpdateTokenResponse>(_UpdateTokenResponse);
-            MessageManager.Instance.Subscribe<TokenExpiredRequest>(_TokenExpiredRequest);
+            GameApp.MessageManager.Subscribe<HeartBeatResponse>(_HeartBeatResponse);
+            GameApp.MessageManager.Subscribe<RpcResponse>(_RpcResponse);
+            GameApp.MessageManager.Subscribe<RpcRequest>(_RpcRequest);
+            GameApp.MessageManager.Subscribe<SyncVarResponse>(_SyncVarResponse);
+            GameApp.MessageManager.Subscribe<SyncVarRequest>(_SyncVarRequest);
+            GameApp.MessageManager.Subscribe<GetTokenResponse>(_GetTokenResponse);
+            GameApp.MessageManager.Subscribe<UpdateTokenResponse>(_UpdateTokenResponse);
+            GameApp.MessageManager.Subscribe<TokenExpiredRequest>(_TokenExpiredRequest);
             // 注册out事件
-            EventManager.RegisterOut("OnDisconnected", this, "OnDisconnected");
+            GameApp.EventManager.RegisterOut("OnDisconnected", this, "OnDisconnected");
         }
 
         /// <summary>
@@ -120,9 +122,9 @@ namespace Game.Net
         /// <param name="message">发送过来的信息</param>
         private void _TokenExpiredRequest(Connection sender, TokenExpiredRequest message)
         {
-            if (NetClient.Instance.Running == true)
+            if (GameApp.NetClient.Running == true)
             {
-                TokenManager.Instance.UpdateToken(NetClient.Instance.FlashToken, NetClient.Instance.LongTimeToken);
+                GameApp.TokenManager.UpdateToken(GameApp.NetClient.FlashToken, GameApp.NetClient.LongTimeToken);
             }
         }
 
@@ -131,11 +133,11 @@ namespace Game.Net
         /// </summary>
         private IEnumerator SendGetTokenMessage()
         {
-            while (NetClient.Instance.FlashToken == "no_payload.no_token" && NetClient.Instance.LongTimeToken == "no_payload.no_token")
+            while (GameApp.NetClient.FlashToken == "no_payload.no_token" && GameApp.NetClient.LongTimeToken == "no_payload.no_token")
             {
-                if (NetClient.Instance.Running == true)
+                if (GameApp.NetClient.Running == true)
                 {
-                    TokenManager.Instance.GetToken(NetClient.Instance.sessionID);
+                    GameApp.TokenManager.GetToken(GameApp.NetClient.sessionID);
                     break;
                 }
                 yield return new WaitForSeconds(1);
@@ -149,7 +151,7 @@ namespace Game.Net
         /// <param name="message">发送过来的信息</param>
         private void _SyncVarRequest(Connection sender, SyncVarRequest message)
         {
-            SyncVarManager.Instance.SyncVarRequestHander(sender, message);
+            GameApp.SyncVarManager.SyncVarRequestHander(sender, message);
         }
 
         /// <summary>
@@ -159,7 +161,7 @@ namespace Game.Net
         /// <param name="message">发送过来的信息</param>
         private void _SyncVarResponse(Connection sender, SyncVarResponse message)
         {
-            SyncVarManager.Instance.SyncVarResponseHander(sender, message);
+            GameApp.SyncVarManager.SyncVarResponseHander(sender, message);
         }
 
         /// <summary>
@@ -169,7 +171,7 @@ namespace Game.Net
         /// <param name="message">发送过来的信息</param>
         private void _RpcRequest(Connection sender, RpcRequest message)
         {
-            RpcMethodManager.Instance.RPCRequestHander(sender, message);
+            GameApp.RpcMethodManager.RPCRequestHander(sender, message);
             // RpcMethodManager.Instance.RPCRequestHander(message);
         }
 
@@ -196,7 +198,7 @@ namespace Game.Net
         /// <param name="message">发送过来的信息</param>
         private void _RpcResponse(Connection sender, RpcResponse message)
         {
-            RpcMethodManager.Instance.RPCResponseHander(sender, message);
+            GameApp.RpcMethodManager.RPCResponseHander(sender, message);
         }
 
         /// <summary>
@@ -208,8 +210,8 @@ namespace Game.Net
         {
             if (message.State == true)
             {
-                NetClient.Instance.FlashToken = message.FlashToken;
-                NetClient.Instance.LongTimeToken = message.FlashToken;
+                GameApp.NetClient.FlashToken = message.FlashToken;
+                GameApp.NetClient.LongTimeToken = message.FlashToken;
             }
         }
 
@@ -222,8 +224,8 @@ namespace Game.Net
         {
             if (message.State == true)
             {
-                NetClient.Instance.FlashToken = message.FlashToken;
-                NetClient.Instance.LongTimeToken = message.LongTimeToken;
+                GameApp.NetClient.FlashToken = message.FlashToken;
+                GameApp.NetClient.LongTimeToken = message.LongTimeToken;
             }
         }
 
@@ -233,10 +235,10 @@ namespace Game.Net
         /// <returns>WaitForSeconds</returns>
         private IEnumerator SendHeartMessage()
         {
-            while (NetClient.Instance.Running == true)
+            while (GameApp.NetClient.Running == true)
             {
                 yield return new WaitForSeconds(beatTime);
-                NetClient.Instance.Send(beatRequest, false);
+                GameApp.NetClient.Send(beatRequest, false);
                 lastBeatTime = DateTime.Now;
             }
         }
@@ -246,7 +248,7 @@ namespace Game.Net
         /// </summary>
         void OnApplicationQuit()
         {
-            NetClient.Instance.Close();
+            GameApp.NetClient.Close();
         }
 
         /// <summary>
@@ -255,7 +257,7 @@ namespace Game.Net
         private void Update()
         {
             // 主线程内去处理事件
-            EventManager.Tick();
+            GameApp.EventManager.Tick();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Game.Common;
 using Game.Helper;
 using Game.Log;
+using Game.Manager;
 using Google.Protobuf;
 
 namespace Game.Net
@@ -14,7 +15,7 @@ namespace Game.Net
     /// <summary>
     /// 网络客户端类型
     /// </summary>
-    public class NetClient : Singleton<NetClient>
+    public class NetClient
     {
         /// <summary>
         /// 与服务器的连接
@@ -86,7 +87,7 @@ namespace Game.Net
             conn.OnDisconnected += OnDisconnected;
             conn.OnDataReceived += OnDataReceived;
             // 启动消息分发器
-            MessageManager.Instance.Init(threadCount);
+            GameApp.MessageManager.Init(threadCount);
             // 超时重传逻辑接口启动
             CheckOutTime(host, port, threadCount);
             return true;
@@ -128,7 +129,7 @@ namespace Game.Net
         {
             LogUtils.Log("Disconnect To Server");
             // 触发断开事件
-            EventManager.FireOut("OnDisconnected");
+            GameApp.EventManager.FireOut("OnDisconnected");
         }
 
         /// <summary>
@@ -190,11 +191,11 @@ namespace Game.Net
             }
             // 更新已处理的报文
             handleSN = buffer.sn;
-            if (MessageManager.Instance.Running == true)
+            if (GameApp.MessageManager.Running == true)
             {
                 if (buffer.isFull == true)
                 {
-                    MessageManager.Instance.AddMessage(sender, data);
+                    GameApp.MessageManager.AddMessage(sender, data);
                 }
             }
             // 检测缓存的数据 有没有包含下一条可以处理的数据
@@ -230,16 +231,16 @@ namespace Game.Net
         {
             if (conn != null)
             {
-                var bufferEntity = BufferEntityFactory.Allocate();
+                var bufferEntity = GameApp.FactoryManager.BufferEntityFactory.Allocate();
                 if (isAck == true)
                 {
-                    bufferEntity.Init(sessionID, 0, 0, MessageType.ACK.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), FlashToken, LongTimeToken, ProtoHelper.Serialize(message));
+                    bufferEntity.Init(sessionID, 0, 0, MessageType.ACK.GetHashCode(), GameApp.HelperManager.ProtoHelper.SeqCode(message.GetType()), FlashToken, LongTimeToken, GameApp.HelperManager.ProtoHelper.Serialize(message));
                 }
                 else
                 {
-                    bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), ProtoHelper.SeqCode(message.GetType()), FlashToken, LongTimeToken, ProtoHelper.Serialize(message));
+                    bufferEntity.Init(sessionID, 0, 0, MessageType.Logic.GetHashCode(), GameApp.HelperManager.ProtoHelper.SeqCode(message.GetType()), FlashToken, LongTimeToken, GameApp.HelperManager.ProtoHelper.Serialize(message));
                 }
-                bufferEntity.time = TimeHelper.ClientNow(); // 暂时先等于0
+                bufferEntity.time = GameApp.HelperManager.TimeHelper.ClientNow(); // 暂时先等于0
                 sendSN += 1; // 已经发送的SN加一
                 bufferEntity.sn = sendSN;
                 // 如果说是第一个报文根本就不用重发因为连接不上可以直接断掉
@@ -313,7 +314,7 @@ namespace Game.Net
                     }
                 }
                 // 150
-                if (TimeHelper.ClientNow() - package.time >= (package.recurCount + 1) * OverTime)
+                if (GameApp.HelperManager.TimeHelper.ClientNow() - package.time >= (package.recurCount + 1) * OverTime)
                 {
                     package.recurCount += 1;
                     LogUtils.Log($"Time out resend count : {package.recurCount}");

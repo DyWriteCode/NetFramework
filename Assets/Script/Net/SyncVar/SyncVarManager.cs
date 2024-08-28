@@ -7,6 +7,7 @@ using Game.Common;
 using Game.Common.Tasks;
 using Game.Helper;
 using Game.Log;
+using Game.Manager;
 using Google.Protobuf;
 using Proto;
 
@@ -15,7 +16,7 @@ namespace Game.Net.SyncVar
     /// <summary>
     /// SyncVar管理器
     /// </summary>
-    public class SyncVarManager : Singleton<SyncVarManager>
+    public class SyncVarManager
     {
         /// <summary>
         /// 存储SyncVar变量
@@ -171,9 +172,9 @@ namespace Game.Net.SyncVar
         {
             SyncVarRequest request = MakeRequest(varName);
             // RpcRequest request = MakeRequest(ids, methodName, parameters);
-            if (NetClient.Instance.Running == true)
+            if (GameApp.NetClient.Running == true)
             {
-                NetClient.Instance.Send(request, false);
+                GameApp.NetClient.Send(request, false);
             }
             bool isTimeout = false;
             NetStart.Instance.TimeoutRunner.AddTimeoutTask(new TimeoutTaskInfo
@@ -209,9 +210,9 @@ namespace Game.Net.SyncVar
         {
             SyncVarRequest request = MakeRequest(varName);
             // RpcRequest request = MakeRequest(ids, methodName, parameters);
-            if (NetClient.Instance.Running == true)
+            if (GameApp.NetClient.Running == true)
             {
-                NetClient.Instance.Send(request, false);
+                GameApp.NetClient.Send(request, false);
             }
             bool isTimeout = false;
             NetStart.Instance.TimeoutRunner.AddTimeoutTask(new TimeoutTaskInfo
@@ -255,23 +256,23 @@ namespace Game.Net.SyncVar
             catch (Exception ex)
             {
                 response.State = false;
-                response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject("ERROR"));
+                response.Result = ByteString.CopyFrom(GameApp.HelperManager.TypeHelper.ConvertFromObject("ERROR"));
             }
             finally
             {
                 if (result == null)
                 {
-                    response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject("NULL"));
+                    response.Result = ByteString.CopyFrom(GameApp.HelperManager.TypeHelper.ConvertFromObject("NULL"));
                 }
                 else
                 {
-                    response.Result = ByteString.CopyFrom(TypeHelper.ConvertFromObject(result));
+                    response.Result = ByteString.CopyFrom(GameApp.HelperManager.TypeHelper.ConvertFromObject(result));
                 }
                 response.State = true;
             }
-            if (NetClient.Instance.Running == true)
+            if (GameApp.NetClient.Running == true)
             {
-                NetClient.Instance.Send(response, false);
+                GameApp.NetClient.Send(response, false);
             }
         }
 
@@ -287,7 +288,7 @@ namespace Game.Net.SyncVar
             {
                 return;
             }
-            object result = TypeHelper.ConvertFromBinaryByteArray(response.Result.ToByteArray());
+            object result = GameApp.HelperManager.TypeHelper.ConvertFromBinaryByteArray(response.Result.ToByteArray());
             _responseCache[response.Id] = result;
         }
     }

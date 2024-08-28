@@ -1,4 +1,5 @@
 using Game.Log;
+using Game.Manager;
 using Game.Net;
 using Game.Net.Rpc;
 using UnityEngine;
@@ -24,7 +25,7 @@ namespace Game.Test
 
         private async void Update()
         {
-            if (NetClient.Instance.Running == true)
+            if (GameApp.NetClient.Running == true)
             {
                 //if (Input.GetKeyDown(KeyCode.A))
                 //{

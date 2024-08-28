@@ -18,22 +18,22 @@ namespace Game.Helper
         /// <summary>
         /// 类型注册表
         /// </summary>
-        private static Dictionary<string, Type> _registry = new Dictionary<string, Type>();
+        private Dictionary<string, Type> _registry = new Dictionary<string, Type>();
         /// <summary>
         /// 类型注册表 1 主要是为了方便调用
         /// </summary>
-        private static Dictionary<int, Type> _DictIntType = new Dictionary<int, Type>();
+        private Dictionary<int, Type> _DictIntType = new Dictionary<int, Type>();
         /// <summary>
         /// 类型注册表 2 主要是为了方便调用
         /// </summary>
-        private static Dictionary<Type, int> _DictTypeInt = new Dictionary<Type, int>();
+        private Dictionary<Type, int> _DictTypeInt = new Dictionary<Type, int>();
 
         /// <summary>
         /// 序列化protobuf到二进制数据
         /// </summary>
         /// <param name="msg">Protobuf数据</param>
         /// <returns>序列化之后的二进制数据</returns>
-        public static byte[] Serialize(IMessage message)
+        public byte[] Serialize(IMessage message)
         {
             using (MemoryStream rawOutput = new MemoryStream())
             {
@@ -49,7 +49,7 @@ namespace Game.Helper
         /// <typeparam name="T">protobuf转换之后的cs类型</typeparam>
         /// <param name="dataBytes">需要解析的二进制数据</param>
         /// <returns>protobuf类型</returns>
-        public static T Parse<T>(byte[] dataBytes) where T : IMessage, new()
+        public T Parse<T>(byte[] dataBytes) where T : IMessage, new()
         {
             T msg = new T();
             msg = (T)msg.Descriptor.Parser.ParseFrom(dataBytes);
@@ -59,7 +59,7 @@ namespace Game.Helper
         /// <summary>
         /// 初始化
         /// </summary>
-        static ProtoHelper()
+        public ProtoHelper()
         {
             List<string> list = new List<string>();
             var q = from t in Assembly.GetExecutingAssembly().GetTypes() select t;
@@ -97,7 +97,7 @@ namespace Game.Helper
         /// </summary>
         /// <param name="code">protobuf类型对应的int值</param>
         /// <returns>protobuf类型</returns>
-        public static int SeqCode(Type type)
+        public int SeqCode(Type type)
         {
             int result = 0;
             _DictTypeInt.TryGetValue(type, out result);
@@ -109,7 +109,7 @@ namespace Game.Helper
         /// </summary>
         /// <param name="type">protobuf类型</param>
         /// <returns>int值来对应的protobuf类型</returns>
-        public static Type SeqType(int code)
+        public Type SeqType(int code)
         {
             Type type = null;
             _DictIntType.TryGetValue(code, out type);
@@ -124,12 +124,12 @@ namespace Game.Helper
         /// <param name="offset">数据偏移量</param>
         /// <param name="len">数据长度</param>
         /// <returns>protobuf类型</returns>
-        public static IMessage ParseFrom(int typeCode, byte[] data, int offset, int len)
+        public IMessage ParseFrom(int typeCode, byte[] data, int offset, int len)
         {
-            Type t = ProtoHelper.SeqType(typeCode);
+            Type t = SeqType(typeCode);
             var desc = t.GetProperty("Descriptor").GetValue(t) as MessageDescriptor;
             var msg = desc.Parser.ParseFrom(data, offset, len);
-            Debug.Log($"Descriptor Message：code={typeCode} - {ProtoHelper.SeqType(typeCode)}");
+            Debug.Log($"Descriptor Message：code={typeCode} - {SeqType(typeCode)}");
             return msg;
         }
     }

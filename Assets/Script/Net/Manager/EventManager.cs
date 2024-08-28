@@ -46,7 +46,7 @@ namespace Game
     }
 
     /// <summary>
-    /// 一个静态的事件系统
+    /// 一个事件系统
     /// </summary>
     public class EventManager
     {
@@ -71,7 +71,7 @@ namespace Game
         /// <summary>
         /// 对事件管理器内部的一些数据进行初始化
         /// </summary>
-        static EventManager()
+        public EventManager()
         {
             eventInDict = new Dictionary<string, List<GameHandler>>();
             eventOutDict = new Dictionary<string, List<GameHandler>>();
@@ -84,7 +84,7 @@ namespace Game
         /// <param name="eventName">事件名</param>
         /// <param name="target">对应的目标</param>
         /// <param name="methodName">对应的方法</param>
-        public static void RegisterIn(string eventName, object target, string methodName)
+        public void RegisterIn(string eventName, object target, string methodName)
         {
             lock (eventInDict)
             {
@@ -103,7 +103,7 @@ namespace Game
         /// <param name="eventName">事件名</param>
         /// <param name="target">对应的目标</param>
         /// <param name="methodName">对应的方法</param>
-        public static void RegisterOut(string eventName, object target, string methodName)
+        public void RegisterOut(string eventName, object target, string methodName)
         {
             lock (eventOutDict)
             {
@@ -121,7 +121,7 @@ namespace Game
         /// </summary>
         /// <param name="eventName">事件名</param>
         /// <param name="parameters">传入的参数</param>
-        public static void FireIn(string eventName, params object[] parameters)
+        public void FireIn(string eventName, params object[] parameters)
         {
             lock (eventInDict)
             {
@@ -142,7 +142,7 @@ namespace Game
         /// </summary>
         /// <param name="eventName">事件名</param>
         /// <param name="parameters">传入的参数</param>
-        public static void FireOut(string eventName, params object[] parameters)
+        public void FireOut(string eventName, params object[] parameters)
         {
             lock (eventOutDict)
             {
@@ -159,7 +159,7 @@ namespace Game
         /// <param name="eventName">事件名</param>
         /// <param name="target">对应的目标</param>
         /// <param name="methodName">对应的方法</param>
-        public static void UnregisterIn(string eventName, object target, string methodName)
+        public void UnregisterIn(string eventName, object target, string methodName)
         {
             lock (eventInDict)
             {
@@ -174,7 +174,7 @@ namespace Game
         /// <param name="eventName">事件名</param>
         /// <param name="target">对应的目标</param>
         /// <param name="methodName">对应的方法</param>
-        public static void UnregisterOut(string eventName, object target, string methodName)
+        public void UnregisterOut(string eventName, object target, string methodName)
         {
             lock (eventOutDict)
             {
@@ -187,7 +187,7 @@ namespace Game
         /// 简单粗暴的方法 直接clear掉整个字典
         /// </summary>
         /// <param name="eventName"></param>
-        public static void UnregisterIn()
+        public void UnregisterIn()
         {
             lock (eventInDict)
             {
@@ -199,7 +199,7 @@ namespace Game
         /// 简单粗暴的方法 直接clear掉整个字典
         /// </summary>
         /// <param name="eventName"></param>
-        public static void UnregisterOut(string eventName)
+        public void UnregisterOut(string eventName)
         {
             lock (eventOutDict)
             {
@@ -210,7 +210,7 @@ namespace Game
         /// <summary>
         /// 在主线程Update调用
         /// </summary>
-        public static void Tick()
+        public void Tick()
         {
             if (System.Threading.Thread.CurrentThread.ManagedThreadId == 1)
             {

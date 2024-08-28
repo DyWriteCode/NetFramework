@@ -1,4 +1,5 @@
 using Game.Log;
+using Game.Manager;
 using Game.Net;
 using Game.Net.SyncVar;
 using UnityEngine;
@@ -25,15 +26,15 @@ namespace Game.Test
         // Update is called once per frame
         async void Update()
         {
-            if (NetClient.Instance.Running == true)
+            if (GameApp.NetClient.Running == true)
             {
                 if (Input.GetKeyDown(KeyCode.A))
                 {
-                    SyncVarManager.Instance.GetVar("token_long", 3, (string id, object result) =>
+                    await GameApp.SyncVarManager.GetVar("token_long", 3, (string id, object result) =>
                     {
                         LogUtils.Warn(result);
                     });
-                    LogUtils.Warn(await SyncVarManager.Instance.GetVar("token_string", 3));
+                    LogUtils.Warn(await GameApp.SyncVarManager.GetVar("token_string", 3));
                 }
             }
         }

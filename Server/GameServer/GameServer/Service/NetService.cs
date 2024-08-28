@@ -84,6 +84,15 @@ namespace GameServer.Net.Service
         }
 
         /// <summary>
+        /// 结束服务
+        /// </summary>
+        public override void Stop()
+        {
+            base.Stop();
+            tcpServer.Stop();
+        }
+
+        /// <summary>
         /// 开启服务
         /// </summary>
         public override void Start()

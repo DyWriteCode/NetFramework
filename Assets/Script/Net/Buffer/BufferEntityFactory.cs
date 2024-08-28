@@ -25,16 +25,16 @@ namespace Game.Net
         /// <summary>
         /// 自定义数据流对象池
         /// </summary>
-        private static ClassObjectPool<BufferEntity> BufferEntityPool;
+        private ClassObjectPool<BufferEntity> BufferEntityPool;
         /// <summary>
         /// 最大容量
         /// </summary>
-        public static int PoolMaxCount = 200;
+        public int PoolMaxCount = 200;
 
         /// <summary>
         /// 对buffer factory进行初始化
         /// </summary>
-        public static void Init()
+        public void Init()
         {
             BufferEntityPool = new ClassObjectPool<BufferEntity>(PoolMaxCount);
         }
@@ -44,7 +44,7 @@ namespace Game.Net
         /// </summary>
         /// <param name="NotCreate">如果池中没有对象是否创建</param>
         /// <returns>自定义数据流</returns>
-        public static BufferEntity Allocate(bool NotCreate = true)
+        public BufferEntity Allocate(bool NotCreate = true)
         {
             // 从对象池中获取 BufferEntity
             lock (BufferEntityPool)
@@ -58,7 +58,7 @@ namespace Game.Net
         /// </summary>
         /// <param name="bytes">二进制数据</param>
         /// <returns>自定义数据流</returns>
-        public static BufferEntity Allocate(byte[] bytes, bool NotCreate = true)
+        public BufferEntity Allocate(byte[] bytes, bool NotCreate = true)
         {
             BufferEntity buffer = Allocate(NotCreate);
             buffer.Init(bytes);
@@ -69,7 +69,7 @@ namespace Game.Net
         /// 回收对象
         /// </summary>
         /// <param name="buffer">需要回收的对象</param>
-        public static void Recycle(BufferEntity buffer)
+        public void Recycle(BufferEntity buffer)
         {
             buffer.Reset();
             BufferEntityPool.Recycle(buffer);

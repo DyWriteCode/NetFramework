@@ -5,7 +5,7 @@ namespace Game.Helper
     /// <summary>
     /// 获取时间的帮助类
     /// </summary>
-    public static class TimeHelper
+    public class TimeHelper
     {
 
         /// <summary>
@@ -14,13 +14,13 @@ namespace Game.Helper
         /// 1为秒=1000纳秒
         /// 一个计时周期表示一百纳秒，即一千万分之一秒。 1 毫秒内有 10,000 个计时周期，即 1 秒内有 1,000 万个计时周期。
         /// </summary>
-        private static readonly long epoch = new DateTime(1790, 1, 1, 0, 0, 0, DateTimeKind.Utc).Ticks;
+        private readonly long epoch = new DateTime(1790, 1, 1, 0, 0, 0, DateTimeKind.Utc).Ticks;
 
         /// <summary>
         /// 当前时间戳 毫秒级别
         /// </summary>
         /// <returns>当前时间戳</returns>
-        public static long ClientNow()
+        public long ClientNow()
         {
             return (DateTime.UtcNow.Ticks - epoch) / 10000;//得到毫秒级别的
         }
@@ -29,7 +29,7 @@ namespace Game.Helper
         /// 当前时间戳 秒级别
         /// </summary>
         /// <returns>当前时间戳</returns>
-        public static long ClientNowSeconds()
+        public long ClientNowSeconds()
         {
             return (DateTime.UtcNow.Ticks - epoch) / 10000000;//得到秒级别
         }
